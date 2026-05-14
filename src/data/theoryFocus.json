@@ -1,0 +1,66 @@
+[
+  {
+    "id": "focus_primitive_communism",
+    "stageId": 0,
+    "title": "🔍 关键认知：原始共产主义——人类社会的起点",
+    "content": "在生产力极其低下的原始社会，人们共同劳动、平均分配，没有阶级、没有剥削、没有国家。恩格斯称之为'原始共产主义'。这不是理想社会，而是生产力极度落后的无奈——单个人无法独立生存，只有依靠集体才能活下去。原始社会的平等是贫困的平等，是生存逼迫下的平等。",
+    "philosophy": "唯物史观的起点：人类社会的第一个形态是由极低生产力决定的原始公有制。这说明一个根本原理——不是'人性'决定了社会制度，而是生产力水平决定了生产关系。所谓'人性自私'不过是私有制社会的产物，在原始社会根本不存在。",
+    "relatedTerms": ["primitive_community", "collective_labor", "productive_forces", "materialism"]
+  },
+  {
+    "id": "focus_private_property",
+    "stageId": 1,
+    "title": "🔑 关键转折：私有制的诞生",
+    "content": "生产力的发展带来了剩余产品，剩余产品的出现使剥削成为可能。少数人开始占有剩余产品，生产资料从公有变为私有。这是人类历史上最根本的变革之一——它催生了阶级、国家、剥削，改变了整个人类社会的走向。",
+    "philosophy": "量变引起质变：生产力的逐步积累（量变）最终导致生产关系的根本变革（质变）——从公有制到私有制。",
+    "relatedTerms": ["private_property", "surplus_product", "social_division", "quantity_to_quality"]
+  },
+  {
+    "id": "focus_state_birth",
+    "stageId": 2,
+    "title": "🏛️ 关键转折：国家的诞生",
+    "content": "当社会分裂为利益根本对立的阶级时，为了防止阶级冲突把社会毁灭，就需要一种表面上凌驾于社会之上的力量来维持秩序——国家由此诞生。国家不是从来就有的，它是阶级矛盾不可调和的产物。",
+    "philosophy": "社会存在决定社会意识：奴隶社会的国家机器是奴隶主阶级意志的体现，是维护奴隶主经济利益的政治工具。",
+    "relatedTerms": ["state_origin", "class", "exploitation", "social_being"]
+  },
+  {
+    "id": "focus_feudal_ideology",
+    "stageId": 3,
+    "title": "🏰 深度剖析：封建制度——宗教如何成为统治工具",
+    "content": "封建制度下，宗教神学成为占统治地位的意识形态。教会宣扬'君权神授''今世受苦来世享福'，这不是偶然的——它是封建经济基础在上层建筑中的集中反映。领主需要一种让农奴甘于受压迫的思想体系，宗教完美地扮演了这个角色。经济基础决定上层建筑，上层建筑反过来巩固经济基础——封建教会与封建土地所有制就是这样互为支撑的关系。",
+    "philosophy": "意识形态的阶级性：统治阶级的思想在每一时代都是占统治地位的思想。封建社会的宗教不是中立的，而是维护领主统治的精神工具。一切意识形态都有其阶级根源——这个原理贯穿全部阶级社会史。",
+    "relatedTerms": ["feudalism", "ideology", "superstructure", "land_rent", "base_and_superstructure"]
+  },
+  {
+    "id": "focus_crisis",
+    "stageId": 4,
+    "title": "⚠️ 关键转折：第一次经济危机",
+    "content": "资本主义的基本矛盾——生产社会化与生产资料私人占有之间的矛盾——必然导致经济危机。工厂生产了大量商品，但工人买不起，商品卖不出去，工厂倒闭，工人失业。这不是偶然的，而是资本主义制度的必然产物。",
+    "philosophy": "矛盾是事物发展的根本动力：资本主义的基本矛盾推动着社会向更高阶段发展。危机暴露了资本主义的内在局限性。",
+    "relatedTerms": ["surplus_value", "capital_accumulation", "contradiction", "overproduction"]
+  },
+  {
+    "id": "focus_marxism_birth",
+    "stageId": 5,
+    "title": "📖 关键转折：马克思主义的诞生",
+    "content": "垄断资本主义的矛盾日益尖锐，工人运动蓬勃发展。马克思和恩格斯在批判继承前人思想的基础上，创立了科学社会主义。马克思主义不是空想，而是对资本主义发展规律的科学揭示，为无产阶级指明了解放道路。",
+    "philosophy": "实践与认识：马克思主义来源于工人运动的实践，又指导工人运动的实践。理论一经掌握群众，就会变成物质力量。",
+    "relatedTerms": ["class_struggle", "historical_materialism", "practice_and_cognition", "truth"]
+  },
+  {
+    "id": "focus_socialist_revolution",
+    "stageId": 6,
+    "title": "✊ 关键转折：社会主义革命",
+    "content": "无产阶级通过革命推翻资产阶级统治，建立无产阶级专政，将生产资料收归公有。这是从资本主义到共产主义的过渡时期。社会主义不是凭空产生的，而是资本主义基本矛盾发展的必然结果。",
+    "philosophy": "否定之否定：原始公有制（肯定）→ 私有制（否定）→ 共产主义公有制（否定之否定）。在更高阶段上恢复了公有制的特征。",
+    "relatedTerms": ["dictatorship_proletariat", "public_ownership", "negation_of_negation", "relations_of_production"]
+  },
+  {
+    "id": "focus_communism",
+    "stageId": 7,
+    "title": "🌟 终极目标：共产主义——人的解放与自由王国",
+    "content": "共产主义不是乌托邦，而是生产力高度发展的必然结果。当物质财富极大丰富、阶级彻底消灭后，国家自行消亡，劳动不再是被迫的谋生手段而成为人的第一需要。'各尽所能，按需分配'意味着人类终于从必然王国跨入了自由王国——每个人的自由发展是一切人自由发展的条件。这是马克思为人类描绘的终极解放图景。",
+    "philosophy": "人类解放的辩证法：从被自然支配→被阶级支配→人类真正成为自己命运的主人。这是一个否定之否定的完整循环，在更高阶段实现了人的复归。马克思主义的终极关怀不是阶级斗争本身，而是消灭一切阶级、实现全人类的解放——这才是'改变世界'的真正含义。",
+    "relatedTerms": ["communism", "distribution_need", "human_development", "state_withering", "realm_freedom_necessity", "freedom"]
+  }
+]

@@ -1,0 +1,270 @@
+[
+  {
+    "id": 0,
+    "name": "原始共产主义",
+    "icon": "axe",
+    "productivity": "石器、火、采集与狩猎，生产力极其低下，个人无法独立生存",
+    "relations": "生产资料公有制，集体劳动，平均分配，无阶级无剥削",
+    "exploitationRate": 0,
+    "classes": [
+      { "name": "全体成员", "populationPct": 100, "color": "#8BC34A" }
+    ],
+    "superstructure": {
+      "politics": "氏族议事会，人人平等参与，氏族首领无特权",
+      "law": "习惯与禁忌，无成文法，依靠传统和舆论维持秩序",
+      "ideology": "万物有灵、图腾崇拜、集体意识、原始平等观念"
+    },
+    "citizenDialogs": ["prim_hunter_1", "prim_hunter_2", "prim_hunter_3", "prim_elder_1", "prim_elder_2", "prim_gatherer_1", "prim_shaman_1", "prim_child_1", "prim_craftsman_1", "prim_thinker_1", "prim_thinker_2", "prim_cause_1", "prim_essence_1", "prim_necessity_1", "prim_knowledge_1"],
+    "knowledgeCards": ["card_primitive_community", "card_productive_forces", "card_collective_labor", "card_totem_religion", "card_clan_democracy", "card_cause_effect", "card_essence_appearance", "card_necessity_contingency", "card_perceptual_rational"],
+    "theoryFocus": "focus_primitive_communism",
+    "townTheme": {
+      "ground": "#5D8A3C",
+      "sky": "#87CEEB",
+      "buildings": ["cave", "campfire", "hut"],
+      "ambient": ["clouds", "birds"],
+      "palette": {
+        "primary": "#6B8E23",
+        "secondary": "#8FBC8F",
+        "accent": "#DAA520",
+        "building": "#8B7355",
+        "roof": "#6B4226"
+      }
+    }
+  },
+  {
+    "id": 1,
+    "name": "私有制萌芽",
+    "icon": "wheat_chain",
+    "productivity": "磨制石器、原始农业与畜牧、金属工具开始出现",
+    "relations": "生产资料部分私有，剩余产品出现，交换萌芽，氏族贵族开始占有",
+    "exploitationRate": 0.08,
+    "classes": [
+      { "name": "氏族贵族", "populationPct": 10, "color": "#9C27B0" },
+      { "name": "自由民", "populationPct": 75, "color": "#8BC34A" },
+      { "name": "战俘", "populationPct": 15, "color": "#9E9E9E" }
+    ],
+    "superstructure": {
+      "politics": "氏族首领世袭化，权力开始集中于少数家族",
+      "law": "私有财产保护萌芽，习惯法开始偏向有产者",
+      "ideology": "祖先崇拜、权力神圣化、财产观念萌芽"
+    },
+    "citizenDialogs": ["priv_noble_1", "priv_noble_2", "priv_noble_3", "priv_freeman_1", "priv_freeman_2", "priv_captive_1", "priv_trader_1", "priv_rebel_1", "priv_thinker_1", "priv_elder_1", "priv_contradiction_1", "priv_principal_1", "priv_initiative_1"],
+    "knowledgeCards": ["card_private_property", "card_surplus_product", "card_social_division", "card_exchange_embryo", "card_war_class", "card_contradiction_universality_particularity", "card_principal_secondary_contradiction", "card_subjective_initiative"],
+    "theoryFocus": "focus_private_property",
+    "townTheme": {
+      "ground": "#6B8E3C",
+      "sky": "#87CEEB",
+      "buildings": ["fence", "barn", "storage"],
+      "ambient": ["clouds", "smoke"],
+      "palette": {
+        "primary": "#7B8E23",
+        "secondary": "#9FBC8F",
+        "accent": "#EAA520",
+        "building": "#9B8365",
+        "roof": "#7B5236"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "奴隶社会",
+    "icon": "chain",
+    "productivity": "青铜器广泛使用、灌溉农业、手工业、脑体分工出现",
+    "relations": "奴隶主占有生产资料和奴隶人身全部，奴隶是会说话的工具",
+    "exploitationRate": 0.8,
+    "classes": [
+      { "name": "奴隶主", "populationPct": 5, "color": "#9C27B0" },
+      { "name": "自由民", "populationPct": 15, "color": "#FF9800" },
+      { "name": "奴隶", "populationPct": 80, "color": "#9E9E9E" }
+    ],
+    "superstructure": {
+      "politics": "奴隶主专政，国家机器诞生并日益完善",
+      "law": "维护奴隶主利益，奴隶无任何权利，公开的阶级压迫",
+      "ideology": "天命观、君权神授、等级宿命论、脑力劳动特权化"
+    },
+    "citizenDialogs": ["slave_master_1", "slave_master_2", "slave_slave_1", "slave_slave_2", "slave_freeman_1", "slave_scribe_1", "slave_rebel_1", "slave_priest_1", "slave_thinker_1", "slave_thinker_2", "slave_philosopher_1", "slave_content_1", "slave_individual_1", "slave_possibility_1"],
+    "knowledgeCards": ["card_slavery", "card_state_origin", "card_class", "card_exploitation", "card_mental_manual_divide", "card_slave_revolt", "card_content_form", "card_individual_in_history", "card_possibility_actuality"],
+    "theoryFocus": "focus_state_birth",
+    "townTheme": {
+      "ground": "#8B7D3C",
+      "sky": "#C4A882",
+      "buildings": ["palace", "temple", "slave_camp", "farm"],
+      "ambient": ["smoke", "dust"],
+      "palette": {
+        "primary": "#B8860B",
+        "secondary": "#DAA520",
+        "accent": "#8B0000",
+        "building": "#D2B48C",
+        "roof": "#8B4513"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "封建制度",
+    "icon": "castle",
+    "productivity": "铁器广泛使用、耕犁、手工业行会、风车水磨",
+    "relations": "领主占有土地，农奴依附于土地，有一定人身自由但须缴纳地租",
+    "exploitationRate": 0.6,
+    "classes": [
+      { "name": "领主", "populationPct": 5, "color": "#9C27B0" },
+      { "name": "农奴", "populationPct": 80, "color": "#8BC34A" },
+      { "name": "手工业者", "populationPct": 15, "color": "#FF9800" }
+    ],
+    "superstructure": {
+      "politics": "封建等级制，君权神授，层层分封",
+      "law": "维护领主特权，农奴受领主审判，等级森严",
+      "ideology": "宗教神学、君权神授、三纲五常、今世受苦来世享福"
+    },
+    "citizenDialogs": ["feudal_lord_1", "feudal_lord_2", "feudal_lord_3", "feudal_serf_1", "feudal_serf_2", "feudal_artisan_1", "feudal_priest_1", "feudal_peasant_1", "feudal_doubter_1", "feudal_thinker_1", "feudal_law_1", "feudal_masses_1", "feudal_truth_1"],
+    "knowledgeCards": ["card_feudalism", "card_serfdom", "card_superstructure", "card_ideology", "card_land_rent", "card_religion_tool", "card_law_objectivity", "card_masses_create_history", "card_truth_absoluteness_relativity"],
+    "theoryFocus": "focus_feudal_ideology",
+    "townTheme": {
+      "ground": "#5D7A3C",
+      "sky": "#7EB8DA",
+      "buildings": ["castle", "church", "village", "manor"],
+      "ambient": ["clouds", "birds"],
+      "palette": {
+        "primary": "#556B2F",
+        "secondary": "#8FBC8F",
+        "accent": "#8B0000",
+        "building": "#A0522D",
+        "roof": "#8B0000"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "资本主义自由竞争",
+    "icon": "smoke",
+    "productivity": "蒸汽机、机器大工业、铁路、纺织机械化",
+    "relations": "资本家私有制，雇佣劳动，劳动力成为商品，剩余价值剥削",
+    "exploitationRate": 1.25,
+    "classes": [
+      { "name": "资本家", "populationPct": 5, "color": "#F1C40F" },
+      { "name": "工人", "populationPct": 85, "color": "#E67E22" },
+      { "name": "小资产阶级", "populationPct": 10, "color": "#95A5A6" }
+    ],
+    "superstructure": {
+      "politics": "议会民主，多党竞争，形式上的政治平等",
+      "law": "私有财产不可侵犯，契约自由，法律面前形式平等",
+      "ideology": "自由主义、功利主义、个人主义、机械唯物主义"
+    },
+    "citizenDialogs": ["cap_capitalist_1", "cap_capitalist_2", "cap_worker_1", "cap_worker_2", "cap_worker_3", "cap_worker_4", "cap_merchant_1", "cap_banker_1", "cap_engineer_1", "cap_thinker_1", "cap_peasant_1", "cap_banker_2", "cap_labor_duality_1", "cap_value_law_1", "cap_money_1", "cap_surplus_rate_1", "cap_wage_1", "cap_profit_1", "cap_motion_1"],
+    "knowledgeCards": ["card_surplus_value", "card_labor_power", "card_commodity_fetishism", "card_capital_accumulation", "card_alienation_labor", "card_cyclical_crisis", "card_labor_duality", "card_law_of_value", "card_money_essence", "card_rate_of_surplus_value", "card_wage_essence", "card_average_profit", "card_matter_motion"],
+    "theoryFocus": "focus_crisis",
+    "townTheme": {
+      "ground": "#6B6B6B",
+      "sky": "#A9A9A9",
+      "buildings": ["factory", "chimney", "market", "parliament", "slum"],
+      "ambient": ["smoke", "steam"],
+      "palette": {
+        "primary": "#4A4A4A",
+        "secondary": "#696969",
+        "accent": "#FF4500",
+        "building": "#808080",
+        "roof": "#2F4F4F"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "垄断资本主义",
+    "icon": "moneybag",
+    "productivity": "电气化、流水线、化工、金融资本主导",
+    "relations": "垄断资本控制经济命脉，金融寡头统治，贫富分化加剧",
+    "exploitationRate": 2.0,
+    "classes": [
+      { "name": "垄断资本", "populationPct": 2, "color": "#F1C40F" },
+      { "name": "工人", "populationPct": 68, "color": "#E67E22" },
+      { "name": "失业者", "populationPct": 30, "color": "#E74C3C" }
+    ],
+    "superstructure": {
+      "politics": "资本操纵民主，国家是管理资产阶级事务的委员会",
+      "law": "反垄断法形同虚设，保护垄断利润，镇压工人运动",
+      "ideology": "消费主义、新自由主义、历史终结论、帝国主义意识形态"
+    },
+    "citizenDialogs": ["mono_banker_1", "mono_banker_2", "mono_unemployed_1", "mono_striker_1", "mono_worker_1", "mono_general_1", "mono_intellectual_1", "mono_worker_2", "mono_thinker_1", "mono_theorist_1", "mono_rebel_1", "mono_state_1", "mono_global_1", "mono_change_1"],
+    "knowledgeCards": ["card_monopoly", "card_overproduction", "card_class_struggle", "card_imperialism", "card_finance_capital", "card_imperialist_war", "card_state_monopoly_capitalism", "card_economic_globalization", "card_contemporary_capitalism_changes"],
+    "theoryFocus": "focus_marxism_birth",
+    "townTheme": {
+      "ground": "#4A4A4A",
+      "sky": "#8B8B8B",
+      "buildings": ["skyscraper", "slum", "barricade", "police_station"],
+      "ambient": ["smoke", "rain"],
+      "palette": {
+        "primary": "#2F2F2F",
+        "secondary": "#4A4A4A",
+        "accent": "#FFD700",
+        "building": "#3C3C3C",
+        "roof": "#1C1C1C"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "社会主义过渡",
+    "icon": "handshake",
+    "productivity": "电气化、拖拉机、集体化生产、计划工业化体系",
+    "relations": "生产资料公有制，按劳分配，消灭剥削阶级基础",
+    "exploitationRate": 0,
+    "classes": [
+      { "name": "工人阶级", "populationPct": 60, "color": "#2196F3" },
+      { "name": "农民", "populationPct": 30, "color": "#4CAF50" },
+      { "name": "知识分子", "populationPct": 10, "color": "#9C27B0" }
+    ],
+    "superstructure": {
+      "politics": "无产阶级专政，人民当家作主，广泛的社会参与",
+      "law": "保护公有制，保障劳动权利和基本生活权利",
+      "ideology": "马克思主义指导，集体主义精神，劳动光荣观念"
+    },
+    "citizenDialogs": ["social_farmer_1", "social_cadre_1", "social_worker_1", "social_intellectual_1", "social_doctor_1", "social_woman_1", "social_student_1", "social_engineer_1", "social_leader_1", "social_historian_1", "social_party_1", "social_spread_1", "social_tech_1"],
+    "knowledgeCards": ["card_public_ownership", "card_distribution_labor", "card_social_security", "card_dictatorship_proletariat", "card_industrialization", "card_women_liberation", "card_marxist_party", "card_socialism_one_to_many", "card_science_technology_productivity"],
+    "theoryFocus": "focus_socialist_revolution",
+    "townTheme": {
+      "ground": "#5D8A3C",
+      "sky": "#87CEEB",
+      "buildings": ["collective_farm", "culture_palace", "hospital", "school"],
+      "ambient": ["clouds", "flags"],
+      "palette": {
+        "primary": "#CC3333",
+        "secondary": "#FFD700",
+        "accent": "#FF4444",
+        "building": "#B8860B",
+        "roof": "#CC3333"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "name": "共产主义远景",
+    "icon": "star",
+    "productivity": "绿色能源、自动化、人工智能、生产力高度发达",
+    "relations": "生产资料全社会公有，按需分配，自由人联合体",
+    "exploitationRate": 0,
+    "classes": [
+      { "name": "自由人联合体", "populationPct": 100, "color": "#E91E63" }
+    ],
+    "superstructure": {
+      "politics": "国家自行消亡，自由人的自由联合，社会自治",
+      "law": "无需强制性法律，公共事务由自由人协商决定",
+      "ideology": "人的全面发展，自由自觉的活动，人类共同意识"
+    },
+    "citizenDialogs": ["comm_resident_1", "comm_resident_2", "comm_resident_3", "comm_child_1", "comm_artist_1", "comm_scientist_1", "comm_elder_1", "comm_philosopher_1", "comm_thinker_1", "comm_leap1_1", "comm_leap2_1", "comm_necessity_1"],
+    "knowledgeCards": ["card_communism", "card_distribution_need", "card_human_development", "card_state_withering", "card_realm_of_freedom", "card_full_emancipation", "card_perceptual_to_rational_leap", "card_rational_to_practice_leap"],
+    "theoryFocus": "focus_communism",
+    "townTheme": {
+      "ground": "#7CCD7C",
+      "sky": "#87CEFA",
+      "buildings": ["green_energy", "auto_factory", "leisure_center", "tech_tree"],
+      "ambient": ["clouds", "birds", "sparkles"],
+      "palette": {
+        "primary": "#32CD32",
+        "secondary": "#00CED1",
+        "accent": "#FFD700",
+        "building": "#90EE90",
+        "roof": "#20B2AA"
+      }
+    }
+  }
+]
