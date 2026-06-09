@@ -115,6 +115,8 @@ interface AppState {
   superstructureExpanded: boolean
   tooltipText: string | null
   tooltipPos: { x: number; y: number } | null
+  showQuiz: boolean
+  showExplanation: boolean
 
   setStage: (id: number) => void
   nextStage: () => void
@@ -134,6 +136,8 @@ interface AppState {
   setHighlightedStages: (ids: number[]) => void
   toggleSuperstructure: () => void
   setTooltip: (text: string | null, pos?: { x: number; y: number }) => void
+  setQuiz: (show: boolean) => void
+  setExplanation: (show: boolean) => void
 }
 
 export const useAppStore = create<AppState>((set, get) => ({
@@ -159,6 +163,8 @@ export const useAppStore = create<AppState>((set, get) => ({
   superstructureExpanded: false,
   tooltipText: null,
   tooltipPos: null,
+  showQuiz: false,
+  showExplanation: false,
 
   setStage: (id: number) => {
     const state = get()
@@ -255,4 +261,8 @@ export const useAppStore = create<AppState>((set, get) => ({
     tooltipText: text,
     tooltipPos: pos || null
   }),
+
+  setQuiz: (show: boolean) => set({ showQuiz: show }),
+
+  setExplanation: (show: boolean) => set({ showExplanation: show }),
 }))

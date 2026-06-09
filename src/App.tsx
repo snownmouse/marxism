@@ -10,12 +10,17 @@ import TheoryFocusPanel from './components/TheoryFocusPanel'
 import GlossaryPopup from './components/GlossaryPopup'
 import DialogBubbles from './components/DialogBubbles'
 import ConceptOverview from './components/ConceptOverview'
+import QuizPanel from './components/QuizPanel'
+import ExplanationPanel from './components/ExplanationPanel'
+import KnowledgeMap from './components/KnowledgeMap'
 
 export default function App() {
   const isAutoPlaying = useAppStore(s => s.isAutoPlaying)
   const toggleAutoPlay = useAppStore(s => s.toggleAutoPlay)
   const setComparison = useAppStore(s => s.setComparison)
   const setKnowledgeNetwork = useAppStore(s => s.setKnowledgeNetwork)
+  const setQuiz = useAppStore(s => s.setQuiz)
+  const setExplanation = useAppStore(s => s.setExplanation)
   const tooltipText = useAppStore(s => s.tooltipText)
   const tooltipPos = useAppStore(s => s.tooltipPos)
   const [showConceptOverview, setShowConceptOverview] = useState(false)
@@ -55,6 +60,24 @@ export default function App() {
           </button>
           <button
             className="header-btn"
+            onClick={() => setExplanation(true)}
+          >
+            📖 内容讲解
+          </button>
+          <button
+            className="header-btn"
+            onClick={() => setQuiz(true)}
+          >
+            📝 考试复习
+          </button>
+          <button
+            className="header-btn"
+            onClick={() => setShowConceptOverview(true)}
+          >
+            🌳 知识体系
+          </button>
+          <button
+            className="header-btn"
             onClick={() => {
               alert(
                 '📖 原理社会 · 马克思主义动态模拟器\n\n' +
@@ -91,6 +114,8 @@ export default function App() {
       <KnowledgeNetwork />
       <TheoryFocusPanel />
       <GlossaryPopup />
+      <QuizPanel />
+      <ExplanationPanel />
 
       <ConceptOverview show={showConceptOverview} onClose={() => setShowConceptOverview(false)} />
 

@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useAppStore } from '../store/useAppStore'
+import KnowledgeMap from './KnowledgeMap'
 
-type TabKey = 'glossary' | 'dialogs' | 'cards' | 'summary'
+type TabKey = 'glossary' | 'dialogs' | 'cards' | 'summary' | 'knowledge'
 
 export default function ConceptOverview({ show, onClose }: { show: boolean; onClose: () => void }) {
   const stages = useAppStore(s => s.stages)
@@ -19,6 +20,7 @@ export default function ConceptOverview({ show, onClose }: { show: boolean; onCl
 
   const tabs: { key: TabKey; label: string; count: number }[] = [
     { key: 'summary', label: '📊 总览', count: 0 },
+    { key: 'knowledge', label: '🌳 知识体系', count: 0 },
     { key: 'glossary', label: '📖 术语', count: glossary.length },
     { key: 'dialogs', label: '💬 对话', count: dialogs.length },
     { key: 'cards', label: '🃏 卡片', count: knowledgeCards.length },
@@ -94,6 +96,12 @@ export default function ConceptOverview({ show, onClose }: { show: boolean; onCl
                   })}
                 </div>
               </div>
+            </div>
+          )}
+
+          {tab === 'knowledge' && (
+            <div className="knowledge-tab-content">
+              <KnowledgeMap />
             </div>
           )}
 
