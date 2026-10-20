@@ -13,6 +13,7 @@ import ConceptOverview from './components/ConceptOverview'
 import QuizPanel from './components/QuizPanel'
 import ExplanationPanel from './components/ExplanationPanel'
 import KnowledgeMap from './components/KnowledgeMap'
+import NpcChat from './components/NpcChat'
 import VoiceSettings from './components/VoiceSettings'
 import { subscribe as subscribeTts, getSnapshot as getTtsSnapshot, stop as stopTts } from './services/tts'
 
@@ -23,6 +24,8 @@ export default function App() {
   const setKnowledgeNetwork = useAppStore(s => s.setKnowledgeNetwork)
   const setQuiz = useAppStore(s => s.setQuiz)
   const setExplanation = useAppStore(s => s.setExplanation)
+  const showNpc = useAppStore(s => s.showNpc)
+  const setNpc = useAppStore(s => s.setNpc)
   const tooltipText = useAppStore(s => s.tooltipText)
   const tooltipPos = useAppStore(s => s.tooltipPos)
   const [showConceptOverview, setShowConceptOverview] = useState(false)
@@ -45,13 +48,6 @@ export default function App() {
           </button>
         </div>
         <div className="header-actions">
-          <button
-            className={`header-btn ${isSpeaking ? 'active' : ''}`}
-            onClick={() => isSpeaking ? stopTts() : setShowVoiceSettings(true)}
-            title={isSpeaking ? '停止朗读' : '语音设置'}
-          >
-            {isSpeaking ? '⏹ 停止朗读' : '🔊 语音'}
-          </button>
           <button
             className={`header-btn ${isAutoPlaying ? 'active' : ''}`}
             onClick={toggleAutoPlay}
@@ -81,6 +77,19 @@ export default function App() {
             onClick={() => setQuiz(true)}
           >
             📝 考试复习
+          </button>
+          <button
+            className={`header-btn ${showNpc ? 'active' : ''}`}
+            onClick={() => setNpc(true)}
+          >
+            🤖 AI 向导
+          </button>
+          <button
+            className={`header-btn ${isSpeaking ? 'active' : ''}`}
+            onClick={() => isSpeaking ? stopTts() : setShowVoiceSettings(true)}
+            title={isSpeaking ? '停止朗读' : '语音设置'}
+          >
+            {isSpeaking ? '⏹ 停止朗读' : '🔊 语音'}
           </button>
           <button
             className="header-btn"
@@ -128,6 +137,7 @@ export default function App() {
       <GlossaryPopup />
       <QuizPanel />
       <ExplanationPanel />
+      <NpcChat />
 
       <ConceptOverview show={showConceptOverview} onClose={() => setShowConceptOverview(false)} />
 

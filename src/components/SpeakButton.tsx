@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from 'react'
 import { speak, stop, subscribe, getSnapshot, cleanText } from '../services/tts'
+import '../styles/voice.css'
 
 interface SpeakButtonProps {
   /** 要朗读的文本 */

@@ -117,6 +117,7 @@ interface AppState {
   tooltipPos: { x: number; y: number } | null
   showQuiz: boolean
   showExplanation: boolean
+  showNpc: boolean
 
   setStage: (id: number) => void
   nextStage: () => void
@@ -138,6 +139,7 @@ interface AppState {
   setTooltip: (text: string | null, pos?: { x: number; y: number }) => void
   setQuiz: (show: boolean) => void
   setExplanation: (show: boolean) => void
+  setNpc: (show: boolean) => void
 }
 
 export const useAppStore = create<AppState>((set, get) => ({
@@ -165,6 +167,7 @@ export const useAppStore = create<AppState>((set, get) => ({
   tooltipPos: null,
   showQuiz: false,
   showExplanation: false,
+  showNpc: false,
 
   setStage: (id: number) => {
     const state = get()
@@ -186,7 +189,7 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   prevStage: () => {
     const state = get()
-    const prevId = Math.max(state.currentStageId - 1, 0)
+    const prevId = Math.max(state.currentStageId - 1, state.stages.length - 1)
     state.setStage(prevId)
   },
 
@@ -265,4 +268,6 @@ export const useAppStore = create<AppState>((set, get) => ({
   setQuiz: (show: boolean) => set({ showQuiz: show }),
 
   setExplanation: (show: boolean) => set({ showExplanation: show }),
+
+  setNpc: (show: boolean) => set({ showNpc: show }),
 }))
