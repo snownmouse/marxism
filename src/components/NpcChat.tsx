@@ -9,6 +9,7 @@ import {
   type ChatMessage,
   type AIContext,
 } from '../lib/aiModel'
+import '../styles/npc.css'
 
 interface Msg {
   id: string

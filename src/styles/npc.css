@@ -1,0 +1,280 @@
+/* ===================== AI 向导 NPC 面板 ===================== */
+.npc-modal {
+  width: 440px;
+  max-width: 92vw;
+  display: flex;
+  flex-direction: column;
+  max-height: 82vh;
+}
+
+.npc-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.npc-mode-badge {
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+.npc-mode-badge.mode-local {
+  color: var(--text-accent);
+  border-color: rgba(255, 215, 0, 0.3);
+  background: rgba(255, 215, 0, 0.08);
+}
+.npc-mode-badge.mode-dashscope {
+  color: var(--accent-blue);
+  border-color: rgba(33, 150, 243, 0.4);
+  background: rgba(33, 150, 243, 0.1);
+}
+
+.npc-gear {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.npc-gear:hover {
+  color: var(--text-accent);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.npc-settings {
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid var(--border-color);
+}
+.npc-settings-title {
+  font-size: 13px;
+  color: var(--text-accent);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.npc-settings-hint {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.npc-settings-hint code {
+  background: var(--bg-card);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+.npc-settings-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.npc-key-input {
+  flex: 1;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: var(--ui-font);
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+.npc-key-input:focus {
+  outline: none;
+  border-color: var(--text-accent);
+}
+.npc-save-btn,
+.npc-clear-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: var(--ui-font);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.npc-save-btn:hover {
+  border-color: var(--text-accent);
+  color: var(--text-accent);
+}
+.npc-clear-btn:hover {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+}
+.npc-security-note {
+  font-size: 11px;
+  color: var(--accent-orange);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.npc-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 240px;
+}
+
+.npc-msg {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.npc-msg.user {
+  justify-content: flex-end;
+}
+.npc-avatar {
+  font-size: 20px;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+}
+.npc-bubble {
+  position: relative;
+  max-width: 82%;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+.npc-msg.user .npc-bubble {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.25), rgba(33, 150, 243, 0.12));
+  border-color: rgba(33, 150, 243, 0.4);
+  color: #eaf4ff;
+}
+.npc-msg-text > div {
+  margin: 2px 0;
+}
+.npc-quote {
+  border-left: 3px solid rgba(255, 215, 0, 0.4);
+  padding-left: 8px;
+  color: var(--text-accent);
+  font-style: italic;
+}
+.npc-bullet {
+  padding-left: 4px;
+}
+.npc-speak-btn {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 1px 5px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.npc-bubble:hover .npc-speak-btn {
+  opacity: 1;
+}
+.npc-speak-btn:hover {
+  color: var(--text-accent);
+}
+.npc-loading {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.npc-input-area {
+  border-top: 1px solid var(--border-color);
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.15);
+}
+.npc-speak-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.npc-textarea {
+  width: 100%;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-family: var(--ui-font);
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 8px 10px;
+  border-radius: 6px;
+  resize: none;
+}
+.npc-textarea:focus {
+  outline: none;
+  border-color: var(--text-accent);
+}
+.npc-input-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.npc-clear-chat {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-family: var(--ui-font);
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.npc-clear-chat:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
+}
+.npc-send-btn {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+  border: 1px solid var(--text-accent);
+  color: var(--text-accent);
+  font-family: var(--ui-font);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.npc-send-btn:hover:not(:disabled) {
+  background: rgba(255, 215, 0, 0.25);
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.2);
+}
+.npc-send-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .npc-modal {
+    width: 94vw;
+    max-height: 88vh;
+  }
+}
