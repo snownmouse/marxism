@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useAppStore } from '../store/useAppStore'
+import SpeakButton from './SpeakButton'
 
 const BUBBLE_W = 200
 const BUBBLE_OFFSET_X = Math.floor(BUBBLE_W / 2)
@@ -67,6 +68,13 @@ export default function DialogBubbles() {
               <span className="dialog-bubble-text">{bubble.text}</span>
             </div>
             <div className={`dialog-bubble-tail ${isQuirky ? 'dialog-bubble-tail-quirky' : ''}`} />
+            {!isUser && (
+              <SpeakButton
+                text={bubble.text}
+                title="朗读这句话"
+                className="speak-btn-bubble"
+              />
+            )}
             {gItem && (
               <button
                 className="dialog-bubble-info"
