@@ -13,6 +13,7 @@ import ConceptOverview from './components/ConceptOverview'
 import QuizPanel from './components/QuizPanel'
 import ExplanationPanel from './components/ExplanationPanel'
 import KnowledgeMap from './components/KnowledgeMap'
+import NpcChat from './components/NpcChat'
 
 export default function App() {
   const isAutoPlaying = useAppStore(s => s.isAutoPlaying)
@@ -21,6 +22,8 @@ export default function App() {
   const setKnowledgeNetwork = useAppStore(s => s.setKnowledgeNetwork)
   const setQuiz = useAppStore(s => s.setQuiz)
   const setExplanation = useAppStore(s => s.setExplanation)
+  const showNpc = useAppStore(s => s.showNpc)
+  const setNpc = useAppStore(s => s.setNpc)
   const tooltipText = useAppStore(s => s.tooltipText)
   const tooltipPos = useAppStore(s => s.tooltipPos)
   const [showConceptOverview, setShowConceptOverview] = useState(false)
@@ -71,6 +74,12 @@ export default function App() {
             📝 考试复习
           </button>
           <button
+            className={`header-btn ${showNpc ? 'active' : ''}`}
+            onClick={() => setNpc(true)}
+          >
+            🤖 AI 向导
+          </button>
+          <button
             className="header-btn"
             onClick={() => setShowConceptOverview(true)}
           >
@@ -116,6 +125,7 @@ export default function App() {
       <GlossaryPopup />
       <QuizPanel />
       <ExplanationPanel />
+      <NpcChat />
 
       <ConceptOverview show={showConceptOverview} onClose={() => setShowConceptOverview(false)} />
 
