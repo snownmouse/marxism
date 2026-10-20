@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useSyncExternalStore } from 'react'
 import { useAppStore } from './store/useAppStore'
 import PixelTownCanvas from './components/PixelTownCanvas'
 import DataPanel from './components/DataPanel'
@@ -14,6 +14,8 @@ import QuizPanel from './components/QuizPanel'
 import ExplanationPanel from './components/ExplanationPanel'
 import KnowledgeMap from './components/KnowledgeMap'
 import NpcChat from './components/NpcChat'
+import VoiceSettings from './components/VoiceSettings'
+import { subscribe as subscribeTts, getSnapshot as getTtsSnapshot, stop as stopTts } from './services/tts'
 
 export default function App() {
   const isAutoPlaying = useAppStore(s => s.isAutoPlaying)
@@ -27,6 +29,9 @@ export default function App() {
   const tooltipText = useAppStore(s => s.tooltipText)
   const tooltipPos = useAppStore(s => s.tooltipPos)
   const [showConceptOverview, setShowConceptOverview] = useState(false)
+  const [showVoiceSettings, setShowVoiceSettings] = useState(false)
+  const ttsState = useSyncExternalStore(subscribeTts, getTtsSnapshot)
+  const isSpeaking = ttsState.status === 'playing' || ttsState.status === 'loading'
 
   return (
     <div className="app-container">
@@ -80,6 +85,13 @@ export default function App() {
             🤖 AI 向导
           </button>
           <button
+            className={`header-btn ${isSpeaking ? 'active' : ''}`}
+            onClick={() => isSpeaking ? stopTts() : setShowVoiceSettings(true)}
+            title={isSpeaking ? '停止朗读' : '语音设置'}
+          >
+            {isSpeaking ? '⏹ 停止朗读' : '🔊 语音'}
+          </button>
+          <button
             className="header-btn"
             onClick={() => setShowConceptOverview(true)}
           >
@@ -128,6 +140,8 @@ export default function App() {
       <NpcChat />
 
       <ConceptOverview show={showConceptOverview} onClose={() => setShowConceptOverview(false)} />
+
+      {showVoiceSettings && <VoiceSettings onClose={() => setShowVoiceSettings(false)} />}
 
       {tooltipText && tooltipPos && (
         <div
