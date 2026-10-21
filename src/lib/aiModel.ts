@@ -314,25 +314,38 @@ function stripForSpeech(text: string): string {
 /**
  * 切成适合「边合成边播」的小段：第一段尽量短（先出声），后面逐步放长（少发请求）。
  * 只在标点处切，不改动用字，避免合成出来断句怪异。
+ * 注意：这里逐字符扫描而不是用正则后行断言（?<=），否则老版 Safari 会在解析阶段抛错、整站白屏。
  */
 function splitSegments(text: string): string[] {
-  const clauses = text.split(/(?<=[。！？!?；;：:，,])/).map(s => s.trim()).filter(Boolean)
-  if (clauses.length <= 1) return [text]
-  const limit = (i: number) => (i === 0 ? 36 : 72)
-  const segs: string[] = []
+  const MARKS = '。！？!?；;：:，,、\n'
+  const clauses: string[] = []
   let buf = ''
-  for (const c of clauses) {
-    if (buf && buf.length + c.length > limit(segs.length)) {
-      segs.push(buf)
-      buf = ''
-    }
-    buf += c
-    if (/[。！？!?]$/.test(buf) && buf.length >= limit(segs.length)) {
-      segs.push(buf)
+  for (const ch of text) {
+    buf += ch
+    if (MARKS.includes(ch)) {
+      const s = buf.trim()
+      if (s) clauses.push(s)
       buf = ''
     }
   }
-  if (buf) segs.push(buf)
+  if (buf.trim()) clauses.push(buf.trim())
+  if (clauses.length <= 1) return [text]
+
+  const limit = (i: number) => (i === 0 ? 28 : 72)
+  const segs: string[] = []
+  let cur = ''
+  for (const c of clauses) {
+    if (cur && cur.length + c.length > limit(segs.length)) {
+      segs.push(cur)
+      cur = ''
+    }
+    cur += c
+    if (/[。！？!?]$/.test(cur) && cur.length >= limit(segs.length)) {
+      segs.push(cur)
+      cur = ''
+    }
+  }
+  if (cur) segs.push(cur)
   return segs
 }
 
