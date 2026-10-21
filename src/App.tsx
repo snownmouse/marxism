@@ -14,8 +14,8 @@ import QuizPanel from './components/QuizPanel'
 import ExplanationPanel from './components/ExplanationPanel'
 import KnowledgeMap from './components/KnowledgeMap'
 import NpcChat from './components/NpcChat'
-import VoiceSettings from './components/VoiceSettings'
-import { subscribe as subscribeTts, getSnapshot as getTtsSnapshot, stop as stopTts } from './services/tts'
+import VoiceGallery from './components/VoiceGallery'
+import { subscribe as subscribeTts, getSnapshot as getTtsSnapshot, stop as stopTts, toggleEnabled } from './services/tts'
 
 export default function App() {
   const isAutoPlaying = useAppStore(s => s.isAutoPlaying)
@@ -29,7 +29,7 @@ export default function App() {
   const tooltipText = useAppStore(s => s.tooltipText)
   const tooltipPos = useAppStore(s => s.tooltipPos)
   const [showConceptOverview, setShowConceptOverview] = useState(false)
-  const [showVoiceSettings, setShowVoiceSettings] = useState(false)
+  const [showVoiceGallery, setShowVoiceGallery] = useState(false)
   const ttsState = useSyncExternalStore(subscribeTts, getTtsSnapshot)
   const isSpeaking = ttsState.status === 'playing' || ttsState.status === 'loading'
 
@@ -85,11 +85,18 @@ export default function App() {
             🤖 AI 向导
           </button>
           <button
-            className={`header-btn ${isSpeaking ? 'active' : ''}`}
-            onClick={() => isSpeaking ? stopTts() : setShowVoiceSettings(true)}
-            title={isSpeaking ? '停止朗读' : '语音设置'}
+            className={`header-btn ${ttsState.enabled ? 'active' : ''}`}
+            onClick={() => isSpeaking ? stopTts() : toggleEnabled()}
+            title={isSpeaking ? '停止朗读' : (ttsState.enabled ? '关闭朗读按钮' : '开启朗读按钮')}
           >
-            {isSpeaking ? '⏹ 停止朗读' : '🔊 语音'}
+            {isSpeaking ? '⏹ 停止朗读' : (ttsState.enabled ? '🔊 朗读中' : '🔇 朗读关')}
+          </button>
+          <button
+            className="header-btn"
+            onClick={() => setShowVoiceGallery(true)}
+            title="查看 26 个预制音色的人设与来源"
+          >
+            🎙️ 音色图鉴
           </button>
           <button
             className="header-btn"
@@ -141,7 +148,7 @@ export default function App() {
 
       <ConceptOverview show={showConceptOverview} onClose={() => setShowConceptOverview(false)} />
 
-      {showVoiceSettings && <VoiceSettings onClose={() => setShowVoiceSettings(false)} />}
+      {showVoiceGallery && <VoiceGallery onClose={() => setShowVoiceGallery(false)} />}
 
       {tooltipText && tooltipPos && (
         <div

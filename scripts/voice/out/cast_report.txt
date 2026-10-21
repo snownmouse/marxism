@@ -1,0 +1,33 @@
+== 选角报告 ==
+说话人总数: 82 (THCHS-30 + AISHELL-1)
+音色匹配: 26/26
+
+音色                       说话人     性别      F0 语速       能量     来源        
+banker_m                 AS0011  M      115 normal   low    AISHELL-1 
+building_n               AS0728  M      101 slow     low    AISHELL-1 
+cadre_n                  B8      M      144 normal   high   THCHS-30  
+capitalist_m             C8      M      155 normal   high   THCHS-30  
+chatter_f                D13     F      234 normal   normal THCHS-30  
+chatter_m                AS0005  M      124 normal   low    AISHELL-1 
+child_n                  B15     F      250 normal   normal THCHS-30  
+citizen_new_n            D8      M      149 normal   high   THCHS-30  
+concept_economy_m        AS0731  M      122 slow     low    AISHELL-1 
+concept_philosophy_n     AS0010  M      134 slow     low    AISHELL-1 
+elder_m                  AS0008  M      113 slow     low    AISHELL-1 
+freeman_m                AS0734  M      127 normal   normal AISHELL-1 
+future_f                 D6      F      226 normal   high   THCHS-30  
+future_m                 A8      M      147 normal   high   THCHS-30  
+intellectual_m           AS0004  M      119 normal   low    AISHELL-1 
+lord_m                   AS0012  M      124 slow     low    AISHELL-1 
+noble_antiquity_m        AS0725  M      142 slow     normal AISHELL-1 
+philosopher_n            AS0735  M      127 slow     low    AISHELL-1 
+priest_m                 AS0009  M      114 slow     low    AISHELL-1 
+rebel_m                  AS0727  M      138 normal   low    AISHELL-1 
+serf_m                   AS0016  M      120 slow     low    AISHELL-1 
+shaman_m                 AS0726  M      115 slow     low    AISHELL-1 
+slave_f                  C20     F      229 slow     low    THCHS-30  
+tribal_f                 A33     F      183 normal   normal THCHS-30  
+tribal_m                 AS0733  M      132 normal   low    AISHELL-1 
+worker_m                 AS0015  M      126 slow     low    AISHELL-1 
+
+注意: F0 接近的音色对 (可能听感雷同): [('intellectual_m', 'lord_m'), ('serf_m', 'shaman_m'), ('tribal_m', 'worker_m')]

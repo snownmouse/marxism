@@ -1,6 +1,11 @@
 node_modules
 dist
 *.tsbuildinfo
+__pycache__/
+*.pyc
+scripts/voice/out/*.csv
+scripts/voice/out/report.txt
+scripts/voice/out/tsc.txt
 .DS_Store
 *.log
 .env

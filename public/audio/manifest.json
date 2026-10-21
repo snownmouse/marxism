@@ -1,0 +1,2200 @@
+{
+ "generatedAt": "2026-10-21 11:44:40",
+ "model": "GPT-SoVITS s1v3 + s2Gv2ProPlus（零样本克隆）",
+ "totalDialogs": 210,
+ "totalFiles": 220,
+ "dialogs": {
+  "prim_hunter_1": {
+   "voice": "tribal_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_hunter_1.mp3",
+     "duration": 2.06
+    }
+   ]
+  },
+  "prim_hunter_2": {
+   "voice": "tribal_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_hunter_2.mp3",
+     "duration": 2.06
+    }
+   ]
+  },
+  "prim_elder_1": {
+   "voice": "elder_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_elder_1.mp3",
+     "duration": 3.02
+    }
+   ]
+  },
+  "prim_elder_2": {
+   "voice": "elder_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_elder_2.mp3",
+     "duration": 3.22
+    }
+   ]
+  },
+  "prim_gatherer_1": {
+   "voice": "tribal_f",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_gatherer_1.mp3",
+     "duration": 2.66
+    }
+   ]
+  },
+  "prim_shaman_1": {
+   "voice": "shaman_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_shaman_1.mp3",
+     "duration": 2.11
+    }
+   ]
+  },
+  "prim_hunter_3": {
+   "voice": "tribal_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_hunter_3.mp3",
+     "duration": 2.93
+    }
+   ]
+  },
+  "prim_child_1": {
+   "voice": "child_n",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_child_1.mp3",
+     "duration": 2.62
+    }
+   ]
+  },
+  "prim_craftsman_1": {
+   "voice": "tribal_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_craftsman_1.mp3",
+     "duration": 4.22
+    }
+   ]
+  },
+  "prim_thinker_1": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_thinker_1.mp3",
+     "duration": 2.9
+    }
+   ]
+  },
+  "prim_thinker_2": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_thinker_2.mp3",
+     "duration": 3.74
+    }
+   ]
+  },
+  "prim_cause_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_cause_1.mp3",
+     "duration": 7.61
+    }
+   ]
+  },
+  "prim_essence_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_essence_1.mp3",
+     "duration": 7.25
+    }
+   ]
+  },
+  "prim_necessity_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_necessity_1.mp3",
+     "duration": 8.42
+    }
+   ]
+  },
+  "prim_knowledge_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_knowledge_1.mp3",
+     "duration": 8.18
+    }
+   ]
+  },
+  "prim_chat_1": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_chat_1.mp3",
+     "duration": 2.18
+    }
+   ]
+  },
+  "prim_chat_2": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_chat_2.mp3",
+     "duration": 3.29
+    }
+   ]
+  },
+  "prim_chat_3": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_chat_3.mp3",
+     "duration": 3.38
+    }
+   ]
+  },
+  "prim_chat_4": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_chat_4.mp3",
+     "duration": 3.58
+    }
+   ]
+  },
+  "prim_chat_5": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_chat_5.mp3",
+     "duration": 4.22
+    }
+   ]
+  },
+  "prim_chat_6": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_chat_6.mp3",
+     "duration": 4.51
+    }
+   ]
+  },
+  "prim_chat_7": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_chat_7.mp3",
+     "duration": 3.17
+    }
+   ]
+  },
+  "prim_quirky_1": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_quirky_1.mp3",
+     "duration": 4.56
+    }
+   ]
+  },
+  "prim_quirky_2": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_quirky_2.mp3",
+     "duration": 4.63
+    }
+   ]
+  },
+  "prim_quirky_3": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_quirky_3.mp3",
+     "duration": 3.86
+    }
+   ]
+  },
+  "prim_quirky_4": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/prim_quirky_4.mp3",
+     "duration": 7.06
+    }
+   ]
+  },
+  "priv_noble_1": {
+   "voice": "noble_antiquity_m",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_noble_1.mp3",
+     "duration": 4.39
+    }
+   ]
+  },
+  "priv_freeman_1": {
+   "voice": "freeman_m",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_freeman_1.mp3",
+     "duration": 2.42
+    }
+   ]
+  },
+  "priv_freeman_2": {
+   "voice": "freeman_m",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_freeman_2.mp3",
+     "duration": 2.42
+    }
+   ]
+  },
+  "priv_captive_1": {
+   "voice": "slave_f",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_captive_1.mp3",
+     "duration": 2.26
+    }
+   ]
+  },
+  "priv_noble_2": {
+   "voice": "noble_antiquity_m",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_noble_2.mp3",
+     "duration": 5.35
+    }
+   ]
+  },
+  "priv_trader_1": {
+   "voice": "capitalist_m",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_trader_1.mp3",
+     "duration": 3.17
+    }
+   ]
+  },
+  "priv_noble_3": {
+   "voice": "noble_antiquity_m",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_noble_3.mp3",
+     "duration": 5.42
+    }
+   ]
+  },
+  "priv_rebel_1": {
+   "voice": "rebel_m",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_rebel_1.mp3",
+     "duration": 5.18
+    }
+   ]
+  },
+  "priv_thinker_1": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_thinker_1.mp3",
+     "duration": 5.11
+    }
+   ]
+  },
+  "priv_elder_1": {
+   "voice": "elder_m",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_elder_1.mp3",
+     "duration": 2.71
+    }
+   ]
+  },
+  "priv_contradiction_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_contradiction_1.mp3",
+     "duration": 10.3
+    }
+   ]
+  },
+  "priv_principal_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_principal_1.mp3",
+     "duration": 10.34
+    }
+   ]
+  },
+  "priv_initiative_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_initiative_1.mp3",
+     "duration": 6.38
+    }
+   ]
+  },
+  "priv_chat_1": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_chat_1.mp3",
+     "duration": 3.94
+    }
+   ]
+  },
+  "priv_chat_2": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_chat_2.mp3",
+     "duration": 3.1
+    }
+   ]
+  },
+  "priv_chat_3": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_chat_3.mp3",
+     "duration": 3.14
+    }
+   ]
+  },
+  "priv_chat_4": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_chat_4.mp3",
+     "duration": 4.15
+    }
+   ]
+  },
+  "priv_chat_5": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_chat_5.mp3",
+     "duration": 3.0
+    }
+   ]
+  },
+  "priv_chat_6": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_chat_6.mp3",
+     "duration": 3.58
+    }
+   ]
+  },
+  "priv_quirky_1": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_quirky_1.mp3",
+     "duration": 5.42
+    }
+   ]
+  },
+  "priv_quirky_2": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_quirky_2.mp3",
+     "duration": 6.02
+    }
+   ]
+  },
+  "priv_quirky_3": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/priv_quirky_3.mp3",
+     "duration": 4.56
+    }
+   ]
+  },
+  "slave_master_1": {
+   "voice": "noble_antiquity_m",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_master_1.mp3",
+     "duration": 3.77
+    }
+   ]
+  },
+  "slave_master_2": {
+   "voice": "noble_antiquity_m",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_master_2.mp3",
+     "duration": 4.39
+    }
+   ]
+  },
+  "slave_slave_1": {
+   "voice": "slave_f",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_slave_1.mp3",
+     "duration": 2.18
+    }
+   ]
+  },
+  "slave_slave_2": {
+   "voice": "slave_f",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_slave_2.mp3",
+     "duration": 2.42
+    }
+   ]
+  },
+  "slave_freeman_1": {
+   "voice": "freeman_m",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_freeman_1.mp3",
+     "duration": 3.48
+    }
+   ]
+  },
+  "slave_scribe_1": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_scribe_1.mp3",
+     "duration": 3.41
+    }
+   ]
+  },
+  "slave_rebel_1": {
+   "voice": "rebel_m",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_rebel_1.mp3",
+     "duration": 3.82
+    }
+   ]
+  },
+  "slave_priest_1": {
+   "voice": "priest_m",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_priest_1.mp3",
+     "duration": 5.06
+    }
+   ]
+  },
+  "slave_thinker_1": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_thinker_1.mp3",
+     "duration": 4.51
+    }
+   ]
+  },
+  "slave_thinker_2": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_thinker_2.mp3",
+     "duration": 7.63
+    }
+   ]
+  },
+  "slave_philosopher_1": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_philosopher_1.mp3",
+     "duration": 3.91
+    }
+   ]
+  },
+  "slave_content_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_content_1.mp3",
+     "duration": 10.68
+    }
+   ]
+  },
+  "slave_individual_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_individual_1.mp3",
+     "duration": 8.14
+    }
+   ]
+  },
+  "slave_possibility_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_possibility_1.mp3",
+     "duration": 12.1
+    }
+   ]
+  },
+  "slave_chat_1": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_chat_1.mp3",
+     "duration": 4.82
+    }
+   ]
+  },
+  "slave_chat_2": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_chat_2.mp3",
+     "duration": 2.3
+    }
+   ]
+  },
+  "slave_chat_3": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_chat_3.mp3",
+     "duration": 2.59
+    }
+   ]
+  },
+  "slave_chat_4": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_chat_4.mp3",
+     "duration": 3.31
+    }
+   ]
+  },
+  "slave_chat_5": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_chat_5.mp3",
+     "duration": 3.14
+    }
+   ]
+  },
+  "slave_quirky_1": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_quirky_1.mp3",
+     "duration": 7.63
+    }
+   ]
+  },
+  "slave_quirky_2": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_quirky_2.mp3",
+     "duration": 4.63
+    }
+   ]
+  },
+  "slave_quirky_3": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/slave_quirky_3.mp3",
+     "duration": 4.78
+    }
+   ]
+  },
+  "feudal_lord_1": {
+   "voice": "lord_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_lord_1.mp3",
+     "duration": 3.96
+    }
+   ]
+  },
+  "feudal_lord_2": {
+   "voice": "lord_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_lord_2.mp3",
+     "duration": 3.79
+    }
+   ]
+  },
+  "feudal_serf_1": {
+   "voice": "serf_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_serf_1.mp3",
+     "duration": 2.52
+    }
+   ]
+  },
+  "feudal_serf_2": {
+   "voice": "serf_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_serf_2.mp3",
+     "duration": 2.18
+    }
+   ]
+  },
+  "feudal_artisan_1": {
+   "voice": "serf_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_artisan_1.mp3",
+     "duration": 4.08
+    }
+   ]
+  },
+  "feudal_priest_1": {
+   "voice": "priest_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_priest_1.mp3",
+     "duration": 4.18
+    }
+   ]
+  },
+  "feudal_peasant_1": {
+   "voice": "serf_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_peasant_1.mp3",
+     "duration": 3.6
+    }
+   ]
+  },
+  "feudal_lord_3": {
+   "voice": "lord_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_lord_3.mp3",
+     "duration": 5.5
+    }
+   ]
+  },
+  "feudal_doubter_1": {
+   "voice": "serf_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_doubter_1.mp3",
+     "duration": 7.34
+    }
+   ]
+  },
+  "feudal_thinker_1": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_thinker_1.mp3",
+     "duration": 7.44
+    }
+   ]
+  },
+  "feudal_law_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_law_1.mp3",
+     "duration": 12.26
+    }
+   ]
+  },
+  "feudal_masses_1": {
+   "voice": "rebel_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_masses_1.mp3",
+     "duration": 10.1
+    }
+   ]
+  },
+  "feudal_truth_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_truth_1.mp3",
+     "duration": 9.5
+    }
+   ]
+  },
+  "feudal_chat_1": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_chat_1.mp3",
+     "duration": 5.23
+    }
+   ]
+  },
+  "feudal_chat_2": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_chat_2.mp3",
+     "duration": 5.88
+    }
+   ]
+  },
+  "feudal_chat_3": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_chat_3.mp3",
+     "duration": 4.46
+    }
+   ]
+  },
+  "feudal_chat_4": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_chat_4.mp3",
+     "duration": 2.98
+    }
+   ]
+  },
+  "feudal_chat_5": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_chat_5.mp3",
+     "duration": 4.58
+    }
+   ]
+  },
+  "feudal_quirky_1": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_quirky_1.mp3",
+     "duration": 6.98
+    }
+   ]
+  },
+  "feudal_quirky_2": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_quirky_2.mp3",
+     "duration": 5.95
+    }
+   ]
+  },
+  "feudal_quirky_3": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/feudal_quirky_3.mp3",
+     "duration": 5.52
+    }
+   ]
+  },
+  "cap_capitalist_1": {
+   "voice": "capitalist_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_capitalist_1.mp3",
+     "duration": 1.66
+    }
+   ]
+  },
+  "cap_capitalist_2": {
+   "voice": "capitalist_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_capitalist_2.mp3",
+     "duration": 3.1
+    }
+   ]
+  },
+  "cap_worker_1": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_worker_1.mp3",
+     "duration": 4.56
+    }
+   ]
+  },
+  "cap_worker_2": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_worker_2.mp3",
+     "duration": 2.93
+    }
+   ]
+  },
+  "cap_merchant_1": {
+   "voice": "capitalist_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_merchant_1.mp3",
+     "duration": 2.3
+    }
+   ]
+  },
+  "cap_worker_3": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_worker_3.mp3",
+     "duration": 4.1
+    }
+   ]
+  },
+  "cap_worker_4": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_worker_4.mp3",
+     "duration": 4.92
+    }
+   ]
+  },
+  "cap_banker_1": {
+   "voice": "banker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_banker_1.mp3",
+     "duration": 4.51
+    }
+   ]
+  },
+  "cap_engineer_1": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_engineer_1.mp3",
+     "duration": 6.05
+    }
+   ]
+  },
+  "cap_thinker_1": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_thinker_1.mp3",
+     "duration": 7.87
+    }
+   ]
+  },
+  "cap_peasant_1": {
+   "voice": "serf_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_peasant_1.mp3",
+     "duration": 5.69
+    }
+   ]
+  },
+  "cap_banker_2": {
+   "voice": "banker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_banker_2.mp3",
+     "duration": 5.66
+    }
+   ]
+  },
+  "cap_labor_duality_1": {
+   "voice": "concept_economy_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_labor_duality_1.mp3",
+     "duration": 8.88
+    }
+   ]
+  },
+  "cap_value_law_1": {
+   "voice": "concept_economy_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_value_law_1.mp3",
+     "duration": 8.14
+    }
+   ]
+  },
+  "cap_money_1": {
+   "voice": "concept_economy_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_money_1.mp3",
+     "duration": 7.82
+    },
+    {
+     "file": "audio/dialog/cap_money_1_p2.mp3",
+     "duration": 2.83
+    }
+   ]
+  },
+  "cap_surplus_rate_1": {
+   "voice": "concept_economy_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_surplus_rate_1.mp3",
+     "duration": 10.56
+    }
+   ]
+  },
+  "cap_wage_1": {
+   "voice": "concept_economy_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_wage_1.mp3",
+     "duration": 8.9
+    },
+    {
+     "file": "audio/dialog/cap_wage_1_p2.mp3",
+     "duration": 2.66
+    }
+   ]
+  },
+  "cap_profit_1": {
+   "voice": "concept_economy_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_profit_1.mp3",
+     "duration": 9.29
+    }
+   ]
+  },
+  "cap_motion_1": {
+   "voice": "concept_economy_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_motion_1.mp3",
+     "duration": 12.19
+    }
+   ]
+  },
+  "cap_chat_1": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_chat_1.mp3",
+     "duration": 2.26
+    }
+   ]
+  },
+  "cap_chat_2": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_chat_2.mp3",
+     "duration": 3.31
+    }
+   ]
+  },
+  "cap_chat_3": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_chat_3.mp3",
+     "duration": 2.71
+    }
+   ]
+  },
+  "cap_chat_4": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_chat_4.mp3",
+     "duration": 6.12
+    }
+   ]
+  },
+  "cap_chat_5": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_chat_5.mp3",
+     "duration": 1.92
+    }
+   ]
+  },
+  "cap_chat_6": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_chat_6.mp3",
+     "duration": 4.01
+    }
+   ]
+  },
+  "cap_quirky_1": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_quirky_1.mp3",
+     "duration": 9.07
+    }
+   ]
+  },
+  "cap_quirky_2": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_quirky_2.mp3",
+     "duration": 12.38
+    }
+   ]
+  },
+  "cap_quirky_3": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/cap_quirky_3.mp3",
+     "duration": 5.38
+    }
+   ]
+  },
+  "mono_banker_1": {
+   "voice": "banker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_banker_1.mp3",
+     "duration": 2.9
+    }
+   ]
+  },
+  "mono_banker_2": {
+   "voice": "banker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_banker_2.mp3",
+     "duration": 3.94
+    }
+   ]
+  },
+  "mono_unemployed_1": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_unemployed_1.mp3",
+     "duration": 4.34
+    }
+   ]
+  },
+  "mono_striker_1": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_striker_1.mp3",
+     "duration": 3.05
+    }
+   ]
+  },
+  "mono_worker_1": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_worker_1.mp3",
+     "duration": 4.46
+    }
+   ]
+  },
+  "mono_general_1": {
+   "voice": "banker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_general_1.mp3",
+     "duration": 2.83
+    }
+   ]
+  },
+  "mono_intellectual_1": {
+   "voice": "intellectual_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_intellectual_1.mp3",
+     "duration": 4.8
+    }
+   ]
+  },
+  "mono_worker_2": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_worker_2.mp3",
+     "duration": 4.61
+    }
+   ]
+  },
+  "mono_thinker_1": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_thinker_1.mp3",
+     "duration": 4.34
+    }
+   ]
+  },
+  "mono_theorist_1": {
+   "voice": "intellectual_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_theorist_1.mp3",
+     "duration": 5.45
+    }
+   ]
+  },
+  "mono_rebel_1": {
+   "voice": "rebel_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_rebel_1.mp3",
+     "duration": 4.34
+    }
+   ]
+  },
+  "mono_state_1": {
+   "voice": "concept_economy_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_state_1.mp3",
+     "duration": 12.74
+    }
+   ]
+  },
+  "mono_global_1": {
+   "voice": "concept_economy_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_global_1.mp3",
+     "duration": 8.76
+    }
+   ]
+  },
+  "mono_change_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_change_1.mp3",
+     "duration": 12.77
+    }
+   ]
+  },
+  "mono_chat_1": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_chat_1.mp3",
+     "duration": 3.98
+    }
+   ]
+  },
+  "mono_chat_2": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_chat_2.mp3",
+     "duration": 4.44
+    }
+   ]
+  },
+  "mono_chat_3": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_chat_3.mp3",
+     "duration": 4.06
+    }
+   ]
+  },
+  "mono_chat_4": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_chat_4.mp3",
+     "duration": 5.09
+    }
+   ]
+  },
+  "mono_quirky_1": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_quirky_1.mp3",
+     "duration": 6.77
+    }
+   ]
+  },
+  "mono_quirky_2": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_quirky_2.mp3",
+     "duration": 6.72
+    }
+   ]
+  },
+  "mono_quirky_3": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/mono_quirky_3.mp3",
+     "duration": 9.46
+    }
+   ]
+  },
+  "social_farmer_1": {
+   "voice": "citizen_new_n",
+   "parts": [
+    {
+     "file": "audio/dialog/social_farmer_1.mp3",
+     "duration": 2.64
+    }
+   ]
+  },
+  "social_cadre_1": {
+   "voice": "cadre_n",
+   "parts": [
+    {
+     "file": "audio/dialog/social_cadre_1.mp3",
+     "duration": 3.19
+    }
+   ]
+  },
+  "social_worker_1": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/social_worker_1.mp3",
+     "duration": 3.1
+    }
+   ]
+  },
+  "social_intellectual_1": {
+   "voice": "intellectual_m",
+   "parts": [
+    {
+     "file": "audio/dialog/social_intellectual_1.mp3",
+     "duration": 2.74
+    }
+   ]
+  },
+  "social_doctor_1": {
+   "voice": "citizen_new_n",
+   "parts": [
+    {
+     "file": "audio/dialog/social_doctor_1.mp3",
+     "duration": 2.18
+    }
+   ]
+  },
+  "social_woman_1": {
+   "voice": "citizen_new_n",
+   "parts": [
+    {
+     "file": "audio/dialog/social_woman_1.mp3",
+     "duration": 3.26
+    }
+   ]
+  },
+  "social_student_1": {
+   "voice": "citizen_new_n",
+   "parts": [
+    {
+     "file": "audio/dialog/social_student_1.mp3",
+     "duration": 3.02
+    }
+   ]
+  },
+  "social_engineer_1": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/social_engineer_1.mp3",
+     "duration": 3.41
+    }
+   ]
+  },
+  "social_leader_1": {
+   "voice": "cadre_n",
+   "parts": [
+    {
+     "file": "audio/dialog/social_leader_1.mp3",
+     "duration": 4.25
+    }
+   ]
+  },
+  "social_historian_1": {
+   "voice": "citizen_new_n",
+   "parts": [
+    {
+     "file": "audio/dialog/social_historian_1.mp3",
+     "duration": 3.77
+    }
+   ]
+  },
+  "social_party_1": {
+   "voice": "cadre_n",
+   "parts": [
+    {
+     "file": "audio/dialog/social_party_1.mp3",
+     "duration": 8.86
+    }
+   ]
+  },
+  "social_spread_1": {
+   "voice": "citizen_new_n",
+   "parts": [
+    {
+     "file": "audio/dialog/social_spread_1.mp3",
+     "duration": 7.42
+    }
+   ]
+  },
+  "social_tech_1": {
+   "voice": "worker_m",
+   "parts": [
+    {
+     "file": "audio/dialog/social_tech_1.mp3",
+     "duration": 13.18
+    }
+   ]
+  },
+  "social_chat_1": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/social_chat_1.mp3",
+     "duration": 3.14
+    }
+   ]
+  },
+  "social_chat_2": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/social_chat_2.mp3",
+     "duration": 3.62
+    }
+   ]
+  },
+  "social_chat_3": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/social_chat_3.mp3",
+     "duration": 4.13
+    }
+   ]
+  },
+  "social_chat_4": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/social_chat_4.mp3",
+     "duration": 2.71
+    }
+   ]
+  },
+  "social_chat_5": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/social_chat_5.mp3",
+     "duration": 2.76
+    }
+   ]
+  },
+  "social_chat_6": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/social_chat_6.mp3",
+     "duration": 2.95
+    }
+   ]
+  },
+  "social_quirky_1": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/social_quirky_1.mp3",
+     "duration": 7.44
+    }
+   ]
+  },
+  "social_quirky_2": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/social_quirky_2.mp3",
+     "duration": 8.23
+    }
+   ]
+  },
+  "social_quirky_3": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/social_quirky_3.mp3",
+     "duration": 6.29
+    }
+   ]
+  },
+  "comm_resident_1": {
+   "voice": "future_f",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_resident_1.mp3",
+     "duration": 2.74
+    }
+   ]
+  },
+  "comm_resident_2": {
+   "voice": "future_f",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_resident_2.mp3",
+     "duration": 3.38
+    }
+   ]
+  },
+  "comm_resident_3": {
+   "voice": "future_m",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_resident_3.mp3",
+     "duration": 3.72
+    }
+   ]
+  },
+  "comm_child_1": {
+   "voice": "child_n",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_child_1.mp3",
+     "duration": 2.45
+    }
+   ]
+  },
+  "comm_artist_1": {
+   "voice": "future_f",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_artist_1.mp3",
+     "duration": 3.96
+    }
+   ]
+  },
+  "comm_scientist_1": {
+   "voice": "future_m",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_scientist_1.mp3",
+     "duration": 3.26
+    }
+   ]
+  },
+  "comm_elder_1": {
+   "voice": "elder_m",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_elder_1.mp3",
+     "duration": 3.31
+    }
+   ]
+  },
+  "comm_philosopher_1": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_philosopher_1.mp3",
+     "duration": 8.23
+    }
+   ]
+  },
+  "comm_thinker_1": {
+   "voice": "philosopher_n",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_thinker_1.mp3",
+     "duration": 5.9
+    }
+   ]
+  },
+  "comm_leap1_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_leap1_1.mp3",
+     "duration": 4.46
+    },
+    {
+     "file": "audio/dialog/comm_leap1_1_p2.mp3",
+     "duration": 10.46
+    }
+   ]
+  },
+  "comm_leap2_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_leap2_1.mp3",
+     "duration": 10.73
+    }
+   ]
+  },
+  "comm_necessity_1": {
+   "voice": "concept_philosophy_n",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_necessity_1.mp3",
+     "duration": 13.08
+    }
+   ]
+  },
+  "comm_chat_1": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_chat_1.mp3",
+     "duration": 3.02
+    }
+   ]
+  },
+  "comm_chat_2": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_chat_2.mp3",
+     "duration": 6.07
+    }
+   ]
+  },
+  "comm_chat_3": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_chat_3.mp3",
+     "duration": 2.64
+    }
+   ]
+  },
+  "comm_chat_4": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_chat_4.mp3",
+     "duration": 3.89
+    }
+   ]
+  },
+  "comm_chat_5": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_chat_5.mp3",
+     "duration": 3.67
+    }
+   ]
+  },
+  "comm_chat_6": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_chat_6.mp3",
+     "duration": 3.58
+    }
+   ]
+  },
+  "comm_quirky_1": {
+   "voice": "chatter_f",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_quirky_1.mp3",
+     "duration": 8.9
+    }
+   ]
+  },
+  "comm_quirky_2": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_quirky_2.mp3",
+     "duration": 7.03
+    }
+   ]
+  },
+  "comm_quirky_3": {
+   "voice": "chatter_m",
+   "parts": [
+    {
+     "file": "audio/dialog/comm_quirky_3.mp3",
+     "duration": 8.28
+    }
+   ]
+  },
+  "bldg_cave_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_cave_1.mp3",
+     "duration": 10.34
+    }
+   ]
+  },
+  "bldg_campfire_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_campfire_1.mp3",
+     "duration": 10.32
+    }
+   ]
+  },
+  "bldg_hut_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_hut_1.mp3",
+     "duration": 8.02
+    }
+   ]
+  },
+  "bldg_fence_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_fence_1.mp3",
+     "duration": 9.17
+    }
+   ]
+  },
+  "bldg_barn_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_barn_1.mp3",
+     "duration": 8.42
+    }
+   ]
+  },
+  "bldg_temple_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_temple_1.mp3",
+     "duration": 5.16
+    },
+    {
+     "file": "audio/dialog/bldg_temple_1_p2.mp3",
+     "duration": 4.42
+    }
+   ]
+  },
+  "bldg_palace_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_palace_1.mp3",
+     "duration": 9.98
+    }
+   ]
+  },
+  "bldg_slave_camp_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_slave_camp_1.mp3",
+     "duration": 8.16
+    }
+   ]
+  },
+  "bldg_church_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_church_1.mp3",
+     "duration": 10.97
+    }
+   ]
+  },
+  "bldg_castle_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_castle_1.mp3",
+     "duration": 11.42
+    }
+   ]
+  },
+  "bldg_manor_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_manor_1.mp3",
+     "duration": 9.91
+    }
+   ]
+  },
+  "bldg_factory_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_factory_1.mp3",
+     "duration": 8.45
+    }
+   ]
+  },
+  "bldg_parliament_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_parliament_1.mp3",
+     "duration": 7.15
+    },
+    {
+     "file": "audio/dialog/bldg_parliament_1_p2.mp3",
+     "duration": 3.0
+    }
+   ]
+  },
+  "bldg_slum_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_slum_1.mp3",
+     "duration": 10.32
+    }
+   ]
+  },
+  "bldg_bank_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_bank_1.mp3",
+     "duration": 10.82
+    },
+    {
+     "file": "audio/dialog/bldg_bank_1_p2.mp3",
+     "duration": 4.7
+    }
+   ]
+  },
+  "bldg_market_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_market_1.mp3",
+     "duration": 5.64
+    },
+    {
+     "file": "audio/dialog/bldg_market_1_p2.mp3",
+     "duration": 6.38
+    }
+   ]
+  },
+  "bldg_skyscraper_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_skyscraper_1.mp3",
+     "duration": 9.55
+    },
+    {
+     "file": "audio/dialog/bldg_skyscraper_1_p2.mp3",
+     "duration": 4.68
+    }
+   ]
+  },
+  "bldg_barricade_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_barricade_1.mp3",
+     "duration": 8.78
+    }
+   ]
+  },
+  "bldg_bank_tower_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_bank_tower_1.mp3",
+     "duration": 11.69
+    }
+   ]
+  },
+  "bldg_police_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_police_1.mp3",
+     "duration": 5.95
+    },
+    {
+     "file": "audio/dialog/bldg_police_1_p2.mp3",
+     "duration": 4.13
+    }
+   ]
+  },
+  "bldg_collective_farm_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_collective_farm_1.mp3",
+     "duration": 7.78
+    }
+   ]
+  },
+  "bldg_culture_palace_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_culture_palace_1.mp3",
+     "duration": 7.39
+    }
+   ]
+  },
+  "bldg_hospital_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_hospital_1.mp3",
+     "duration": 9.48
+    }
+   ]
+  },
+  "bldg_school_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_school_1.mp3",
+     "duration": 8.02
+    }
+   ]
+  },
+  "bldg_green_energy_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_green_energy_1.mp3",
+     "duration": 9.19
+    }
+   ]
+  },
+  "bldg_auto_factory_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_auto_factory_1.mp3",
+     "duration": 13.1
+    }
+   ]
+  },
+  "bldg_leisure_center_1": {
+   "voice": "building_n",
+   "parts": [
+    {
+     "file": "audio/dialog/bldg_leisure_center_1.mp3",
+     "duration": 6.55
+    },
+    {
+     "file": "audio/dialog/bldg_leisure_center_1_p2.mp3",
+     "duration": 5.09
+    }
+   ]
+  }
+ },
+ "voices": {
+  "philosopher_n": {
+   "family": "封建时代",
+   "gender": "M",
+   "persona": "民间智者，深沉缓重（全时期）",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0735",
+    "license": "Apache-2.0"
+   }
+  },
+  "concept_philosophy_n": {
+   "family": "拟人概念",
+   "gender": "M",
+   "persona": "哲思之声，空灵中性，画外音",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0010",
+    "license": "Apache-2.0"
+   }
+  },
+  "elder_m": {
+   "family": "原始公社",
+   "gender": "M",
+   "persona": "长老，苍老缓慢有分量（跨时期呼应）",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0008",
+    "license": "Apache-2.0"
+   }
+  },
+  "freeman_m": {
+   "family": "奴隶制",
+   "gender": "M",
+   "persona": "自由民，傲气、自我庆幸",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0734",
+    "license": "Apache-2.0"
+   }
+  },
+  "building_n": {
+   "family": "拟人建筑",
+   "gender": "M",
+   "persona": "建筑，古朴沧桑，历史本人在说话",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0728",
+    "license": "Apache-2.0"
+   }
+  },
+  "priest_m": {
+   "family": "封建时代",
+   "gender": "M",
+   "persona": "神职人员，虔诚腔调",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0009",
+    "license": "Apache-2.0"
+   }
+  },
+  "serf_m": {
+   "family": "封建时代",
+   "gender": "M",
+   "persona": "农奴/贫苦农民，悲苦麻木",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0016",
+    "license": "Apache-2.0"
+   }
+  },
+  "cadre_n": {
+   "family": "社会主义",
+   "gender": "M",
+   "persona": "干部/领袖，正直昂扬",
+   "source": {
+    "dataset": "THCHS-30",
+    "speaker": "B8",
+    "license": "Apache-2.0"
+   }
+  },
+  "future_m": {
+   "family": "共产主义",
+   "gender": "M",
+   "persona": "未来居民（男），明朗洒脱",
+   "source": {
+    "dataset": "THCHS-30",
+    "speaker": "A8",
+    "license": "Apache-2.0"
+   }
+  },
+  "shaman_m": {
+   "family": "原始公社",
+   "gender": "M",
+   "persona": "萨满，神秘悠远，拖长音",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0726",
+    "license": "Apache-2.0"
+   }
+  },
+  "citizen_new_n": {
+   "family": "社会主义",
+   "gender": "M",
+   "persona": "新社会公民，明快亲切",
+   "source": {
+    "dataset": "THCHS-30",
+    "speaker": "D8",
+    "license": "Apache-2.0"
+   }
+  },
+  "tribal_f": {
+   "family": "原始公社",
+   "gender": "F",
+   "persona": "采集者/部落妇女，明快利落",
+   "source": {
+    "dataset": "THCHS-30",
+    "speaker": "A33",
+    "license": "Apache-2.0"
+   }
+  },
+  "concept_economy_m": {
+   "family": "拟人概念",
+   "gender": "M",
+   "persona": "世间规则之声，冷峻低沉",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0731",
+    "license": "Apache-2.0"
+   }
+  },
+  "child_n": {
+   "family": "原始公社",
+   "gender": "F",
+   "persona": "孩童，稚嫩明快（跨 S0/S7）",
+   "source": {
+    "dataset": "THCHS-30",
+    "speaker": "B15",
+    "license": "Apache-2.0"
+   }
+  },
+  "banker_m": {
+   "family": "资本主义",
+   "gender": "M",
+   "persona": "银行家，精明世故",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0011",
+    "license": "Apache-2.0"
+   }
+  },
+  "future_f": {
+   "family": "共产主义",
+   "gender": "F",
+   "persona": "未来居民（女），自由明亮",
+   "source": {
+    "dataset": "THCHS-30",
+    "speaker": "D6",
+    "license": "Apache-2.0"
+   }
+  },
+  "chatter_m": {
+   "family": "市井百姓",
+   "gender": "M",
+   "persona": "市井男声，朴实憨厚，爱唠嗑",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0005",
+    "license": "Apache-2.0"
+   }
+  },
+  "intellectual_m": {
+   "family": "资本主义",
+   "gender": "M",
+   "persona": "知识分子/理论家，文气沉思",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0004",
+    "license": "Apache-2.0"
+   }
+  },
+  "noble_antiquity_m": {
+   "family": "奴隶制",
+   "gender": "M",
+   "persona": "奴隶主，高傲冷酷",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0725",
+    "license": "Apache-2.0"
+   }
+  },
+  "slave_f": {
+   "family": "奴隶制",
+   "gender": "F",
+   "persona": "奴隶，怯懦疲惫（跨 S1-S2）",
+   "source": {
+    "dataset": "THCHS-30",
+    "speaker": "C20",
+    "license": "Apache-2.0"
+   }
+  },
+  "capitalist_m": {
+   "family": "资本主义",
+   "gender": "M",
+   "persona": "资本家/商人，傲慢圆滑",
+   "source": {
+    "dataset": "THCHS-30",
+    "speaker": "C8",
+    "license": "Apache-2.0"
+   }
+  },
+  "lord_m": {
+   "family": "封建时代",
+   "gender": "M",
+   "persona": "封建领主，傲慢拖腔",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0012",
+    "license": "Apache-2.0"
+   }
+  },
+  "chatter_f": {
+   "family": "市井百姓",
+   "gender": "F",
+   "persona": "市井女声，亲切爱聊，带方言烟火气",
+   "source": {
+    "dataset": "THCHS-30",
+    "speaker": "D13",
+    "license": "Apache-2.0"
+   }
+  },
+  "worker_m": {
+   "family": "资本主义",
+   "gender": "M",
+   "persona": "工人，沙哑沉稳，疲惫但有力量",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0015",
+    "license": "Apache-2.0"
+   }
+  },
+  "tribal_m": {
+   "family": "原始公社",
+   "gender": "M",
+   "persona": "猎人/匠人，粗犷直接，嗓子带风沙感",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0733",
+    "license": "Apache-2.0"
+   }
+  },
+  "rebel_m": {
+   "family": "封建时代",
+   "gender": "M",
+   "persona": "觉醒者，低沉转激昂（跨 S1/S2/S5）",
+   "source": {
+    "dataset": "AISHELL-1",
+    "speaker": "AS0727",
+    "license": "Apache-2.0"
+   }
+  }
+ }
+}

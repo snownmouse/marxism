@@ -70,7 +70,8 @@ export default function DialogBubbles() {
             <div className={`dialog-bubble-tail ${isQuirky ? 'dialog-bubble-tail-quirky' : ''}`} />
             {!isUser && (
               <SpeakButton
-                text={bubble.text}
+                audioId={bubble.dialogId}
+                fallbackText={bubble.text}
                 title="朗读这句话"
                 className="speak-btn-bubble"
               />

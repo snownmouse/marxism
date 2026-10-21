@@ -189,7 +189,7 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   prevStage: () => {
     const state = get()
-    const prevId = Math.max(state.currentStageId - 1, 0)
+    const prevId = Math.max(state.currentStageId - 1, state.stages.length - 1)
     state.setStage(prevId)
   },
 

@@ -1,0 +1,809 @@
+{
+ "philosopher_n": {
+  "speaker": "AS0735",
+  "gender": "M",
+  "f0_med": 127.0,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "封建时代",
+  "persona": "民间智者，深沉缓重（全时期）",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0735",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\philosopher_n_neutral.wav",
+    "text": "近半年签约价在五万二左右。，加装电梯的楼宇均价约二点六万。",
+    "dur": 8.73
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\philosopher_n_happy.wav",
+    "text": "楼市迎来新一轮政策调整。，中新网九月十六日电今天上午。",
+    "dur": 8.0
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\philosopher_n_playful.wav",
+    "text": "近半年签约价在五万二左右。，加装电梯的楼宇均价约二点六万。",
+    "dur": 8.73
+   }
+  }
+ },
+ "concept_philosophy_n": {
+  "speaker": "AS0010",
+  "gender": "M",
+  "f0_med": 133.6,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "拟人概念",
+  "persona": "哲思之声，空灵中性，画外音",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0010",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\concept_philosophy_n_neutral.wav",
+    "text": "高周转就是牺牲利润。，高周转就是牺牲利润。，据万达内部人士介绍。",
+    "dur": 9.25
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\concept_philosophy_n_happy.wav",
+    "text": "高周转就是牺牲利润。，高周转就是牺牲利润。，据万达内部人士介绍。",
+    "dur": 9.25
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\concept_philosophy_n_playful.wav",
+    "text": "高周转就是牺牲利润。，高周转就是牺牲利润。，据万达内部人士介绍。",
+    "dur": 9.25
+   }
+  }
+ },
+ "elder_m": {
+  "speaker": "AS0008",
+  "gender": "M",
+  "f0_med": 112.8,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "原始公社",
+  "persona": "长老，苍老缓慢有分量（跨时期呼应）",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0008",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\elder_m_neutral.wav",
+    "text": "尤其对于一二线重点城市而言。，林波向南都记者表示。",
+    "dur": 8.36
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\elder_m_happy.wav",
+    "text": "尤其对于一二线重点城市而言。，林波向南都记者表示。",
+    "dur": 8.36
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\elder_m_playful.wav",
+    "text": "尤其对于一二线重点城市而言。，林波向南都记者表示。",
+    "dur": 8.36
+   }
+  }
+ },
+ "freeman_m": {
+  "speaker": "AS0734",
+  "gender": "M",
+  "f0_med": 127.2,
+  "rate_bucket": "normal",
+  "energy_bucket": "normal",
+  "family": "奴隶制",
+  "persona": "自由民，傲气、自我庆幸",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0734",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\freeman_m_neutral.wav",
+    "text": "提供优质的养老服务等等。，此次价格上调，这是因为成本压力。",
+    "dur": 7.09
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\freeman_m_happy.wav",
+    "text": "意在为业主提供好房子，好服务好社区。",
+    "dur": 4.97
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\freeman_m_playful.wav",
+    "text": "提供优质的养老服务等等。，此次价格上调，这是因为成本压力。",
+    "dur": 7.09
+   }
+  }
+ },
+ "building_n": {
+  "speaker": "AS0728",
+  "gender": "M",
+  "f0_med": 101.3,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "拟人建筑",
+  "persona": "建筑，古朴沧桑，历史本人在说话",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0728",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\building_n_neutral.wav",
+    "text": "一线城市在政策制度上占据优势。，未来市场将出现分化。",
+    "dur": 7.66
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\building_n_happy.wav",
+    "text": "标旺极客精神做创新也成了一种趋势。，一线城市在政策制度上占据优势。",
+    "dur": 8.6
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\building_n_playful.wav",
+    "text": "一线城市在政策制度上占据优势。，未来市场将出现分化。",
+    "dur": 7.66
+   }
+  }
+ },
+ "priest_m": {
+  "speaker": "AS0009",
+  "gender": "M",
+  "f0_med": 113.6,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "封建时代",
+  "persona": "神职人员，虔诚腔调",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0009",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\priest_m_neutral.wav",
+    "text": "产业标杆全线升级。，盛等嘉宾发表主题演讲。，打破房地产惯性思维。",
+    "dur": 9.79
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\priest_m_happy.wav",
+    "text": "产业标杆全线升级。，盛等嘉宾发表主题演讲。，打破房地产惯性思维。",
+    "dur": 9.79
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\priest_m_playful.wav",
+    "text": "你认为这种眼光是否公平？，产业标杆全线升级。",
+    "dur": 7.03
+   }
+  }
+ },
+ "serf_m": {
+  "speaker": "AS0016",
+  "gender": "M",
+  "f0_med": 120.0,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "封建时代",
+  "persona": "农奴/贫苦农民，悲苦麻木",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0016",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\serf_m_neutral.wav",
+    "text": "而在经营上，采取轻资产重运营的策略。",
+    "dur": 6.74
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\serf_m_happy.wav",
+    "text": "有专业的团队才能更好地运营。",
+    "dur": 5.57
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\serf_m_playful.wav",
+    "text": "而在经营上，采取轻资产重运营的策略。",
+    "dur": 6.74
+   }
+  }
+ },
+ "cadre_n": {
+  "speaker": "B8",
+  "gender": "M",
+  "f0_med": 143.5,
+  "rate_bucket": "normal",
+  "energy_bucket": "high",
+  "family": "社会主义",
+  "persona": "干部/领袖，正直昂扬",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "B8",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\cadre_n_neutral.wav",
+    "text": "且夫努努阿文却尚无偷文，如欧阳公之恶德，而文章以较为能做作者也。",
+    "dur": 8.78
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\cadre_n_happy.wav",
+    "text": "平定县槐树铺乡新关村村民王培民，一家六口人拥有两座小院八眼窑洞。",
+    "dur": 8.34
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\cadre_n_playful.wav",
+    "text": "且夫努努阿文却尚无偷文，如欧阳公之恶德，而文章以较为能做作者也。",
+    "dur": 8.78
+   }
+  }
+ },
+ "future_m": {
+  "speaker": "A8",
+  "gender": "M",
+  "f0_med": 146.5,
+  "rate_bucket": "normal",
+  "energy_bucket": "high",
+  "family": "共产主义",
+  "persona": "未来居民（男），明朗洒脱",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "A8",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\future_m_neutral.wav",
+    "text": "沃罗宁认为，叶利钦的命令既违反了俄联邦宪法，也违反了俄联邦各共和国宪法。",
+    "dur": 8.15
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\future_m_happy.wav",
+    "text": "绿是阳春烟景大块，文章的底色，四月的林峦更是绿的鲜活秀，媚，诗意盎然。",
+    "dur": 9.34
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\future_m_playful.wav",
+    "text": "那种从国外引进的用辣椒减肥的洋玩意儿，究竟是吃还是外服广告，未说明不得而知。",
+    "dur": 9.21
+   }
+  }
+ },
+ "shaman_m": {
+  "speaker": "AS0726",
+  "gender": "M",
+  "f0_med": 115.0,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "原始公社",
+  "persona": "萨满，神秘悠远，拖长音",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0726",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\shaman_m_neutral.wav",
+    "text": "热点一二线城市也已集中推出优惠利益。，九折利率是个分水岭。",
+    "dur": 9.34
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\shaman_m_happy.wav",
+    "text": "可以看出，土地市场已经回暖。",
+    "dur": 4.15
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\shaman_m_playful.wav",
+    "text": "热点一二线城市也已集中推出优惠利益。，九折利率是个分水岭。",
+    "dur": 9.34
+   }
+  }
+ },
+ "citizen_new_n": {
+  "speaker": "D8",
+  "gender": "M",
+  "f0_med": 148.9,
+  "rate_bucket": "normal",
+  "energy_bucket": "high",
+  "family": "社会主义",
+  "persona": "新社会公民，明快亲切",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "D8",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\citizen_new_n_neutral.wav",
+    "text": "他们走到司马路，一家茶食铺里，阿九说要熏鱼。他给买了又给转儿买了饼干。",
+    "dur": 7.78
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\citizen_new_n_happy.wav",
+    "text": "北京丰台区农民自己花钱筹办万佛延寿寺迎春庙会，吸引了区内六十支秧歌队参赛。",
+    "dur": 9.15
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\citizen_new_n_playful.wav",
+    "text": "他们走到司马路，一家茶食铺里，阿九说要熏鱼。他给买了又给转儿买了饼干。",
+    "dur": 7.78
+   }
+  }
+ },
+ "tribal_f": {
+  "speaker": "A33",
+  "gender": "F",
+  "f0_med": 183.5,
+  "rate_bucket": "normal",
+  "energy_bucket": "normal",
+  "family": "原始公社",
+  "persona": "采集者/部落妇女，明快利落",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "A33",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\tribal_f_neutral.wav",
+    "text": "截止今年七月中旬，该市共拖欠教师工资一百三十五万元，",
+    "dur": 9.65
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\tribal_f_happy.wav",
+    "text": "绿是阳春烟景大快，文章的底色，四叶的凌峦，更是绿的鲜活秀美，",
+    "dur": 9.65
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\tribal_f_playful.wav",
+    "text": "单位不是我老爹开的，凭什么要一次二次照顾我？我不能把自己的包袱往学校甩。",
+    "dur": 7.96
+   }
+  }
+ },
+ "concept_economy_m": {
+  "speaker": "AS0731",
+  "gender": "M",
+  "f0_med": 122.3,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "拟人概念",
+  "persona": "世间规则之声，冷峻低沉",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0731",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\concept_economy_m_neutral.wav",
+    "text": "绿地在确定转型战略之后。，万达首先开始了人员结构的调整。",
+    "dur": 8.26
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\concept_economy_m_happy.wav",
+    "text": "绿地在确定转型战略之后。，万达首先开始了人员结构的调整。",
+    "dur": 8.26
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\concept_economy_m_playful.wav",
+    "text": "绿地在确定转型战略之后。，万达首先开始了人员结构的调整。",
+    "dur": 8.26
+   }
+  }
+ },
+ "child_n": {
+  "speaker": "B15",
+  "gender": "F",
+  "f0_med": 250.1,
+  "rate_bucket": "normal",
+  "energy_bucket": "normal",
+  "family": "原始公社",
+  "persona": "孩童，稚嫩明快（跨 S0/S7）",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "B15",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\child_n_neutral.wav",
+    "text": "所以这野兽有时候又特别的厌恶粗俗，沉默寡言，冷酷的凝望着人间。",
+    "dur": 6.59
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\child_n_happy.wav",
+    "text": "至于洪都，拉斯奎尔是早已定好预二十七日要去参加该国新总统的就职仪式。",
+    "dur": 9.06
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\child_n_playful.wav",
+    "text": "总算你运气好，我昨天刚刚把货卖了，否则恐怕一文钱也借不出来呢。",
+    "dur": 7.65
+   }
+  },
+  "child_pitch_risk": false
+ },
+ "banker_m": {
+  "speaker": "AS0011",
+  "gender": "M",
+  "f0_med": 114.6,
+  "rate_bucket": "normal",
+  "energy_bucket": "low",
+  "family": "资本主义",
+  "persona": "银行家，精明世故",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0011",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\banker_m_neutral.wav",
+    "text": "由此导致九龙仓趁机成为绿城第二大股东。",
+    "dur": 5.17
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\banker_m_happy.wav",
+    "text": "由此导致九龙仓趁机成为绿城第二大股东。",
+    "dur": 5.17
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\banker_m_playful.wav",
+    "text": "由此导致九龙仓趁机成为绿城第二大股东。",
+    "dur": 5.17
+   }
+  }
+ },
+ "future_f": {
+  "speaker": "D6",
+  "gender": "F",
+  "f0_med": 226.5,
+  "rate_bucket": "normal",
+  "energy_bucket": "high",
+  "family": "共产主义",
+  "persona": "未来居民（女），自由明亮",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "D6",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\future_f_neutral.wav",
+    "text": "由太原市南郊区寇庄村农民投资数百万元建设的平阳集贸市场，",
+    "dur": 9.65
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\future_f_happy.wav",
+    "text": "运用这种仪器，新华医院又抢救了两例胃癌和十二指肠溃疡，大量溶血病人均获得成功。",
+    "dur": 9.34
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\future_f_playful.wav",
+    "text": "由太原市南郊区寇庄村农民投资数百万元建设的平阳集贸市场，",
+    "dur": 9.65
+   }
+  }
+ },
+ "chatter_m": {
+  "speaker": "AS0005",
+  "gender": "M",
+  "f0_med": 123.5,
+  "rate_bucket": "normal",
+  "energy_bucket": "low",
+  "family": "市井百姓",
+  "persona": "市井男声，朴实憨厚，爱唠嗑",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0005",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\chatter_m_neutral.wav",
+    "text": "十年后就是十五万亿元。，呈现出多个领域的老大。",
+    "dur": 6.84
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\chatter_m_happy.wav",
+    "text": "十年后就是十五万亿元。，呈现出多个领域的老大。",
+    "dur": 6.84
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\chatter_m_playful.wav",
+    "text": "十年后就是十五万亿元。，呈现出多个领域的老大。",
+    "dur": 6.84
+   }
+  }
+ },
+ "intellectual_m": {
+  "speaker": "AS0004",
+  "gender": "M",
+  "f0_med": 119.0,
+  "rate_bucket": "normal",
+  "energy_bucket": "low",
+  "family": "资本主义",
+  "persona": "知识分子/理论家，文气沉思",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0004",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\intellectual_m_neutral.wav",
+    "text": "不排除购房者可以在互联网上下单。，随着并购大潮的来临。，从房地产投资增速来看。",
+    "dur": 8.67
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\intellectual_m_happy.wav",
+    "text": "不排除购房者可以在互联网上下单。，随着并购大潮的来临。，从房地产投资增速来看。",
+    "dur": 8.67
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\intellectual_m_playful.wav",
+    "text": "不排除购房者可以在互联网上下单。，随着并购大潮的来临。，从房地产投资增速来看。",
+    "dur": 8.67
+   }
+  }
+ },
+ "noble_antiquity_m": {
+  "speaker": "AS0725",
+  "gender": "M",
+  "f0_med": 141.8,
+  "rate_bucket": "slow",
+  "energy_bucket": "normal",
+  "family": "奴隶制",
+  "persona": "奴隶主，高傲冷酷",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0725",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\noble_antiquity_m_neutral.wav",
+    "text": "据中原研究部截取阳光家园数据统计。",
+    "dur": 6.04
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\noble_antiquity_m_happy.wav",
+    "text": "设计好汽车的零件和图纸。",
+    "dur": 3.87
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\noble_antiquity_m_playful.wav",
+    "text": "据中原研究部截取阳光家园数据统计。",
+    "dur": 6.04
+   }
+  }
+ },
+ "slave_f": {
+  "speaker": "C20",
+  "gender": "F",
+  "f0_med": 229.2,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "奴隶制",
+  "persona": "奴隶，怯懦疲惫（跨 S1-S2）",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "C20",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\slave_f_neutral.wav",
+    "text": "第一批收集的有享誉沈港澳和东南亚的欧阳山、陈残云、秦牧、杜哀、黄秋云等五人。",
+    "dur": 9.65
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\slave_f_happy.wav",
+    "text": "据悉，",
+    "dur": 9.65
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\slave_f_playful.wav",
+    "text": "第一批收集的有享誉沈港澳和东南亚的欧阳山、陈残云、秦牧、杜哀、黄秋云等五人。",
+    "dur": 9.65
+   }
+  }
+ },
+ "capitalist_m": {
+  "speaker": "C8",
+  "gender": "M",
+  "f0_med": 154.8,
+  "rate_bucket": "normal",
+  "energy_bucket": "high",
+  "family": "资本主义",
+  "persona": "资本家/商人，傲慢圆滑",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "C8",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\capitalist_m_neutral.wav",
+    "text": "六、省区均为黄土高原区、深山区、荒漠区和高寒山区，自然条件恶劣，",
+    "dur": 9.65
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\capitalist_m_happy.wav",
+    "text": "他没有多少豪言壮语，但他却把爱亲人、爱家庭、爱祖国、爱军队，完美地统一了起来。",
+    "dur": 9.53
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\capitalist_m_playful.wav",
+    "text": "下有印牛上有喜耳，既然你已知道自己双耳已乌，为什么又来弄脏我的牛口？",
+    "dur": 8.59
+   }
+  }
+ },
+ "lord_m": {
+  "speaker": "AS0012",
+  "gender": "M",
+  "f0_med": 123.9,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "封建时代",
+  "persona": "封建领主，傲慢拖腔",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0012",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\lord_m_neutral.wav",
+    "text": "优化房地产空间布局。，合理引导房地产市场预期。",
+    "dur": 7.79
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\lord_m_happy.wav",
+    "text": "优化房地产空间布局。，合理引导房地产市场预期。",
+    "dur": 7.79
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\lord_m_playful.wav",
+    "text": "你还囤着车库商铺慢慢卖吗？",
+    "dur": 4.02
+   }
+  }
+ },
+ "chatter_f": {
+  "speaker": "D13",
+  "gender": "F",
+  "f0_med": 234.0,
+  "rate_bucket": "normal",
+  "energy_bucket": "normal",
+  "family": "市井百姓",
+  "persona": "市井女声，亲切爱聊，带方言烟火气",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "D13",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\chatter_f_neutral.wav",
+    "text": "黄英汉被枪毙后，部分余孽深藏起来，几次围捕均未抓获。",
+    "dur": 6.85
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\chatter_f_happy.wav",
+    "text": "天空一些云盲走月亮，陷进云围时，云和烟样和眉山样快要燃烧似的。",
+    "dur": 9.02
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\chatter_f_playful.wav",
+    "text": "黄英汉被枪毙后，部分余孽深藏起来，几次围捕均未抓获。",
+    "dur": 6.85
+   }
+  }
+ },
+ "worker_m": {
+  "speaker": "AS0015",
+  "gender": "M",
+  "f0_med": 125.6,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "资本主义",
+  "persona": "工人，沙哑沉稳，疲惫但有力量",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0015",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\worker_m_neutral.wav",
+    "text": "尽管中国政府在上个月推出了成就楼市的一篮子计划。",
+    "dur": 7.19
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\worker_m_happy.wav",
+    "text": "危险化学品将成为十二五污染防治的新领域。",
+    "dur": 5.79
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\worker_m_playful.wav",
+    "text": "尽管中国政府在上个月推出了成就楼市的一篮子计划。",
+    "dur": 7.19
+   }
+  }
+ },
+ "tribal_m": {
+  "speaker": "AS0733",
+  "gender": "M",
+  "f0_med": 132.2,
+  "rate_bucket": "normal",
+  "energy_bucket": "low",
+  "family": "原始公社",
+  "persona": "猎人/匠人，粗犷直接，嗓子带风沙感",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0733",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\tribal_m_neutral.wav",
+    "text": "按照半年来月均成交数据来算。，还是讲究空间感，奢奢侈尺度的客厅阳台。",
+    "dur": 8.97
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\tribal_m_happy.wav",
+    "text": "美媒售价为十三雷亚尔。，我感觉这次机会挺好。，按照半年来月均成交数据来算。",
+    "dur": 9.89
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\tribal_m_playful.wav",
+    "text": "按照半年来月均成交数据来算。，还是讲究空间感，奢奢侈尺度的客厅阳台。",
+    "dur": 8.97
+   }
+  }
+ },
+ "rebel_m": {
+  "speaker": "AS0727",
+  "gender": "M",
+  "f0_med": 137.7,
+  "rate_bucket": "normal",
+  "energy_bucket": "low",
+  "family": "封建时代",
+  "persona": "觉醒者，低沉转激昂（跨 S1/S2/S5）",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0727",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\rebel_m_neutral.wav",
+    "text": "就六日的拍卖现场。，截至今年二月四日中午。",
+    "dur": 6.15
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\rebel_m_happy.wav",
+    "text": "自己看好的地都没有，能够达到。，获得七亿美元的税前收入。",
+    "dur": 7.3
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs\\rebel_m_playful.wav",
+    "text": "就六日的拍卖现场。，截至今年二月四日中午。",
+    "dur": 6.15
+   }
+  }
+ }
+}

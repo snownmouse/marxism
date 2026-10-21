@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useAppStore } from '../store/useAppStore'
-import SpeakButton from './SpeakButton'
 
 type TabType = 'overview' | 'stage' | 'glossary' | 'card'
 
@@ -123,19 +122,6 @@ export default function ExplanationPanel() {
 
   const currentStage = stages.find(s => s.id === selectedStage)
 
-  // 拼接理论卡片的朗读文本
-  const buildTopicSpeech = (topic: ExplainedTopic): string =>
-    `${topic.title}。${topic.content} 核心要点：${topic.keyPoints.join('；')}。实例说明：${topic.example}`
-
-  // 拼接阶段解析的朗读文本
-  const buildStageSpeech = (): string => {
-    if (!currentStage) return ''
-    const s = currentStage
-    return `${s.name}。生产力水平：${s.productivity}。生产关系：${s.relations}。剥削率百分之${s.exploitationRate}。` +
-      `社会阶级包括：${s.classes.map(c => `${c.name}占百分之${c.populationPct}`).join('，')}。` +
-      `政治制度：${s.superstructure.politics}。法律体系：${s.superstructure.law}。意识形态：${s.superstructure.ideology}。`
-  }
-
   if (!showExplanation) return null
 
   return (
@@ -186,7 +172,6 @@ export default function ExplanationPanel() {
                     <div className="topic-header">
                       <div className="topic-title">{topic.title}</div>
                       <span className="topic-category">{topic.category}</span>
-                      <SpeakButton text={buildTopicSpeech(topic)} title="朗读本条理论" />
                     </div>
                     <div className="topic-content">{topic.content}</div>
                     <div className="topic-key-points">
@@ -256,7 +241,6 @@ export default function ExplanationPanel() {
                       {currentStage.icon === 'axe' ? '🪓' : currentStage.icon === 'wheat_chain' ? '🌾' : currentStage.icon === 'chain' ? '⛓️' : currentStage.icon === 'castle' ? '🏰' : currentStage.icon === 'smoke' ? '🏭' : currentStage.icon === 'moneybag' ? '💰' : currentStage.icon === 'handshake' ? '🤝' : '⭐'}
                     </span>
                     <h4>{currentStage.name}</h4>
-                    <SpeakButton text={buildStageSpeech()} title="朗读阶段解析" />
                   </div>
 
                   <div className="stage-info-grid">

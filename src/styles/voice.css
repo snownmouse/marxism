@@ -1,4 +1,4 @@
-/* ==================== 语音朗读（TTS） ==================== */
+/* ==================== 语音朗读（预制音频） ==================== */
 
 .speak-btn {
   display: inline-flex;
@@ -24,55 +24,16 @@
   border-color: rgba(255, 215, 0, 0.5);
 }
 
-.speak-btn-active {
+.speak-btn.active {
   background: rgba(255, 215, 0, 0.3);
   border-color: var(--text-accent);
   color: #fff;
-}
-
-.speak-btn-icon {
-  display: inline-block;
-}
-
-.speak-btn-loading {
   animation: speak-btn-pulse 0.8s ease-in-out infinite;
 }
 
 @keyframes speak-btn-pulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
-}
-
-/* 播放中的声波指示 */
-.speak-btn-wave {
-  display: inline-block;
-  width: 3px;
-  height: 10px;
-  border-radius: 2px;
-  background: var(--text-accent);
-  animation: speak-btn-wave 0.9s ease-in-out infinite;
-}
-
-@keyframes speak-btn-wave {
-  0%, 100% { transform: scaleY(0.4); }
-  50% { transform: scaleY(1); }
-}
-
-/* 题目 / 解析行内按钮，靠右对齐 */
-.speak-btn-quiz {
-  margin-left: auto;
-}
-
-/* 讲解面板：解析头部改为两端布局，卡片按钮靠右 */
-.explanation-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.topic-header .speak-btn,
-.stage-title-row .speak-btn {
-  margin-left: auto;
+  50% { opacity: 0.55; }
 }
 
 /* 对话气泡内按钮：贴在右下角，避开 ℹ 按钮 */
@@ -96,164 +57,147 @@
   margin-left: auto;
 }
 
-/* ==================== 语音设置弹窗 ==================== */
+/* ==================== 音色图鉴 ==================== */
 
-.voice-settings-modal {
-  width: 560px;
-  max-width: 92vw;
-}
-
-.voice-form {
-  padding: 16px 20px 20px;
+.voice-gallery-modal {
+  width: 720px;
+  max-width: 94vw;
+  max-height: 86vh;
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
-.voice-hint {
-  font-size: 12px;
-  line-height: 1.6;
+.voice-gallery-body {
+  padding: 16px 20px 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.voice-gallery-empty {
+  padding: 40px 0;
+  text-align: center;
   color: var(--text-secondary);
-  background: rgba(255, 215, 0, 0.06);
-  border: 1px solid rgba(255, 215, 0, 0.15);
-  border-radius: 6px;
-  padding: 10px 12px;
+  font-size: 13px;
 }
 
-.voice-field {
+.voice-gallery-family-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.voice-gallery-family-count {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.voice-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.voice-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 12px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  transition: border-color 0.2s;
 }
 
-.voice-field > label {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-primary);
+.voice-card:hover {
+  border-color: rgba(255, 215, 0, 0.4);
 }
 
-.voice-field-tip {
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-
-.voice-inline {
+.voice-card-head {
   display: flex;
-  gap: 8px;
-}
-
-.voice-inline input {
-  flex: 1;
-}
-
-.voice-field input[type="text"],
-.voice-field input[type="file"],
-.voice-field textarea {
-  background: var(--bg-dark);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  color: var(--text-primary);
-  font-family: var(--ui-font);
-  font-size: 13px;
-  padding: 7px 10px;
-}
-
-.voice-field textarea {
-  resize: vertical;
-}
-
-.voice-field input[type="range"] {
-  accent-color: var(--text-accent);
-}
-
-/* 引擎选择卡片 */
-.voice-engine-options {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.voice-engine-card {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto;
-  gap: 2px 8px;
   align-items: center;
-  padding: 9px 12px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s;
+  gap: 8px;
 }
 
-.voice-engine-card.active {
-  border-color: var(--text-accent);
-  background: rgba(255, 215, 0, 0.08);
+.voice-card-gender {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
 
-.voice-engine-card input {
-  grid-row: span 2;
-  accent-color: var(--text-accent);
+.voice-card-gender.gender-F {
+  background: rgba(255, 105, 180, 0.18);
+  color: #ff69b4;
 }
 
-.voice-engine-label {
-  font-size: 13px;
-  font-weight: 600;
+.voice-card-gender.gender-M {
+  background: rgba(100, 149, 237, 0.18);
+  color: #6495ed;
 }
 
-.voice-engine-desc {
-  font-size: 11px;
+.voice-card-gender.gender-N {
+  background: rgba(147, 112, 219, 0.18);
+  color: #b39ddb;
+}
+
+.voice-card-id {
+  font-size: 10px;
   color: var(--text-secondary);
-}
-
-/* 设置弹窗按钮 */
-.voice-btn {
-  background: var(--bg-card);
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
   font-family: var(--ui-font);
-  font-size: 13px;
-  border-radius: 6px;
-  padding: 7px 14px;
-  cursor: pointer;
-  transition: all 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.voice-btn:hover {
-  background: var(--bg-card-hover);
+.voice-card-persona {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-primary);
 }
 
-.voice-btn-primary {
-  background: rgba(255, 215, 0, 0.15);
-  border-color: rgba(255, 215, 0, 0.4);
-  color: var(--text-accent);
-  font-weight: 600;
+.voice-card-source {
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--text-secondary);
 }
 
-.voice-btn-primary:hover {
-  background: rgba(255, 215, 0, 0.28);
-}
-
-.voice-btn-ghost {
-  background: transparent;
-}
-
-.voice-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.voice-gallery-footer {
   border-top: 1px solid var(--border-color);
-  padding-top: 14px;
+  padding-top: 12px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--text-secondary);
 }
 
-.voice-actions-spacer {
-  flex: 1;
+.voice-gallery-footer p {
+  margin: 0;
+}
+
+.voice-gallery-footer b {
+  color: var(--text-accent);
+}
+
+.voice-gallery-meta {
+  font-size: 11px;
+  opacity: 0.75;
 }
 
 @media (max-width: 640px) {
-  .voice-settings-modal {
+  .voice-gallery-modal {
     width: 94vw;
+  }
+  .voice-gallery-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
