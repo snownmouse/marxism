@@ -12,6 +12,13 @@ cast_references.py — THCHS-30 选角 + 参考片段构建
   2. paraformer ASR 全部候选片段 (A/B/C 系 trn 损坏, 文本靠 ASR)
   3. 26 音色 × 说话人 贪心匹配 (性别硬约束 + F0/语速/能量软匹配)
   4. 每音色每情绪选 1-3 句拼接成 3-9.5s 参考音频 (API 硬限制 3-10s), prompt_text 取各句文本拼接
+
+【重要】本脚本产出的是**第一阶段**结果。直接用它合成的参考音频有两个已知问题:
+  - 拼接 (1-3 句 + 150ms 硬静音) 会把断裂节奏写进语义 prompt, 造成「人机感」
+  - 原生 16kHz 缺高频, 降低克隆保真度 (实测退化率 40%)
+  → **必须再跑 rebuild_refs.py** (AP_BWE 超分 48kHz + 单句连续), 产出
+     voice_refs_sr/ 与 voices_sr.json, 那才是合成时实际使用的参考。
+     详见 VOICE_QUALITY_NOTES.md。
 """
 import os, re, json, glob, math, random, collections
 

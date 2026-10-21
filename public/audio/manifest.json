@@ -1,6 +1,6 @@
 {
- "generatedAt": "2026-10-21 11:44:40",
- "model": "GPT-SoVITS s1v3 + s2Gv2ProPlus（零样本克隆）",
+ "generatedAt": "2026-10-21 19:29:14",
+ "model": "GPT-SoVITS v5dev (s1v3 + s2Gv5dev + BigVGAN 48kHz) 零样本克隆",
  "totalDialogs": 210,
  "totalFiles": 220,
  "dialogs": {
@@ -9,7 +9,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_hunter_1.mp3",
-     "duration": 2.06
+     "duration": 2.0
     }
    ]
   },
@@ -18,7 +18,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_hunter_2.mp3",
-     "duration": 2.06
+     "duration": 2.24
     }
    ]
   },
@@ -27,7 +27,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_elder_1.mp3",
-     "duration": 3.02
+     "duration": 2.72
     }
    ]
   },
@@ -36,7 +36,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_elder_2.mp3",
-     "duration": 3.22
+     "duration": 2.08
     }
    ]
   },
@@ -45,7 +45,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_gatherer_1.mp3",
-     "duration": 2.66
+     "duration": 2.32
     }
    ]
   },
@@ -54,7 +54,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_shaman_1.mp3",
-     "duration": 2.11
+     "duration": 3.4
     }
    ]
   },
@@ -63,7 +63,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_hunter_3.mp3",
-     "duration": 2.93
+     "duration": 3.0
     }
    ]
   },
@@ -72,7 +72,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_child_1.mp3",
-     "duration": 2.62
+     "duration": 2.48
     }
    ]
   },
@@ -81,7 +81,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_craftsman_1.mp3",
-     "duration": 4.22
+     "duration": 4.44
     }
    ]
   },
@@ -90,7 +90,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_thinker_1.mp3",
-     "duration": 2.9
+     "duration": 4.48
     }
    ]
   },
@@ -99,7 +99,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_thinker_2.mp3",
-     "duration": 3.74
+     "duration": 4.52
     }
    ]
   },
@@ -108,7 +108,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_cause_1.mp3",
-     "duration": 7.61
+     "duration": 7.0
     }
    ]
   },
@@ -117,7 +117,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_essence_1.mp3",
-     "duration": 7.25
+     "duration": 7.56
     }
    ]
   },
@@ -126,7 +126,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_necessity_1.mp3",
-     "duration": 8.42
+     "duration": 8.36
     }
    ]
   },
@@ -135,7 +135,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_knowledge_1.mp3",
-     "duration": 8.18
+     "duration": 7.12
     }
    ]
   },
@@ -144,7 +144,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_chat_1.mp3",
-     "duration": 2.18
+     "duration": 2.96
     }
    ]
   },
@@ -153,7 +153,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_chat_2.mp3",
-     "duration": 3.29
+     "duration": 2.2
     }
    ]
   },
@@ -162,7 +162,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_chat_3.mp3",
-     "duration": 3.38
+     "duration": 2.64
     }
    ]
   },
@@ -171,7 +171,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_chat_4.mp3",
-     "duration": 3.58
+     "duration": 3.6
     }
    ]
   },
@@ -180,7 +180,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_chat_5.mp3",
-     "duration": 4.22
+     "duration": 3.24
     }
    ]
   },
@@ -189,7 +189,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_chat_6.mp3",
-     "duration": 4.51
+     "duration": 4.32
     }
    ]
   },
@@ -198,7 +198,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_chat_7.mp3",
-     "duration": 3.17
+     "duration": 1.96
     }
    ]
   },
@@ -207,7 +207,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_quirky_1.mp3",
-     "duration": 4.56
+     "duration": 5.32
     }
    ]
   },
@@ -216,7 +216,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_quirky_2.mp3",
-     "duration": 4.63
+     "duration": 6.2
     }
    ]
   },
@@ -225,7 +225,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_quirky_3.mp3",
-     "duration": 3.86
+     "duration": 5.0
     }
    ]
   },
@@ -234,7 +234,7 @@
    "parts": [
     {
      "file": "audio/dialog/prim_quirky_4.mp3",
-     "duration": 7.06
+     "duration": 7.76
     }
    ]
   },
@@ -243,7 +243,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_noble_1.mp3",
-     "duration": 4.39
+     "duration": 3.44
     }
    ]
   },
@@ -252,7 +252,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_freeman_1.mp3",
-     "duration": 2.42
+     "duration": 2.56
     }
    ]
   },
@@ -261,7 +261,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_freeman_2.mp3",
-     "duration": 2.42
+     "duration": 2.44
     }
    ]
   },
@@ -270,7 +270,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_captive_1.mp3",
-     "duration": 2.26
+     "duration": 3.08
     }
    ]
   },
@@ -279,7 +279,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_noble_2.mp3",
-     "duration": 5.35
+     "duration": 4.2
     }
    ]
   },
@@ -288,7 +288,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_trader_1.mp3",
-     "duration": 3.17
+     "duration": 4.76
     }
    ]
   },
@@ -297,7 +297,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_noble_3.mp3",
-     "duration": 5.42
+     "duration": 3.92
     }
    ]
   },
@@ -306,7 +306,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_rebel_1.mp3",
-     "duration": 5.18
+     "duration": 4.56
     }
    ]
   },
@@ -315,7 +315,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_thinker_1.mp3",
-     "duration": 5.11
+     "duration": 5.68
     }
    ]
   },
@@ -324,7 +324,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_elder_1.mp3",
-     "duration": 2.71
+     "duration": 3.92
     }
    ]
   },
@@ -333,7 +333,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_contradiction_1.mp3",
-     "duration": 10.3
+     "duration": 8.36
     }
    ]
   },
@@ -342,7 +342,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_principal_1.mp3",
-     "duration": 10.34
+     "duration": 8.6
     }
    ]
   },
@@ -351,7 +351,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_initiative_1.mp3",
-     "duration": 6.38
+     "duration": 8.08
     }
    ]
   },
@@ -360,7 +360,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_chat_1.mp3",
-     "duration": 3.94
+     "duration": 3.16
     }
    ]
   },
@@ -369,7 +369,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_chat_2.mp3",
-     "duration": 3.1
+     "duration": 2.16
     }
    ]
   },
@@ -378,7 +378,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_chat_3.mp3",
-     "duration": 3.14
+     "duration": 3.44
     }
    ]
   },
@@ -387,7 +387,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_chat_4.mp3",
-     "duration": 4.15
+     "duration": 2.96
     }
    ]
   },
@@ -396,7 +396,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_chat_5.mp3",
-     "duration": 3.0
+     "duration": 3.4
     }
    ]
   },
@@ -405,7 +405,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_chat_6.mp3",
-     "duration": 3.58
+     "duration": 2.52
     }
    ]
   },
@@ -414,7 +414,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_quirky_1.mp3",
-     "duration": 5.42
+     "duration": 7.2
     }
    ]
   },
@@ -423,7 +423,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_quirky_2.mp3",
-     "duration": 6.02
+     "duration": 5.84
     }
    ]
   },
@@ -432,7 +432,7 @@
    "parts": [
     {
      "file": "audio/dialog/priv_quirky_3.mp3",
-     "duration": 4.56
+     "duration": 4.8
     }
    ]
   },
@@ -441,7 +441,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_master_1.mp3",
-     "duration": 3.77
+     "duration": 2.92
     }
    ]
   },
@@ -450,7 +450,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_master_2.mp3",
-     "duration": 4.39
+     "duration": 3.32
     }
    ]
   },
@@ -459,7 +459,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_slave_1.mp3",
-     "duration": 2.18
+     "duration": 3.0
     }
    ]
   },
@@ -468,7 +468,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_slave_2.mp3",
-     "duration": 2.42
+     "duration": 3.64
     }
    ]
   },
@@ -477,7 +477,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_freeman_1.mp3",
-     "duration": 3.48
+     "duration": 3.8
     }
    ]
   },
@@ -486,7 +486,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_scribe_1.mp3",
-     "duration": 3.41
+     "duration": 2.88
     }
    ]
   },
@@ -495,7 +495,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_rebel_1.mp3",
-     "duration": 3.82
+     "duration": 4.04
     }
    ]
   },
@@ -504,7 +504,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_priest_1.mp3",
-     "duration": 5.06
+     "duration": 4.36
     }
    ]
   },
@@ -513,7 +513,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_thinker_1.mp3",
-     "duration": 4.51
+     "duration": 5.96
     }
    ]
   },
@@ -522,7 +522,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_thinker_2.mp3",
-     "duration": 7.63
+     "duration": 4.88
     }
    ]
   },
@@ -531,7 +531,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_philosopher_1.mp3",
-     "duration": 3.91
+     "duration": 5.84
     }
    ]
   },
@@ -540,7 +540,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_content_1.mp3",
-     "duration": 10.68
+     "duration": 10.52
     }
    ]
   },
@@ -549,7 +549,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_individual_1.mp3",
-     "duration": 8.14
+     "duration": 7.56
     }
    ]
   },
@@ -558,7 +558,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_possibility_1.mp3",
-     "duration": 12.1
+     "duration": 10.84
     }
    ]
   },
@@ -567,7 +567,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_chat_1.mp3",
-     "duration": 4.82
+     "duration": 3.84
     }
    ]
   },
@@ -576,7 +576,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_chat_2.mp3",
-     "duration": 2.3
+     "duration": 2.52
     }
    ]
   },
@@ -585,7 +585,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_chat_3.mp3",
-     "duration": 2.59
+     "duration": 3.24
     }
    ]
   },
@@ -594,7 +594,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_chat_4.mp3",
-     "duration": 3.31
+     "duration": 3.32
     }
    ]
   },
@@ -603,7 +603,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_chat_5.mp3",
-     "duration": 3.14
+     "duration": 2.96
     }
    ]
   },
@@ -612,7 +612,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_quirky_1.mp3",
-     "duration": 7.63
+     "duration": 5.2
     }
    ]
   },
@@ -621,7 +621,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_quirky_2.mp3",
-     "duration": 4.63
+     "duration": 5.84
     }
    ]
   },
@@ -630,7 +630,7 @@
    "parts": [
     {
      "file": "audio/dialog/slave_quirky_3.mp3",
-     "duration": 4.78
+     "duration": 4.8
     }
    ]
   },
@@ -639,7 +639,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_lord_1.mp3",
-     "duration": 3.96
+     "duration": 4.68
     }
    ]
   },
@@ -648,7 +648,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_lord_2.mp3",
-     "duration": 3.79
+     "duration": 3.04
     }
    ]
   },
@@ -657,7 +657,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_serf_1.mp3",
-     "duration": 2.52
+     "duration": 2.8
     }
    ]
   },
@@ -666,7 +666,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_serf_2.mp3",
-     "duration": 2.18
+     "duration": 3.24
     }
    ]
   },
@@ -675,7 +675,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_artisan_1.mp3",
-     "duration": 4.08
+     "duration": 3.8
     }
    ]
   },
@@ -684,7 +684,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_priest_1.mp3",
-     "duration": 4.18
+     "duration": 4.36
     }
    ]
   },
@@ -693,7 +693,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_peasant_1.mp3",
-     "duration": 3.6
+     "duration": 3.48
     }
    ]
   },
@@ -702,7 +702,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_lord_3.mp3",
-     "duration": 5.5
+     "duration": 4.36
     }
    ]
   },
@@ -711,7 +711,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_doubter_1.mp3",
-     "duration": 7.34
+     "duration": 4.92
     }
    ]
   },
@@ -720,7 +720,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_thinker_1.mp3",
-     "duration": 7.44
+     "duration": 5.76
     }
    ]
   },
@@ -729,7 +729,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_law_1.mp3",
-     "duration": 12.26
+     "duration": 12.8
     }
    ]
   },
@@ -738,7 +738,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_masses_1.mp3",
-     "duration": 10.1
+     "duration": 12.2
     }
    ]
   },
@@ -747,7 +747,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_truth_1.mp3",
-     "duration": 9.5
+     "duration": 9.96
     }
    ]
   },
@@ -756,7 +756,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_chat_1.mp3",
-     "duration": 5.23
+     "duration": 3.6
     }
    ]
   },
@@ -765,7 +765,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_chat_2.mp3",
-     "duration": 5.88
+     "duration": 4.24
     }
    ]
   },
@@ -774,7 +774,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_chat_3.mp3",
-     "duration": 4.46
+     "duration": 3.04
     }
    ]
   },
@@ -783,7 +783,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_chat_4.mp3",
-     "duration": 2.98
+     "duration": 2.4
     }
    ]
   },
@@ -792,7 +792,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_chat_5.mp3",
-     "duration": 4.58
+     "duration": 3.48
     }
    ]
   },
@@ -801,7 +801,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_quirky_1.mp3",
-     "duration": 6.98
+     "duration": 6.36
     }
    ]
   },
@@ -810,7 +810,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_quirky_2.mp3",
-     "duration": 5.95
+     "duration": 6.0
     }
    ]
   },
@@ -819,7 +819,7 @@
    "parts": [
     {
      "file": "audio/dialog/feudal_quirky_3.mp3",
-     "duration": 5.52
+     "duration": 5.72
     }
    ]
   },
@@ -828,7 +828,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_capitalist_1.mp3",
-     "duration": 1.66
+     "duration": 1.68
     }
    ]
   },
@@ -837,7 +837,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_capitalist_2.mp3",
-     "duration": 3.1
+     "duration": 3.44
     }
    ]
   },
@@ -846,7 +846,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_worker_1.mp3",
-     "duration": 4.56
+     "duration": 4.08
     }
    ]
   },
@@ -855,7 +855,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_worker_2.mp3",
-     "duration": 2.93
+     "duration": 2.56
     }
    ]
   },
@@ -864,7 +864,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_merchant_1.mp3",
-     "duration": 2.3
+     "duration": 3.08
     }
    ]
   },
@@ -873,7 +873,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_worker_3.mp3",
-     "duration": 4.1
+     "duration": 3.04
     }
    ]
   },
@@ -882,7 +882,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_worker_4.mp3",
-     "duration": 4.92
+     "duration": 3.84
     }
    ]
   },
@@ -891,7 +891,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_banker_1.mp3",
-     "duration": 4.51
+     "duration": 5.08
     }
    ]
   },
@@ -900,7 +900,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_engineer_1.mp3",
-     "duration": 6.05
+     "duration": 5.24
     }
    ]
   },
@@ -909,7 +909,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_thinker_1.mp3",
-     "duration": 7.87
+     "duration": 8.24
     }
    ]
   },
@@ -918,7 +918,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_peasant_1.mp3",
-     "duration": 5.69
+     "duration": 5.56
     }
    ]
   },
@@ -927,7 +927,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_banker_2.mp3",
-     "duration": 5.66
+     "duration": 7.04
     }
    ]
   },
@@ -936,7 +936,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_labor_duality_1.mp3",
-     "duration": 8.88
+     "duration": 10.4
     }
    ]
   },
@@ -945,7 +945,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_value_law_1.mp3",
-     "duration": 8.14
+     "duration": 10.96
     }
    ]
   },
@@ -954,11 +954,11 @@
    "parts": [
     {
      "file": "audio/dialog/cap_money_1.mp3",
-     "duration": 7.82
+     "duration": 9.2
     },
     {
      "file": "audio/dialog/cap_money_1_p2.mp3",
-     "duration": 2.83
+     "duration": 5.24
     }
    ]
   },
@@ -967,7 +967,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_surplus_rate_1.mp3",
-     "duration": 10.56
+     "duration": 12.08
     }
    ]
   },
@@ -976,11 +976,11 @@
    "parts": [
     {
      "file": "audio/dialog/cap_wage_1.mp3",
-     "duration": 8.9
+     "duration": 9.72
     },
     {
      "file": "audio/dialog/cap_wage_1_p2.mp3",
-     "duration": 2.66
+     "duration": 3.64
     }
    ]
   },
@@ -989,7 +989,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_profit_1.mp3",
-     "duration": 9.29
+     "duration": 9.52
     }
    ]
   },
@@ -998,7 +998,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_motion_1.mp3",
-     "duration": 12.19
+     "duration": 12.0
     }
    ]
   },
@@ -1007,7 +1007,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_chat_1.mp3",
-     "duration": 2.26
+     "duration": 1.72
     }
    ]
   },
@@ -1016,7 +1016,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_chat_2.mp3",
-     "duration": 3.31
+     "duration": 4.4
     }
    ]
   },
@@ -1025,7 +1025,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_chat_3.mp3",
-     "duration": 2.71
+     "duration": 3.0
     }
    ]
   },
@@ -1034,7 +1034,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_chat_4.mp3",
-     "duration": 6.12
+     "duration": 5.96
     }
    ]
   },
@@ -1043,7 +1043,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_chat_5.mp3",
-     "duration": 1.92
+     "duration": 2.4
     }
    ]
   },
@@ -1052,7 +1052,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_chat_6.mp3",
-     "duration": 4.01
+     "duration": 2.36
     }
    ]
   },
@@ -1061,7 +1061,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_quirky_1.mp3",
-     "duration": 9.07
+     "duration": 7.36
     }
    ]
   },
@@ -1070,7 +1070,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_quirky_2.mp3",
-     "duration": 12.38
+     "duration": 9.0
     }
    ]
   },
@@ -1079,7 +1079,7 @@
    "parts": [
     {
      "file": "audio/dialog/cap_quirky_3.mp3",
-     "duration": 5.38
+     "duration": 4.08
     }
    ]
   },
@@ -1088,7 +1088,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_banker_1.mp3",
-     "duration": 2.9
+     "duration": 2.32
     }
    ]
   },
@@ -1097,7 +1097,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_banker_2.mp3",
-     "duration": 3.94
+     "duration": 3.6
     }
    ]
   },
@@ -1106,7 +1106,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_unemployed_1.mp3",
-     "duration": 4.34
+     "duration": 2.72
     }
    ]
   },
@@ -1115,7 +1115,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_striker_1.mp3",
-     "duration": 3.05
+     "duration": 2.16
     }
    ]
   },
@@ -1124,7 +1124,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_worker_1.mp3",
-     "duration": 4.46
+     "duration": 3.2
     }
    ]
   },
@@ -1133,7 +1133,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_general_1.mp3",
-     "duration": 2.83
+     "duration": 3.96
     }
    ]
   },
@@ -1142,7 +1142,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_intellectual_1.mp3",
-     "duration": 4.8
+     "duration": 4.6
     }
    ]
   },
@@ -1151,7 +1151,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_worker_2.mp3",
-     "duration": 4.61
+     "duration": 4.2
     }
    ]
   },
@@ -1160,7 +1160,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_thinker_1.mp3",
-     "duration": 4.34
+     "duration": 5.24
     }
    ]
   },
@@ -1169,7 +1169,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_theorist_1.mp3",
-     "duration": 5.45
+     "duration": 4.56
     }
    ]
   },
@@ -1178,7 +1178,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_rebel_1.mp3",
-     "duration": 4.34
+     "duration": 5.8
     }
    ]
   },
@@ -1187,7 +1187,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_state_1.mp3",
-     "duration": 12.74
+     "duration": 10.48
     }
    ]
   },
@@ -1196,7 +1196,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_global_1.mp3",
-     "duration": 8.76
+     "duration": 12.88
     }
    ]
   },
@@ -1205,7 +1205,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_change_1.mp3",
-     "duration": 12.77
+     "duration": 11.76
     }
    ]
   },
@@ -1214,7 +1214,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_chat_1.mp3",
-     "duration": 3.98
+     "duration": 3.04
     }
    ]
   },
@@ -1223,7 +1223,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_chat_2.mp3",
-     "duration": 4.44
+     "duration": 4.0
     }
    ]
   },
@@ -1232,7 +1232,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_chat_3.mp3",
-     "duration": 4.06
+     "duration": 3.68
     }
    ]
   },
@@ -1241,7 +1241,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_chat_4.mp3",
-     "duration": 5.09
+     "duration": 4.2
     }
    ]
   },
@@ -1250,7 +1250,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_quirky_1.mp3",
-     "duration": 6.77
+     "duration": 9.56
     }
    ]
   },
@@ -1259,7 +1259,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_quirky_2.mp3",
-     "duration": 6.72
+     "duration": 8.04
     }
    ]
   },
@@ -1268,7 +1268,7 @@
    "parts": [
     {
      "file": "audio/dialog/mono_quirky_3.mp3",
-     "duration": 9.46
+     "duration": 7.68
     }
    ]
   },
@@ -1277,7 +1277,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_farmer_1.mp3",
-     "duration": 2.64
+     "duration": 4.08
     }
    ]
   },
@@ -1286,7 +1286,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_cadre_1.mp3",
-     "duration": 3.19
+     "duration": 3.12
     }
    ]
   },
@@ -1295,7 +1295,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_worker_1.mp3",
-     "duration": 3.1
+     "duration": 2.96
     }
    ]
   },
@@ -1304,7 +1304,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_intellectual_1.mp3",
-     "duration": 2.74
+     "duration": 2.4
     }
    ]
   },
@@ -1313,7 +1313,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_doctor_1.mp3",
-     "duration": 2.18
+     "duration": 2.44
     }
    ]
   },
@@ -1322,7 +1322,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_woman_1.mp3",
-     "duration": 3.26
+     "duration": 3.12
     }
    ]
   },
@@ -1331,7 +1331,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_student_1.mp3",
-     "duration": 3.02
+     "duration": 2.76
     }
    ]
   },
@@ -1340,7 +1340,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_engineer_1.mp3",
-     "duration": 3.41
+     "duration": 2.76
     }
    ]
   },
@@ -1349,7 +1349,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_leader_1.mp3",
-     "duration": 4.25
+     "duration": 3.6
     }
    ]
   },
@@ -1358,7 +1358,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_historian_1.mp3",
-     "duration": 3.77
+     "duration": 4.16
     }
    ]
   },
@@ -1367,7 +1367,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_party_1.mp3",
-     "duration": 8.86
+     "duration": 7.84
     }
    ]
   },
@@ -1376,7 +1376,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_spread_1.mp3",
-     "duration": 7.42
+     "duration": 8.08
     }
    ]
   },
@@ -1385,7 +1385,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_tech_1.mp3",
-     "duration": 13.18
+     "duration": 12.16
     }
    ]
   },
@@ -1394,7 +1394,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_chat_1.mp3",
-     "duration": 3.14
+     "duration": 3.6
     }
    ]
   },
@@ -1403,7 +1403,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_chat_2.mp3",
-     "duration": 3.62
+     "duration": 6.36
     }
    ]
   },
@@ -1412,7 +1412,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_chat_3.mp3",
-     "duration": 4.13
+     "duration": 3.32
     }
    ]
   },
@@ -1421,7 +1421,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_chat_4.mp3",
-     "duration": 2.71
+     "duration": 3.4
     }
    ]
   },
@@ -1430,7 +1430,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_chat_5.mp3",
-     "duration": 2.76
+     "duration": 2.88
     }
    ]
   },
@@ -1439,7 +1439,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_chat_6.mp3",
-     "duration": 2.95
+     "duration": 4.36
     }
    ]
   },
@@ -1448,7 +1448,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_quirky_1.mp3",
-     "duration": 7.44
+     "duration": 6.36
     }
    ]
   },
@@ -1457,7 +1457,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_quirky_2.mp3",
-     "duration": 8.23
+     "duration": 8.24
     }
    ]
   },
@@ -1466,7 +1466,7 @@
    "parts": [
     {
      "file": "audio/dialog/social_quirky_3.mp3",
-     "duration": 6.29
+     "duration": 6.4
     }
    ]
   },
@@ -1475,7 +1475,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_resident_1.mp3",
-     "duration": 2.74
+     "duration": 2.4
     }
    ]
   },
@@ -1484,7 +1484,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_resident_2.mp3",
-     "duration": 3.38
+     "duration": 2.68
     }
    ]
   },
@@ -1493,7 +1493,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_resident_3.mp3",
-     "duration": 3.72
+     "duration": 2.44
     }
    ]
   },
@@ -1502,7 +1502,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_child_1.mp3",
-     "duration": 2.45
+     "duration": 2.08
     }
    ]
   },
@@ -1511,7 +1511,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_artist_1.mp3",
-     "duration": 3.96
+     "duration": 3.04
     }
    ]
   },
@@ -1520,7 +1520,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_scientist_1.mp3",
-     "duration": 3.26
+     "duration": 2.64
     }
    ]
   },
@@ -1529,7 +1529,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_elder_1.mp3",
-     "duration": 3.31
+     "duration": 4.28
     }
    ]
   },
@@ -1538,7 +1538,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_philosopher_1.mp3",
-     "duration": 8.23
+     "duration": 8.2
     }
    ]
   },
@@ -1547,7 +1547,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_thinker_1.mp3",
-     "duration": 5.9
+     "duration": 6.44
     }
    ]
   },
@@ -1556,11 +1556,11 @@
    "parts": [
     {
      "file": "audio/dialog/comm_leap1_1.mp3",
-     "duration": 4.46
+     "duration": 3.64
     },
     {
      "file": "audio/dialog/comm_leap1_1_p2.mp3",
-     "duration": 10.46
+     "duration": 8.92
     }
    ]
   },
@@ -1569,7 +1569,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_leap2_1.mp3",
-     "duration": 10.73
+     "duration": 10.84
     }
    ]
   },
@@ -1578,7 +1578,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_necessity_1.mp3",
-     "duration": 13.08
+     "duration": 12.16
     }
    ]
   },
@@ -1587,7 +1587,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_chat_1.mp3",
-     "duration": 3.02
+     "duration": 2.8
     }
    ]
   },
@@ -1596,7 +1596,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_chat_2.mp3",
-     "duration": 6.07
+     "duration": 4.88
     }
    ]
   },
@@ -1605,7 +1605,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_chat_3.mp3",
-     "duration": 2.64
+     "duration": 3.12
     }
    ]
   },
@@ -1614,7 +1614,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_chat_4.mp3",
-     "duration": 3.89
+     "duration": 3.52
     }
    ]
   },
@@ -1623,7 +1623,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_chat_5.mp3",
-     "duration": 3.67
+     "duration": 3.52
     }
    ]
   },
@@ -1632,7 +1632,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_chat_6.mp3",
-     "duration": 3.58
+     "duration": 3.16
     }
    ]
   },
@@ -1641,7 +1641,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_quirky_1.mp3",
-     "duration": 8.9
+     "duration": 8.44
     }
    ]
   },
@@ -1650,7 +1650,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_quirky_2.mp3",
-     "duration": 7.03
+     "duration": 6.96
     }
    ]
   },
@@ -1659,7 +1659,7 @@
    "parts": [
     {
      "file": "audio/dialog/comm_quirky_3.mp3",
-     "duration": 8.28
+     "duration": 6.16
     }
    ]
   },
@@ -1668,7 +1668,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_cave_1.mp3",
-     "duration": 10.34
+     "duration": 11.12
     }
    ]
   },
@@ -1677,7 +1677,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_campfire_1.mp3",
-     "duration": 10.32
+     "duration": 11.64
     }
    ]
   },
@@ -1686,7 +1686,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_hut_1.mp3",
-     "duration": 8.02
+     "duration": 10.52
     }
    ]
   },
@@ -1695,7 +1695,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_fence_1.mp3",
-     "duration": 9.17
+     "duration": 11.72
     }
    ]
   },
@@ -1704,7 +1704,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_barn_1.mp3",
-     "duration": 8.42
+     "duration": 10.6
     }
    ]
   },
@@ -1713,11 +1713,11 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_temple_1.mp3",
-     "duration": 5.16
+     "duration": 5.0
     },
     {
      "file": "audio/dialog/bldg_temple_1_p2.mp3",
-     "duration": 4.42
+     "duration": 6.24
     }
    ]
   },
@@ -1726,7 +1726,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_palace_1.mp3",
-     "duration": 9.98
+     "duration": 9.92
     }
    ]
   },
@@ -1735,7 +1735,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_slave_camp_1.mp3",
-     "duration": 8.16
+     "duration": 12.48
     }
    ]
   },
@@ -1744,7 +1744,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_church_1.mp3",
-     "duration": 10.97
+     "duration": 13.64
     }
    ]
   },
@@ -1753,7 +1753,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_castle_1.mp3",
-     "duration": 11.42
+     "duration": 11.4
     }
    ]
   },
@@ -1762,7 +1762,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_manor_1.mp3",
-     "duration": 9.91
+     "duration": 13.0
     }
    ]
   },
@@ -1771,7 +1771,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_factory_1.mp3",
-     "duration": 8.45
+     "duration": 12.12
     }
    ]
   },
@@ -1780,11 +1780,11 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_parliament_1.mp3",
-     "duration": 7.15
+     "duration": 7.8
     },
     {
      "file": "audio/dialog/bldg_parliament_1_p2.mp3",
-     "duration": 3.0
+     "duration": 4.84
     }
    ]
   },
@@ -1793,7 +1793,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_slum_1.mp3",
-     "duration": 10.32
+     "duration": 14.56
     }
    ]
   },
@@ -1802,11 +1802,11 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_bank_1.mp3",
-     "duration": 10.82
+     "duration": 10.04
     },
     {
      "file": "audio/dialog/bldg_bank_1_p2.mp3",
-     "duration": 4.7
+     "duration": 4.16
     }
    ]
   },
@@ -1815,11 +1815,11 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_market_1.mp3",
-     "duration": 5.64
+     "duration": 9.88
     },
     {
      "file": "audio/dialog/bldg_market_1_p2.mp3",
-     "duration": 6.38
+     "duration": 8.12
     }
    ]
   },
@@ -1828,11 +1828,11 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_skyscraper_1.mp3",
-     "duration": 9.55
+     "duration": 12.92
     },
     {
      "file": "audio/dialog/bldg_skyscraper_1_p2.mp3",
-     "duration": 4.68
+     "duration": 4.0
     }
    ]
   },
@@ -1841,7 +1841,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_barricade_1.mp3",
-     "duration": 8.78
+     "duration": 10.16
     }
    ]
   },
@@ -1850,7 +1850,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_bank_tower_1.mp3",
-     "duration": 11.69
+     "duration": 10.0
     }
    ]
   },
@@ -1859,11 +1859,11 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_police_1.mp3",
-     "duration": 5.95
+     "duration": 8.6
     },
     {
      "file": "audio/dialog/bldg_police_1_p2.mp3",
-     "duration": 4.13
+     "duration": 6.8
     }
    ]
   },
@@ -1872,7 +1872,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_collective_farm_1.mp3",
-     "duration": 7.78
+     "duration": 12.52
     }
    ]
   },
@@ -1881,7 +1881,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_culture_palace_1.mp3",
-     "duration": 7.39
+     "duration": 9.72
     }
    ]
   },
@@ -1890,7 +1890,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_hospital_1.mp3",
-     "duration": 9.48
+     "duration": 17.6
     }
    ]
   },
@@ -1899,7 +1899,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_school_1.mp3",
-     "duration": 8.02
+     "duration": 12.0
     }
    ]
   },
@@ -1908,7 +1908,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_green_energy_1.mp3",
-     "duration": 9.19
+     "duration": 12.72
     }
    ]
   },
@@ -1917,7 +1917,7 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_auto_factory_1.mp3",
-     "duration": 13.1
+     "duration": 11.92
     }
    ]
   },
@@ -1926,11 +1926,11 @@
    "parts": [
     {
      "file": "audio/dialog/bldg_leisure_center_1.mp3",
-     "duration": 6.55
+     "duration": 5.84
     },
     {
      "file": "audio/dialog/bldg_leisure_center_1_p2.mp3",
-     "duration": 5.09
+     "duration": 10.24
     }
    ]
   }

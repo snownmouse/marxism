@@ -1,0 +1,964 @@
+{
+ "philosopher_n": {
+  "speaker": "AS0735",
+  "gender": "M",
+  "f0_med": 127.0,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "封建时代",
+  "persona": "民间智者，深沉缓重（全时期）",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0735",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\philosopher_n_neutral.wav",
+    "text": "满堂红广州大道分店店长林虹提供的数据显示",
+    "dur": 6.01,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\philosopher_n_happy.wav",
+    "text": "张国伟是近年来我国涌现出的世界级男子跳高高手",
+    "dur": 6.01,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\philosopher_n_playful.wav",
+    "text": "某国有大行支行因违规发行理财产品",
+    "dur": 6.02,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "concept_philosophy_n": {
+  "speaker": "AS0010",
+  "gender": "M",
+  "f0_med": 133.6,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "拟人概念",
+  "persona": "哲思之声，空灵中性，画外音",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0010",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\concept_philosophy_n_neutral.wav",
+    "text": "同样拥有运动记录卡路里消耗量等体感健康类功能",
+    "dur": 6.0,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\concept_philosophy_n_happy.wav",
+    "text": "华林证券的一位工作人员对二十一世纪经济报道记者说",
+    "dur": 5.99,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\concept_philosophy_n_playful.wav",
+    "text": "弗雷泽普莱斯又在女子一百米比赛中上演无敌模式",
+    "dur": 5.98,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "elder_m": {
+  "speaker": "AS0008",
+  "gender": "M",
+  "f0_med": 112.8,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "原始公社",
+  "persona": "长老，苍老缓慢有分量（跨时期呼应）",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0008",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\elder_m_neutral.wav",
+    "text": "也从一定程度上增加了用户密码被盗窃的难度",
+    "dur": 6.0,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\elder_m_happy.wav",
+    "text": "两天过后英国代表团以二枚金牌暂时领跑金牌榜",
+    "dur": 6.0,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\elder_m_playful.wav",
+    "text": "产险公司产二代第一支柱全部技术标准基本成型",
+    "dur": 6.01,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "freeman_m": {
+  "speaker": "AS0734",
+  "gender": "M",
+  "f0_med": 127.2,
+  "rate_bucket": "normal",
+  "energy_bucket": "normal",
+  "family": "奴隶制",
+  "persona": "自由民，傲气、自我庆幸",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0734",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\freeman_m_neutral.wav",
+    "text": "新媒凭中国离婚率一二年递增多数居民见怪不怪",
+    "dur": 5.4,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\freeman_m_happy.wav",
+    "text": "新版上海游轮合同因台风改变形成公司需退赔",
+    "dur": 6.03,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\freeman_m_playful.wav",
+    "text": "新手女司机油门当刹车连撞七车惊吓过度当场休克",
+    "dur": 5.96,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "building_n": {
+  "speaker": "AS0728",
+  "gender": "M",
+  "f0_med": 101.3,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "拟人建筑",
+  "persona": "建筑，古朴沧桑，历史本人在说话",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0728",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\building_n_neutral.wav",
+    "text": "一线城市在政策制度上占据优势未来市场将出现分化",
+    "dur": 7.59,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\building_n_happy.wav",
+    "text": "一线城市在政策制度上占据优势未来市场将出现分化",
+    "dur": 7.59,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\building_n_playful.wav",
+    "text": "一线城市在政策制度上占据优势未来市场将出现分化",
+    "dur": 7.59,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "priest_m": {
+  "speaker": "AS0009",
+  "gender": "M",
+  "f0_med": 113.6,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "封建时代",
+  "persona": "神职人员，虔诚腔调",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0009",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\priest_m_neutral.wav",
+    "text": "六岁走失男孩不幸民警警察掏手枪证明不是坏人",
+    "dur": 5.99,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\priest_m_happy.wav",
+    "text": "开始项目四山地自行车二十九千米",
+    "dur": 5.99,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\priest_m_playful.wav",
+    "text": "中国企业需要亲与与地地社区区更好的交流与沟通",
+    "dur": 6.01,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "serf_m": {
+  "speaker": "AS0016",
+  "gender": "M",
+  "f0_med": 120.0,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "封建时代",
+  "persona": "农奴/贫苦农民，悲苦麻木",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0016",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\serf_m_neutral.wav",
+    "text": "也可以引申理解为平台对用户的服务品质",
+    "dur": 6.0,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\serf_m_happy.wav",
+    "text": "并最终获得了六千多个意向性订单",
+    "dur": 6.02,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\serf_m_playful.wav",
+    "text": "危险化学品腐饰品有哪些",
+    "dur": 6.16,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "cadre_n": {
+  "speaker": "B8",
+  "gender": "M",
+  "f0_med": 143.5,
+  "rate_bucket": "normal",
+  "energy_bucket": "high",
+  "family": "社会主义",
+  "persona": "干部/领袖，正直昂扬",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "B8",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\cadre_n_neutral.wav",
+    "text": "户外的声音有远有近十分嘈杂可来到他屋内时单调成嗡嗡声",
+    "dur": 6.06,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\cadre_n_happy.wav",
+    "text": "我凑近杯口闻了一闻有点牛奶味儿又有椰子味还略带酒香",
+    "dur": 6.69,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\cadre_n_playful.wav",
+    "text": "专业银行要实现自身利益必须以资金筹措与运用效益的提高为基础",
+    "dur": 6.75,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "future_m": {
+  "speaker": "A8",
+  "gender": "M",
+  "f0_med": 146.5,
+  "rate_bucket": "normal",
+  "energy_bucket": "high",
+  "family": "共产主义",
+  "persona": "未来居民（男），明朗洒脱",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "A8",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\future_m_neutral.wav",
+    "text": "拧开塑料盖一看嗨又是蜡封的木塞儿同样也都陷在瓶口内",
+    "dur": 6.0,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\future_m_happy.wav",
+    "text": "此刻太阳撕破云层撩起雾幔姚山才露出她俏美的面容",
+    "dur": 6.12,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\future_m_playful.wav",
+    "text": "一香港的抗日救亡运动以救亡文化运动为主要形式",
+    "dur": 5.88,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "shaman_m": {
+  "speaker": "AS0726",
+  "gender": "M",
+  "f0_med": 115.0,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "原始公社",
+  "persona": "萨满，神秘悠远，拖长音",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0726",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\shaman_m_neutral.wav",
+    "text": "热点一二线城市也已集中推出优惠利益九折利率是个分水岭",
+    "dur": 9.26,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\shaman_m_happy.wav",
+    "text": "热点一二线城市也已集中推出优惠利益九折利率是个分水岭",
+    "dur": 9.26,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\shaman_m_playful.wav",
+    "text": "热点一二线城市也已集中推出优惠利益九折利率是个分水岭",
+    "dur": 9.26,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "citizen_new_n": {
+  "speaker": "D8",
+  "gender": "M",
+  "f0_med": 148.9,
+  "rate_bucket": "normal",
+  "energy_bucket": "high",
+  "family": "社会主义",
+  "persona": "新社会公民，明快亲切",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "D8",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\citizen_new_n_neutral.wav",
+    "text": "除中文外还将制作英日等外文版软盘以方便海外用户",
+    "dur": 6.19,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\citizen_new_n_happy.wav",
+    "text": "由于镯子尺寸比手腕稍大而会往上滑因此能完全隐没在袖子里",
+    "dur": 6.38,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\citizen_new_n_playful.wav",
+    "text": "除了付给教师们工资外戴维森自己则获取一年八千英镑的收入",
+    "dur": 6.38,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "tribal_f": {
+  "speaker": "A33",
+  "gender": "F",
+  "f0_med": 183.5,
+  "rate_bucket": "normal",
+  "energy_bucket": "normal",
+  "family": "原始公社",
+  "persona": "采集者/部落妇女，明快利落",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "A33",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\tribal_f_neutral.wav",
+    "text": "刘永刚等委员呼吁实行药品专营确保用药安全",
+    "dur": 4.98,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\tribal_f_happy.wav",
+    "text": "旅与游的时间比往往旅长游短与游客的愿望相悖",
+    "dur": 4.94,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\tribal_f_playful.wav",
+    "text": "此刻太阳撕破云层撩起雾幔瑶山才露出她俏美的面容",
+    "dur": 5.25,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "concept_economy_m": {
+  "speaker": "AS0731",
+  "gender": "M",
+  "f0_med": 122.3,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "拟人概念",
+  "persona": "世间规则之声，冷峻低沉",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0731",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\concept_economy_m_neutral.wav",
+    "text": "绿地在确定转型战略之后万达首先开始了人员结构的调整",
+    "dur": 8.19,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\concept_economy_m_happy.wav",
+    "text": "绿地在确定转型战略之后万达首先开始了人员结构的调整",
+    "dur": 8.19,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\concept_economy_m_playful.wav",
+    "text": "绿地在确定转型战略之后万达首先开始了人员结构的调整",
+    "dur": 8.19,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "child_n": {
+  "speaker": "B15",
+  "gender": "F",
+  "f0_med": 250.1,
+  "rate_bucket": "normal",
+  "energy_bucket": "normal",
+  "family": "原始公社",
+  "persona": "孩童，稚嫩明快（跨 S0/S7）",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "B15",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\child_n_neutral.wav",
+    "text": "小奥斯卡发现周围的世界太过荒诞就暗下决心要永远做小孩子",
+    "dur": 6.21,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\child_n_happy.wav",
+    "text": "它能探知因烟雾火焰障碍而无法用肉眼观察到的物体情况",
+    "dur": 6.38,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\child_n_playful.wav",
+    "text": "民用航空器抵押权适用民用航空器国籍登记国法律",
+    "dur": 5.61,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "banker_m": {
+  "speaker": "AS0011",
+  "gender": "M",
+  "f0_med": 114.6,
+  "rate_bucket": "normal",
+  "energy_bucket": "low",
+  "family": "资本主义",
+  "persona": "银行家，精明世故",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0011",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\banker_m_neutral.wav",
+    "text": "目前农板房产证的作用还大多限于证明财产的归属",
+    "dur": 6.01,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\banker_m_happy.wav",
+    "text": "目前他们以四金三银二铜继续在金牌榜和奖牌榜上领跑",
+    "dur": 6.01,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\banker_m_playful.wav",
+    "text": "该平台除了为用户提供良好的智能电视使用体验",
+    "dur": 6.01,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "future_f": {
+  "speaker": "D6",
+  "gender": "F",
+  "f0_med": 226.5,
+  "rate_bucket": "normal",
+  "energy_bucket": "high",
+  "family": "共产主义",
+  "persona": "未来居民（女），自由明亮",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "D6",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\future_f_neutral.wav",
+    "text": "而盖亚盖亚确持相反的态度所以奥恩将军也对他怀恨在心",
+    "dur": 5.75,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\future_f_happy.wav",
+    "text": "作为儒将楷模的岳飞也跻身于湖滨安西世代张扬着治国平天下的教义",
+    "dur": 6.62,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\future_f_playful.wav",
+    "text": "商检人员随即开箱抽样检验发现十五片中有十二片为劣质板",
+    "dur": 6.88,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "chatter_m": {
+  "speaker": "AS0005",
+  "gender": "M",
+  "f0_med": 123.5,
+  "rate_bucket": "normal",
+  "energy_bucket": "low",
+  "family": "市井百姓",
+  "persona": "市井男声，朴实憨厚，爱唠嗑",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0005",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\chatter_m_neutral.wav",
+    "text": "百分之六十三点二受访者将经济独立看作成熟的重要标志",
+    "dur": 5.98,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\chatter_m_happy.wav",
+    "text": "以往新疆在全国排名居于前列的状况得到明显改善",
+    "dur": 5.98,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\chatter_m_playful.wav",
+    "text": "展会参与者将独享接触中国和全球一些顶级品牌的机会",
+    "dur": 5.97,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "intellectual_m": {
+  "speaker": "AS0004",
+  "gender": "M",
+  "f0_med": 119.0,
+  "rate_bucket": "normal",
+  "energy_bucket": "low",
+  "family": "资本主义",
+  "persona": "知识分子/理论家，文气沉思",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0004",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\intellectual_m_neutral.wav",
+    "text": "六十岁儿子忘给秧田放水被责怪锤伤八十一岁父亲丢粪池",
+    "dur": 5.99,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\intellectual_m_happy.wav",
+    "text": "同比增长幅度约为百分之八十二零一三年全年为一百五十宗",
+    "dur": 5.61,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\intellectual_m_playful.wav",
+    "text": "六十岁男子为三十五岁情妇争风吃醋刺死五十岁情敌",
+    "dur": 5.49,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "noble_antiquity_m": {
+  "speaker": "AS0725",
+  "gender": "M",
+  "f0_med": 141.8,
+  "rate_bucket": "slow",
+  "energy_bucket": "normal",
+  "family": "奴隶制",
+  "persona": "奴隶主，高傲冷酷",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0725",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\noble_antiquity_m_neutral.wav",
+    "text": "据中原研究部截取阳光家园数据统计",
+    "dur": 5.98,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\noble_antiquity_m_happy.wav",
+    "text": "据中原研究部截取阳光家园数据统计",
+    "dur": 5.98,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\noble_antiquity_m_playful.wav",
+    "text": "据中原研究部截取阳光家园数据统计",
+    "dur": 5.98,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "slave_f": {
+  "speaker": "C20",
+  "gender": "F",
+  "f0_med": 229.2,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "奴隶制",
+  "persona": "奴隶，怯懦疲惫（跨 S1-S2）",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "C20",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\slave_f_neutral.wav",
+    "text": "英雄曾绍刚无愧于这光荣的称号无愧于我们的时代",
+    "dur": 6.4,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\slave_f_happy.wav",
+    "text": "可是越权审批真少用多乱占滥用耕地却愈演愈烈",
+    "dur": 6.78,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\slave_f_playful.wav",
+    "text": "但是他宁愿让自己和妻子儿女吃糠咽菜也不让王世云老人吃苦",
+    "dur": 7.29,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "capitalist_m": {
+  "speaker": "C8",
+  "gender": "M",
+  "f0_med": 154.8,
+  "rate_bucket": "normal",
+  "energy_bucket": "high",
+  "family": "资本主义",
+  "persona": "资本家/商人，傲慢圆滑",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "C8",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\capitalist_m_neutral.wav",
+    "text": "英雄曾昭纲无愧于这光荣的称号无愧于我们的时代",
+    "dur": 5.5,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\capitalist_m_happy.wav",
+    "text": "但是他宁愿让自己和妻子儿女吃糠咽菜也不让王世云老人吃苦",
+    "dur": 6.62,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\capitalist_m_playful.wav",
+    "text": "当地渔民用这种网来做渔网非常结实耐用而且不怕海水腐蚀",
+    "dur": 6.69,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "lord_m": {
+  "speaker": "AS0012",
+  "gender": "M",
+  "f0_med": 123.9,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "封建时代",
+  "persona": "封建领主，傲慢拖腔",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0012",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\lord_m_neutral.wav",
+    "text": "日本媒体甚至评论她为日本女排新救世主",
+    "dur": 5.99,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\lord_m_happy.wav",
+    "text": "将货币安置补偿款发放给被拆迁居民",
+    "dur": 5.98,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\lord_m_playful.wav",
+    "text": "以宅基地上独立建筑为基本单元进行登记",
+    "dur": 6.03,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "chatter_f": {
+  "speaker": "D13",
+  "gender": "F",
+  "f0_med": 234.0,
+  "rate_bucket": "normal",
+  "energy_bucket": "normal",
+  "family": "市井百姓",
+  "persona": "市井女声，亲切爱聊，带方言烟火气",
+  "source": {
+   "dataset": "THCHS-30",
+   "speaker": "D13",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\chatter_f_neutral.wav",
+    "text": "因此笼统的说女人怎样怎样比如说男人怎样怎样要有把握些",
+    "dur": 5.58,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\chatter_f_happy.wav",
+    "text": "随后江主席由阿莫林外长陪同乘车前往市内纳翁旅馆下榻",
+    "dur": 6.45,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\chatter_f_playful.wav",
+    "text": "而盖亚盖亚却持相反态度所以奥斯将军也对他怀恨在心",
+    "dur": 6.23,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "worker_m": {
+  "speaker": "AS0015",
+  "gender": "M",
+  "f0_med": 125.6,
+  "rate_bucket": "slow",
+  "energy_bucket": "low",
+  "family": "资本主义",
+  "persona": "工人，沙哑沉稳，疲惫但有力量",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0015",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\worker_m_neutral.wav",
+    "text": "各大公司也纷纷加大在此领域内的投资",
+    "dur": 6.0,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\worker_m_happy.wav",
+    "text": "成绩分别为二十二秒零八和二十二秒零九",
+    "dur": 6.0,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\worker_m_playful.wav",
+    "text": "跳出了六点八十九米的个人最好成绩夺得冠军",
+    "dur": 6.02,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "tribal_m": {
+  "speaker": "AS0733",
+  "gender": "M",
+  "f0_med": 132.2,
+  "rate_bucket": "normal",
+  "energy_bucket": "low",
+  "family": "原始公社",
+  "persona": "猎人/匠人，粗犷直接，嗓子带风沙感",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0733",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\tribal_m_neutral.wav",
+    "text": "新华社屠呦呦获诺奖是对中国世界级贡献的认可",
+    "dur": 5.99,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\tribal_m_happy.wav",
+    "text": "人体胎盘提取液新华网长沙七月二十七日消息",
+    "dur": 5.97,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\tribal_m_playful.wav",
+    "text": "新婚妻子婚后首次素颜面对丈夫丈夫诉妻子诈骗",
+    "dur": 5.96,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ },
+ "rebel_m": {
+  "speaker": "AS0727",
+  "gender": "M",
+  "f0_med": 137.7,
+  "rate_bucket": "normal",
+  "energy_bucket": "low",
+  "family": "封建时代",
+  "persona": "觉醒者，低沉转激昂（跨 S1/S2/S5）",
+  "source": {
+   "dataset": "AISHELL-1",
+   "speaker": "AS0727",
+   "license": "Apache-2.0"
+  },
+  "refs": {
+   "neutral": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\rebel_m_neutral.wav",
+    "text": "就六日的拍卖现场截至今年二月四日中午",
+    "dur": 6.09,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "happy": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\rebel_m_happy.wav",
+    "text": "就六日的拍卖现场截至今年二月四日中午",
+    "dur": 6.09,
+    "sr": 48000,
+    "n_seg": 1
+   },
+   "playful": {
+    "path": "D:\\GPT-SoVITS-v5\\voice_refs_sr\\rebel_m_playful.wav",
+    "text": "就六日的拍卖现场截至今年二月四日中午",
+    "dur": 6.09,
+    "sr": 48000,
+    "n_seg": 1
+   }
+  }
+ }
+}

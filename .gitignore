@@ -3,6 +3,9 @@ dist
 *.tsbuildinfo
 __pycache__/
 *.pyc
+scripts/voice/out/*.csv
+scripts/voice/out/report.txt
+scripts/voice/out/tsc.txt
 .DS_Store
 *.log
 .env
@@ -13,3 +16,10 @@ __pycache__/
 *.swo
 *~
 .cache
+
+# 语音合成临时/中间产物
+public/audio/dialog/_tmp_*.wav
+public/audio/dialog/_probe_test.wav
+public/audio/qa_deep.json
+public/audio/qa_quality.json
+_commit_msg.txt
