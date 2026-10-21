@@ -2,7 +2,7 @@
  * 「小原」AI 向导 · 模型与语音层
  *
  * 链路（前端零密钥）：
- *   浏览器 ──POST /api/chat──▶ server/index.mjs ──▶ 阿里通义千问（qwen-plus）
+ *   浏览器 ──POST /api/chat──▶ server/index.mjs ──▶ 阿里通义千问（qwen-flash）
  *   浏览器 ──POST /api/tts ──▶ server/index.mjs ──▶ qwen3-tts-flash（磁盘缓存）
  *
  * 降级顺序：
@@ -295,6 +295,11 @@ export function takePendingSeed(): { speaker: string; text: string } | null {
 
 let currentAudio: HTMLAudioElement | null = null
 let currentObjectUrl: string | null = null
+/** 每次朗读自增。旧流程发现 token 变了就立刻退出，杜绝两段音频叠着播 */
+let playToken = 0
+let playAbort: AbortController | null = null
+/** 播放中若被抢占/停止，用它把 await 中的流程解开，避免悬挂 */
+let pendingStop: (() => void) | null = null
 
 function stripForSpeech(text: string): string {
   return text
@@ -303,13 +308,44 @@ function stripForSpeech(text: string): string {
     .replace(/[•\-]\s+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
-    .slice(0, 400)
+    .slice(0, 600)
+}
+
+/**
+ * 切成适合「边合成边播」的小段：第一段尽量短（先出声），后面逐步放长（少发请求）。
+ * 只在标点处切，不改动用字，避免合成出来断句怪异。
+ */
+function splitSegments(text: string): string[] {
+  const clauses = text.split(/(?<=[。！？!?；;：:，,])/).map(s => s.trim()).filter(Boolean)
+  if (clauses.length <= 1) return [text]
+  const limit = (i: number) => (i === 0 ? 36 : 72)
+  const segs: string[] = []
+  let buf = ''
+  for (const c of clauses) {
+    if (buf && buf.length + c.length > limit(segs.length)) {
+      segs.push(buf)
+      buf = ''
+    }
+    buf += c
+    if (/[。！？!?]$/.test(buf) && buf.length >= limit(segs.length)) {
+      segs.push(buf)
+      buf = ''
+    }
+  }
+  if (buf) segs.push(buf)
+  return segs
 }
 
 function releaseAudio(): void {
+  if (pendingStop) {
+    const fn = pendingStop
+    pendingStop = null
+    fn()
+  }
   if (currentAudio) {
     try {
       currentAudio.pause()
+      currentAudio.src = ''
     } catch {
       /* 忽略 */
     }
@@ -321,50 +357,139 @@ function releaseAudio(): void {
   }
 }
 
-function speakWithBrowser(text: string): void {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-  const utterance = new SpeechSynthesisUtterance(text)
-  utterance.lang = 'zh-CN'
-  utterance.rate = 1
-  utterance.pitch = 1
-  window.speechSynthesis.cancel()
-  window.speechSynthesis.speak(utterance)
+function cancelBrowserSpeech(): void {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    window.speechSynthesis.cancel()
+  }
 }
 
-/** 朗读一段文本。优先 CosyVoice，不可用时降级浏览器语音 */
-export async function speakText(text: string): Promise<void> {
-  const clean = stripForSpeech(text)
-  if (!clean) return
+function teardown(): void {
+  playAbort?.abort()
+  playAbort = null
+  releaseAudio()
+  cancelBrowserSpeech()
+}
 
-  stopSpeaking()
-
+/** 取一小段语音；失败返回 null（由调用方决定是否降级浏览器语音） */
+async function fetchSegment(text: string, signal: AbortSignal): Promise<Blob | null> {
   try {
     const resp = await fetch('/api/tts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text: clean }),
+      body: JSON.stringify({ text }),
+      signal,
     })
     const contentType = resp.headers.get('content-type') || ''
-    if (resp.ok && contentType.startsWith('audio')) {
-      const blob = await resp.blob()
-      const url = URL.createObjectURL(blob)
-      currentObjectUrl = url
-      const audio = new Audio(url)
-      currentAudio = audio
-      audio.onended = () => releaseAudio()
-      await audio.play()
-      return
-    }
+    if (resp.ok && contentType.startsWith('audio')) return await resp.blob()
   } catch {
-    /* 落回浏览器语音 */
+    /* 网络错误或主动中止 */
   }
-
-  speakWithBrowser(clean)
+  return null
 }
 
-export function stopSpeaking(): void {
-  releaseAudio()
-  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+function playBlob(blob: Blob, my: number): Promise<void> {
+  return new Promise<void>(resolve => {
+    if (my !== playToken) {
+      resolve()
+      return
+    }
+    const url = URL.createObjectURL(blob)
+    const audio = new Audio(url)
+    currentAudio = audio
+    currentObjectUrl = url
+    let done = false
+    const finish = () => {
+      if (done) return
+      done = true
+      if (pendingStop === finish) pendingStop = null
+      if (currentAudio === audio) {
+        currentAudio = null
+        URL.revokeObjectURL(url)
+        if (currentObjectUrl === url) currentObjectUrl = null
+      }
+      resolve()
+    }
+    pendingStop = finish
+    audio.onended = finish
+    audio.onerror = finish
+    audio.play().catch(finish)
+  })
+}
+
+function speakBrowser(text: string): Promise<void> {
+  return new Promise<void>(resolve => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      resolve()
+      return
+    }
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.lang = 'zh-CN'
+    utterance.rate = 1
+    utterance.pitch = 1
+    let done = false
+    const finish = () => {
+      if (done) return
+      done = true
+      if (pendingStop === finish) pendingStop = null
+      resolve()
+    }
+    pendingStop = finish
+    utterance.onend = finish
+    utterance.onerror = finish
     window.speechSynthesis.cancel()
+    window.speechSynthesis.speak(utterance)
+  })
+}
+
+/**
+ * 朗读一段文本（小原专用）。
+ * 三条约定：
+ *   1. 全局同一时刻只有一段在播 —— 新的调用立刻接管，旧流程静默退出（修叠音/回声）；
+ *   2. 按句切段、边合成边播，第一段只合成三十来字，所以「先出声」更快；
+ *   3. 服务端不可用时，把这一段交给浏览器语音，后续段落同理。
+ */
+export async function speakText(text: string): Promise<void> {
+  const clean = stripForSpeech(text)
+  if (!clean) return
+
+  playToken += 1
+  const my = playToken
+  teardown()
+
+  const ac = new AbortController()
+  playAbort = ac
+  const segs = splitSegments(clean)
+
+  // 第一段先发出去，不等它回来就继续往下走（下一段的预取靠循环里的 pending）
+  let pending: Promise<Blob | null> | null = fetchSegment(segs[0], ac.signal)
+
+  for (let i = 0; i < segs.length; i++) {
+    if (my !== playToken) return
+    const current = pending
+    pending = i + 1 < segs.length ? fetchSegment(segs[i + 1], ac.signal) : null
+    const blob = current ? await current : null
+    if (my !== playToken) return
+    if (blob) {
+      await playBlob(blob, my)
+    } else {
+      await speakBrowser(segs.slice(i).join(''))
+      return
+    }
   }
+}
+
+/** 停掉当前朗读，并让所有进行中的朗读流程失效 */
+export function stopSpeaking(): void {
+  playToken += 1
+  teardown()
+}
+
+/** 是否正在朗读（供 UI 显示「停止」按钮状态） */
+export function isSpeaking(): boolean {
+  if (currentAudio) return true
+  return (
+    typeof window !== 'undefined' &&
+    'speechSynthesis' in window &&
+    window.speechSynthesis.speaking
+  )
 }

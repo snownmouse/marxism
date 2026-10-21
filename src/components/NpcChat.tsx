@@ -77,6 +77,7 @@ export default function NpcChat() {
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const [speakOn, setSpeakOn] = useState(false)
+  const [speakingId, setSpeakingId] = useState<string | null>(null)
   const [engine, setEngine] = useState<'online' | 'local'>(model.mode)
 
   const listRef = useRef<HTMLDivElement>(null)
@@ -126,8 +127,9 @@ export default function NpcChat() {
     try {
       const history: ChatMessage[] = next.map(m => ({ role: m.role, content: m.content }))
       const reply = await model.sendMessage(history, ctx)
-      setMessages(m => [...m, { id: nextId(), role: 'assistant', content: reply }])
-      if (speakOn) void speakText(reply)
+      const assistantId = nextId()
+      setMessages(m => [...m, { id: assistantId, role: 'assistant', content: reply }])
+      if (speakOn) speakMessage(assistantId, reply)
     } catch (e) {
       const msg = e instanceof Error ? e.message : '出错了'
       setMessages(m => [
@@ -145,12 +147,30 @@ export default function NpcChat() {
   }
 
   const clearChat = () => {
+    stopSpeaking()
+    setSpeakingId(null)
     setMessages([{ id: nextId(), role: 'assistant', content: model.greeting(ctx) }])
   }
 
   const pickQuick = (q: string) => {
     setInput(q)
     textRef.current?.focus()
+  }
+
+  /**
+   * 一次只播一条：
+   *   点正在播的那条 → 停下来；点另一条 → 立刻接管（旧的那段会被打断，不会叠音）。
+   */
+  const speakMessage = (id: string, content: string) => {
+    if (speakingId === id) {
+      stopSpeaking()
+      setSpeakingId(null)
+      return
+    }
+    setSpeakingId(id)
+    void speakText(content).finally(() => {
+      setSpeakingId(cur => (cur === id ? null : cur))
+    })
   }
 
   return (
@@ -191,10 +211,12 @@ export default function NpcChat() {
                 <RichText text={m.content} />
                 {m.role === 'assistant' && (
                   <button
-                    className="npc-speak-btn"
-                    title="朗读"
-                    onClick={() => void speakText(m.content)}
-                  >🔊</button>
+                    className={`npc-speak-btn${speakingId === m.id ? ' speaking' : ''}`}
+                    title={speakingId === m.id ? '停止朗读' : '朗读'}
+                    onClick={() => speakMessage(m.id, m.content)}
+                  >
+                    {speakingId === m.id ? '⏹' : '🔊'}
+                  </button>
                 )}
               </div>
             </div>
@@ -214,7 +236,10 @@ export default function NpcChat() {
               checked={speakOn}
               onChange={e => {
                 setSpeakOn(e.target.checked)
-                if (!e.target.checked) stopSpeaking()
+                if (!e.target.checked) {
+                  stopSpeaking()
+                  setSpeakingId(null)
+                }
               }}
             />
             🔊 自动朗读

@@ -194,6 +194,22 @@
 .npc-speak-btn:hover {
   color: var(--text-accent);
 }
+/* 正在朗读时按钮常显（否则鼠标移开就看不见"停止"了），并轻微呼吸提示 */
+.npc-speak-btn.speaking {
+  opacity: 1;
+  color: var(--text-accent);
+  background: rgba(212, 175, 55, 0.16);
+  animation: npc-speak-pulse 1.6s ease-in-out infinite;
+}
+@keyframes npc-speak-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.18);
+  }
+}
 .npc-loading {
   font-style: italic;
   color: var(--text-secondary);
