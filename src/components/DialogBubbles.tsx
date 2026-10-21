@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useAppStore } from '../store/useAppStore'
+import { askAbout } from '../lib/aiModel'
 import SpeakButton from './SpeakButton'
 
 const BUBBLE_W = 200
@@ -10,6 +11,7 @@ export default function DialogBubbles() {
   const removeBubble = useAppStore(s => s.removeBubble)
   const setGlossaryPopup = useAppStore(s => s.setGlossaryPopup)
   const glossary = useAppStore(s => s.glossary)
+  const setNpc = useAppStore(s => s.setNpc)
 
   const [vw, setVw] = useState(window.innerWidth)
   const [vh, setVh] = useState(window.innerHeight)
@@ -75,6 +77,18 @@ export default function DialogBubbles() {
                 title="朗读这句话"
                 className="speak-btn-bubble"
               />
+            )}
+            {!isUser && (
+              <button
+                className="dialog-bubble-ask"
+                title="问小原：这句话背后的理论是什么"
+                onClick={() => {
+                  askAbout(String(bubble.classType || ''), bubble.text)
+                  setNpc(true)
+                }}
+              >
+                💬
+              </button>
             )}
             {gItem && (
               <button

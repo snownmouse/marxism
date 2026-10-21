@@ -1,0 +1,24 @@
+[Unit]
+Description=Marxism AI Guide API (xiaoyuan proxy: /api/chat + /api/tts)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/marxism/server
+# Key 只放在这里，不要写进仓库
+EnvironmentFile=-/etc/marxism-api.env
+Environment=NODE_ENV=production
+Environment=PORT=1960
+Environment=HOST=127.0.0.1
+ExecStart=/usr/bin/node /opt/marxism/server/index.mjs
+Restart=always
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+# 资源上限：避免异常请求拖垮机器
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target
