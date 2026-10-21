@@ -1,5 +1,4 @@
 import { useAppStore } from '../store/useAppStore'
-import SpeakButton from './SpeakButton'
 
 const CAT_STYLES: Record<string, { bg: string; color: string; label: string }> = {
   '哲学基础': { bg: '#3A1B5C', color: '#CE93D8', label: '哲' },
@@ -17,15 +16,6 @@ export default function GlossaryPopup() {
   const cat = activeGlossaryItem.category || '马克思主义基本原理'
   const cs = CAT_STYLES[cat] || CAT_STYLES['马克思主义基本原理']
 
-  // 拼接词条的朗读文本
-  const buildSpeech = (): string => {
-    const item = activeGlossaryItem
-    const parts = [`${item.term}。定义：${item.definition}`]
-    if (item.marxQuote) parts.push(`经典原文：「${item.marxQuote}」`)
-    parts.push(`场景说明：${item.example}`)
-    return parts.join('。')
-  }
-
   return (
     <div className="modal-overlay" onClick={() => setGlossaryPopup(null)}>
       <div className="modal-content glossary-modal" onClick={e => e.stopPropagation()}>
@@ -37,7 +27,6 @@ export default function GlossaryPopup() {
             </span>
           </h3>
           <div className="glossary-header-actions">
-            <SpeakButton text={buildSpeech()} title="朗读词条" className="speak-btn-modal" />
             <button className="modal-close" onClick={() => setGlossaryPopup(null)}>✕</button>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useAppStore } from '../store/useAppStore'
-import SpeakButton from './SpeakButton'
 import quizData from '../data/quizQuestions.json'
 
 export interface QuizQuestion {
@@ -42,28 +41,6 @@ const getStudyData = () => storage.get('study_data', {
   dailyProgress: 0,
   chapterProgress: {} as Record<string, { total: number; correct: number }>
 })
-
-// 拼接题目的朗读文本
-const buildQuestionSpeech = (q: QuizQuestion): string => {
-  const parts = [q.question]
-  if (q.type === 'judge') {
-    parts.push('请判断这句话是正确的还是错误的。')
-  } else {
-    parts.push(q.options.map((o, i) => `${String.fromCharCode(65 + i)}、${o}`).join('。'))
-  }
-  return parts.join(' ')
-}
-
-// 拼接解析的朗读文本
-const buildExplanationSpeech = (q: QuizQuestion): string => {
-  if (q.explanation) return q.explanation
-  const answerText = Array.isArray(q.answer)
-    ? q.answer.map(a => String.fromCharCode(65 + a)).join('、')
-    : q.type === 'judge'
-      ? (q.answer === 0 ? '正确' : '错误')
-      : String.fromCharCode(65 + q.answer)
-  return `正确答案是${answerText}。`
-}
 
 export default function QuizPanel() {
   const showQuiz = useAppStore(s => s.showQuiz)
@@ -443,11 +420,6 @@ export default function QuizPanel() {
               >
                 {studyData.favoriteIds.includes(currentQuestion.id) ? '⭐' : '☆'}
               </button>
-              <SpeakButton
-                text={buildQuestionSpeech(currentQuestion)}
-                title="朗读题目"
-                className="speak-btn-quiz"
-              />
             </div>
 
             <div className="question-text">{currentQuestion.question}</div>
@@ -488,11 +460,6 @@ export default function QuizPanel() {
               <div className="explanation-section">
                 <div className="explanation-header">
                   <span>💡 答案解析</span>
-                  <SpeakButton
-                    text={buildExplanationSpeech(currentQuestion)}
-                    title="朗读解析"
-                    className="speak-btn-quiz"
-                  />
                 </div>
                 <div className="explanation-text">
                   {currentQuestion.explanation || `正确答案：${Array.isArray(currentQuestion.answer) 
@@ -542,11 +509,6 @@ export default function QuizPanel() {
               <span className={`question-type type-${currentQuestion.type}`}>
                 {currentQuestion.type === 'single' ? '单选' : currentQuestion.type === 'multiple' ? '多选' : '判断'}
               </span>
-              <SpeakButton
-                text={buildQuestionSpeech(currentQuestion)}
-                title="朗读题目"
-                className="speak-btn-quiz"
-              />
             </div>
             
             <div className="question-text">{currentQuestion.question}</div>
