@@ -1,274 +1,340 @@
-// AI 模型抽象层
-// ---------------------------------------------------------------------------
-// 设计目标（对应需求："加一个对话的 AI 做引导的 NPC，后面配阿里的语音或文字模型"）：
-//   1. 默认使用「本地引导模型」——纯前端、规则 + 数据驱动，无需任何密钥，离线可用，
-//      方便本地自测与无网络环境。
-//   2. 当配置了阿里云 DashScope（通义千问）API Key 后，自动切换为「通义千问模型」，
-//      具备真正的对话理解能力。
-//   3. 语音（TTS）提供浏览器内置的 speechSynthesis 作为默认朗读方案；
-//      阿里 CosyVoice / Sambert 的接入点已在 synthesizeWithAliyun() 处预留（见文件末尾）。
-//
-// 安全提示：前端直连大模型会把 API Key 暴露给浏览器。当前方案适合个人/内网学习工具；
-// 若上公网，请改走「服务端代理」转发 DashScope 请求，不要把 Key 打进前端包。
-// ---------------------------------------------------------------------------
-
-import glossaryData from '../data/glossary.json'
-import stagesData from '../data/stages.json'
-import focusData from '../data/theoryFocus.json'
-import type { GlossaryItem, Stage, TheoryFocus } from '../store/useAppStore'
+/**
+ * 「小原」AI 向导 · 模型与语音层
+ *
+ * 链路（前端零密钥）：
+ *   浏览器 ──POST /api/chat──▶ server/index.mjs ──▶ 阿里通义千问（qwen-plus）
+ *   浏览器 ──POST /api/tts ──▶ server/index.mjs ──▶ CosyVoice（磁盘缓存）
+ *
+ * 降级顺序：
+ *   1. 服务端已配 Key        → 在线模型实时生成
+ *   2. 服务端没配/不可达      → 本地规则引导（离线可用，不报错）
+ *   3. 语音合成不可用         → 浏览器 speechSynthesis
+ *
+ * 注意：本文件只服务「小原」。小镇居民的台词与预制音频由 services/tts.ts 负责，
+ *      两条链路互不影响。
+ */
 
 export interface ChatMessage {
-  role: 'user' | 'assistant' | 'system'
+  role: 'user' | 'assistant'
   content: string
 }
 
-// 当前学习上下文：让 NPC 知道用户正在观察哪个历史阶段，从而"在场"地引导
 export interface AIContext {
-  stage: Stage | null
+  /** 当前阶段对象（store 里的 Stage），这里只按需读取少数字段 */
+  stage: unknown
   stageIndex: number
   stageCount: number
 }
 
 export interface AIModel {
-  readonly mode: 'local' | 'dashscope'
+  readonly mode: 'online' | 'local'
   readonly label: string
   greeting(ctx: AIContext): string
   sendMessage(messages: ChatMessage[], ctx: AIContext): Promise<string>
 }
 
-const glossary = glossaryData as GlossaryItem[]
-const stages = stagesData as Stage[]
-const theoryFocuses = focusData as TheoryFocus[]
+export const NPC_NAME = '小原'
+export const NPC_TITLE = '原理社会 · 理论引导员'
 
-const NPC_NAME = '小原'
-const NPC_TITLE = '马克思主义理论引导员'
+/* ------------------------------------------------------------------ *
+ * 通用小工具
+ * ------------------------------------------------------------------ */
 
-/* ===================== 本地引导模型 ===================== */
+function readField(obj: unknown, key: string): string {
+  if (!obj || typeof obj !== 'object') return ''
+  const v = (obj as Record<string, unknown>)[key]
+  if (typeof v === 'string') return v
+  if (typeof v === 'number') return String(v)
+  return ''
+}
+
+function readNested(obj: unknown, outer: string, inner: string): string {
+  if (!obj || typeof obj !== 'object') return ''
+  return readField((obj as Record<string, unknown>)[outer], inner)
+}
+
+function stageNameOf(ctx: AIContext): string {
+  return readField(ctx.stage, 'name') || '当前阶段'
+}
+
+function contextBrief(ctx: AIContext): Record<string, string | number> {
+  return {
+    stageName: readField(ctx.stage, 'name'),
+    productivity: readField(ctx.stage, 'productivity'),
+    relations: readField(ctx.stage, 'relations'),
+    exploitationRate: readField(ctx.stage, 'exploitationRate'),
+    politics: readNested(ctx.stage, 'superstructure', 'politics'),
+    law: readNested(ctx.stage, 'superstructure', 'law'),
+    ideology: readNested(ctx.stage, 'superstructure', 'ideology'),
+    stageIndex: ctx.stageIndex,
+    stageCount: ctx.stageCount,
+  }
+}
+
+function describeError(err: unknown): string {
+  if (err instanceof DOMException && err.name === 'AbortError') return '请求超时'
+  if (err instanceof Error && err.message) return err.message
+  return '未知错误'
+}
+
+async function postJSON<T = any>(url: string, body: unknown, timeoutMs = 40000): Promise<T> {
+  const controller = new AbortController()
+  const timer = window.setTimeout(() => controller.abort(), timeoutMs)
+  try {
+    const resp = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    })
+    const text = await resp.text()
+    let data: any = null
+    try {
+      data = text ? JSON.parse(text) : null
+    } catch {
+      data = null
+    }
+    if (!resp.ok) {
+      const detail = data?.hint || data?.error || data?.detail || `HTTP ${resp.status}`
+      throw new Error(String(detail))
+    }
+    return data as T
+  } finally {
+    window.clearTimeout(timer)
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * 本地规则引导（无网络也能用）
+ * ------------------------------------------------------------------ */
+
+interface FaqEntry {
+  keys: string[]
+  answer: string
+}
+
+const FAQ: FaqEntry[] = [
+  {
+    keys: ['剩余价值', '剥削', '劳动价值'],
+    answer:
+      '**剩余价值**是工人在剩余劳动时间里创造、却被生产资料所有者无偿占有的那部分价值。\n\n• 劳动力成了商品，它的价值由维持工人生活所需决定\n• 工人一天创造的价值高于工资，差额就是剩余价值\n• 提高剥削程度有两条路：延长工作日（绝对剩余价值）／压低必要劳动时间（相对剩余价值）\n\n> 关键不在"老板人好不好"，而在生产资料归谁所有。\n\n想更直观，去面板上看看当前的**剥削率**数字。',
+  },
+  {
+    keys: ['生产力', '生产关系'],
+    answer:
+      '**生产力**是人改造自然的能力（工具、技术、劳动者素质）；**生产关系**是生产中人与人结成的关系（谁占有生产资料、谁支配劳动、产品怎么分配）。\n\n• 生产力决定生产关系\n• 生产关系反过来又促进或阻碍生产力\n• 两者矛盾累积到一定程度，就要求变革生产关系\n\n去「阶段」面板左右切一下，能看到每个阶段这两项的具体对照。',
+  },
+  {
+    keys: ['阶级', '阶级斗争'],
+    answer:
+      '**阶级**是指在特定生产关系中处于不同地位的社会集团——差别根子在**对生产资料的占有关系**，不是收入高低或职业差别。\n\n• 有占有、有支配，就有利益对立\n• 利益对立公开化，就是阶级斗争\n• 阶级斗争推动社会形态更替\n\n镇上不同身份的人说话立场不一样，正是这个结构在起作用。',
+  },
+  {
+    keys: ['上层建筑', '意识形态', '国家', '法律'],
+    answer:
+      '**上层建筑**是建立在经济基础之上的政治法律制度与设施，以及与之相适应的**意识形态**。\n\n• 经济基础决定上层建筑\n• 上层建筑反作用于经济基础：维护它，或阻碍它变革\n• 国家是阶级矛盾不可调和的产物，本质是阶级统治的工具\n\n每个阶段的「社会结构」面板里，政治、法律、意识形态三项就是它的具体形态。',
+  },
+  {
+    keys: ['商品', '货币', '资本'],
+    answer:
+      '**商品**是用来交换的劳动产品，具有使用价值和价值二重性；**货币**是价值形式发展的产物，固定充当一般等价物；**资本**是能带来剩余价值的价值。\n\n• 商品交换 → 货币产生 → 劳动力成为商品 → 货币转化为资本\n• 公式对比：W—G—W 是"为买而卖"，G—W—G′ 是"为卖而买"\n\n> 货币变成资本的关键，是买到一种能创造更多价值的商品——劳动力。',
+  },
+  {
+    keys: ['私有制', '分工', '所有制'],
+    answer:
+      '**分工**提高效率，也带来交换的必要；**私有制**则让生产资料归属固定下来，是阶级产生的根源。\n\n• 第一次大分工（畜牧业）→ 剩余产品与交换出现\n• 第二次（手工业）→ 私有制逐步确立\n• 第三次（商业）→ 出现专门从事交换的阶层\n\n沿着阶段往后走，你会看到同一套逻辑反复重演。',
+  },
+]
+
+function localAnswer(question: string, ctx: AIContext): string {
+  const q = question.trim()
+  const name = stageNameOf(ctx)
+
+  if (!q) {
+    return `你可以直接问我一个概念，或者问「${name}这个阶段最关键的是什么」。`
+  }
+
+  if (/^(你好|您好|hi|hello|嗨|在吗|哈喽)/i.test(q)) {
+    return `你好，我是**${NPC_NAME}**。\n\n现在我们在「${name}」。你可以问我三件事：\n• 镇上某句话背后的**理论**是什么\n• 某个概念的标准定义\n• 这个阶段和你的考点怎么对上\n\n随便问一句试试。`
+  }
+
+  for (const item of FAQ) {
+    if (item.keys.some(k => q.includes(k))) return item.answer
+  }
+
+  if (/玩法|怎么玩|怎么用|做什么|下一步|不会|干嘛|干吗/.test(q)) {
+    return `这个站点的玩法是三层：\n\n• **看**：在城镇里点居民，听他们在当前阶段说什么\n• **问**：指着某句话点 💬，我来讲它背后的理论\n• **验**：进「答题」，做错了再回来问\n\n你现在在「${name}」，建议先把镇上的对话点开两三个。`
+  }
+
+  if (/这个阶段|现在|当前|这里|这一关|这关|时代/.test(q)) {
+    const parts: string[] = [`当前是「${name}」。`]
+    const productivity = readField(ctx.stage, 'productivity')
+    const relations = readField(ctx.stage, 'relations')
+    const rate = readField(ctx.stage, 'exploitationRate')
+    if (productivity) parts.push(`生产力：${productivity}`)
+    if (relations) parts.push(`生产关系：${relations}`)
+    if (rate) parts.push(`剥削率：${rate}`)
+    parts.push('把这几项放在一起看，就是这一阶段的骨架。想深入哪一项，直接问我就行。')
+    return parts.join('\n')
+  }
+
+  if (/考点|考试|复习|知识点|怎么记/.test(q)) {
+    return `按考点记，一个阶段抓四条线：\n\n• **生产力**：工具与技术水平\n• **生产关系**：谁占有、谁劳动、怎么分配\n• **上层建筑**：政治、法律、意识形态\n• **矛盾**：这一阶段最主要的对立是什么\n\n用这四条线过一遍「${name}」，比背零散结论稳。`
+  }
+
+  return `这个问题我按教材口径给你搭个框架：\n\n• 先找**生产关系**的变化——谁占有生产资料，是一切分歧的起点\n• 再看**生产力**是否被这套关系卡住\n• 最后看**上层建筑**在为谁服务\n\n把它落到「${name}」上，你再问我具体是哪一环，我给你说明白。`
+}
 
 class LocalGuideModel implements AIModel {
   readonly mode = 'local' as const
-  readonly label = '本地引导模式'
+  readonly label = '本地引导'
 
   greeting(ctx: AIContext): string {
-    const stage = ctx.stage
-    let reply = `你好，我是 ${NPC_NAME}，${NPC_TITLE} 👋\n`
-    if (stage) {
-      reply += `你现在正在观察「${stage.name}」。我可以帮你讲解概念、梳理这个阶段的生产力与生产关系，或者陪你复习。\n`
-    }
-    reply += `试着问我：\n• 什么是剩余价值？\n• 讲讲这个阶段的剥削率\n• 帮我梳理一下当前知识点`
-    return reply
+    return `我是**${NPC_NAME}**，${NPC_TITLE}。\n\n现在我们在「${stageNameOf(ctx)}」。\n\n问概念、问镇上那句话什么意思、问这阶段的关键矛盾，我都能接住。\n\n（当前是本地引导模式；服务端配好模型 Key 后会自动切到在线模型，回答更灵活。）`
   }
 
   async sendMessage(messages: ChatMessage[], ctx: AIContext): Promise<string> {
     const last = [...messages].reverse().find(m => m.role === 'user')
-    const text = (last?.content || '').trim()
-    if (!text) return this.greeting(ctx)
-
-    // 1) 问候
-    if (/^(你好|您好|hi|hello|在吗|在么|嗨|嘿)/i.test(text)) {
-      return this.greeting(ctx)
-    }
-
-    // 2) 解释 / 什么是 某个概念
-    const explainMatch = text.match(/(?:讲讲|解释|解释一下|什么是|啥是|了解|说说|介绍|讲下|讲一讲)\s*[:：]?\s*(.+)$/)
-    const topic = (explainMatch?.[1] || '').trim()
-
-    // 3) 命中词条（用户原话含词条，或"解释X"里的 X 含词条）
-    const hit = glossary.find(g => text.includes(g.term) || (topic && topic.includes(g.term)))
-    if (hit) {
-      let reply = `📖 **${hit.term}**\n${hit.definition}`
-      if (hit.marxQuote) reply += `\n\n> ${hit.marxQuote}`
-      if (hit.example) reply += `\n\n💡 例子：${hit.example}`
-      reply += `\n\n（分类：${hit.category || '马克思主义'}）`
-      return reply
-    }
-
-    // 4) 当前阶段相关问题
-    if (ctx.stage && /(当前|现在|这个|本|目前|此刻).*(阶段|社会|时期|形态)|这个阶段|现在在|当前阶段/i.test(text)) {
-      return this.describeStage(ctx.stage)
-    }
-
-    // 5) 理论聚焦
-    const focus = ctx.stage ? theoryFocuses.find(f => f.stageId === ctx.stage!.id) : null
-    if (focus && /(聚焦|重点|核心|焦点|理论焦点|focus|深入)/i.test(text)) {
-      return `🎯 **${focus.title}**\n${focus.content}\n\n${focus.philosophy}\n\n相关概念：${focus.relatedTerms.join('、')}`
-    }
-
-    // 6) 功能引导
-    if (/(怎么|如何|怎样|咋).*(学|用|操作|复习|考试|刷题)|功能|按钮|怎么玩|help|帮助|引导/i.test(text)) {
-      return this.guideFeatures()
-    }
-
-    // 7) 关键词兜底：在词条/聚焦里找相关概念
-    const related = this.findRelated(text)
-    if (related) return related
-
-    // 8) 默认引导
-    return this.defaultReply(ctx)
-  }
-
-  private describeStage(stage: Stage): string {
-    const cls = stage.classes.map(c => `${c.name} ${Math.round(c.populationPct * 100)}%`).join('，')
-    return (
-      `🏛️ **${stage.name}**\n` +
-      `• 生产力：${stage.productivity}\n` +
-      `• 生产关系：${stage.relations}\n` +
-      `• 剥削率：${stage.exploitationRate}%\n` +
-      `• 阶级构成：${cls}\n` +
-      `• 上层建筑：政治「${stage.superstructure.politics}」/ 法律「${stage.superstructure.law}」/ 意识形态「${stage.superstructure.ideology}」\n\n` +
-      `建议点开小镇里居民的对话气泡（带 ℹ 的可看词条），再配合左侧「📖 内容讲解」一起看，会更直观。`
-    )
-  }
-
-  private guideFeatures(): string {
-    return (
-      `🧭 这个模拟器里，我可以陪你用这些功能一起学：\n` +
-      `• 「📖 内容讲解」——按阶段精讲基本原理\n` +
-      `• 「📝 考试复习」——刷题、错题本、模拟考试\n` +
-      `• 「🕸️ 知识网络」——看概念之间的关联\n` +
-      `• 「🌳 知识体系」——总览全部词条与对话\n` +
-      `• 点顶部时间轴切换历史阶段，观察社会形态演变\n\n` +
-      `你想先从哪一块开始？我可以针对它出几道思考题。`
-    )
-  }
-
-  private findRelated(text: string): string | null {
-    const t = text.toLowerCase()
-    const g = glossary.find(x => t.includes(x.term.toLowerCase()) || x.term.toLowerCase().includes(t))
-    if (g) {
-      let reply = `📖 **${g.term}**\n${g.definition}`
-      if (g.marxQuote) reply += `\n\n> ${g.marxQuote}`
-      if (g.example) reply += `\n\n💡 例子：${g.example}`
-      return reply
-    }
-    return null
-  }
-
-  private defaultReply(ctx: AIContext): string {
-    const stage = ctx.stage
-    const someTerms = glossary.slice(0, 5).map(g => g.term).join('、')
-    let reply =
-      `这个问题有点超出我当前的数据范围啦 🤔\n` +
-      `不过我可以帮你巩固眼前的知识。试试这样问：\n` +
-      `• 「讲讲 ${stage ? stage.name : '当前阶段'} 的剥削率」\n` +
-      `• 「什么是 ${someTerms.split('、')[0]}？」\n` +
-      `• 「帮我出几道题练练」\n\n` +
-      `（提示：可用词条包括 ${someTerms} 等）`
-    return reply
+    return localAnswer(last?.content ?? '', ctx)
   }
 }
 
-/* ===================== 阿里通义千问模型 ===================== */
+/* ------------------------------------------------------------------ *
+ * 在线模型（走服务端代理）
+ * ------------------------------------------------------------------ */
 
-class DashScopeModel implements AIModel {
-  readonly mode = 'dashscope' as const
-  readonly label = '通义千问模式'
-  private apiKey: string
+class RemoteGuideModel implements AIModel {
+  mode: 'online' | 'local' = 'online'
+  private readonly local = new LocalGuideModel()
 
-  constructor(apiKey: string) {
-    this.apiKey = apiKey
+  get label(): string {
+    return this.mode === 'online' ? '通义千问' : '本地引导'
   }
 
-  greeting(_ctx: AIContext): string {
-    return `你好，我是 ${NPC_NAME}，${NPC_TITLE} 👋 通义千问已接入，我们可以深入学习马克思主义理论了。你想先聊点什么？`
+  greeting(ctx: AIContext): string {
+    if (this.mode === 'local') return this.local.greeting(ctx)
+    return `我是**${NPC_NAME}**，${NPC_TITLE}。\n\n现在我们在「${stageNameOf(ctx)}」。\n\n你可以：\n• 指着镇上某句话点 💬，我讲它背后的理论\n• 直接问任何概念，比如"什么是剩余价值"\n• 让我把这个阶段和你的考点串起来\n\n先问一句试试。`
   }
 
   async sendMessage(messages: ChatMessage[], ctx: AIContext): Promise<string> {
-    const stage = ctx.stage
-    const system =
-      `你是"${NPC_NAME}"，${NPC_TITLE}，一位亲切、循循善诱的马克思主义理论引导员。` +
-      `当前学习阶段：${stage ? stage.name + '（生产力：' + stage.productivity + '；生产关系：' + stage.relations + '；剥削率：' + stage.exploitationRate + '%）' : '未选定'}。` +
-      `请用简洁、通俗、鼓励的中文回答；可适当引用马克思原话；并在合适时引导用户使用"内容讲解/考试复习/知识网络"等功能。` +
-      `回答中可用 **加粗** 标记重点。`
-
-    const payload = {
-      model: 'qwen-plus',
-      messages: [
-        { role: 'system', content: system },
-        ...messages.map(m => ({ role: m.role, content: m.content })),
-      ],
-      temperature: 0.8,
-      max_tokens: 800,
+    try {
+      const data = await postJSON<{ reply?: string }>('/api/chat', {
+        messages: messages.map(m => ({ role: m.role, content: m.content })),
+        context: contextBrief(ctx),
+      })
+      const reply = typeof data?.reply === 'string' ? data.reply.trim() : ''
+      if (!reply) throw new Error('服务端返回为空')
+      this.mode = 'online'
+      return reply
+    } catch (err) {
+      this.mode = 'local'
+      const fallback = await this.local.sendMessage(messages, ctx)
+      return `${fallback}\n\n> 在线模型暂不可用（${describeError(err)}），已切到本地引导。`
     }
-
-    const resp = await fetch('https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${this.apiKey}`,
-      },
-      body: JSON.stringify(payload),
-    })
-
-    if (!resp.ok) {
-      const errText = await resp.text().catch(() => '')
-      throw new Error(`通义千问请求失败(${resp.status})：${errText.slice(0, 200)}`)
-    }
-    const data = await resp.json()
-    return (
-      data?.choices?.[0]?.message?.content?.trim() ||
-      '（模型没有返回内容，请稍后再试）'
-    )
   }
 }
 
-/* ===================== 模型工厂 & 密钥管理 ===================== */
-
-const KEY_STORAGE = 'npc_aliyun_key'
-
-export function getStoredApiKey(): string {
-  try {
-    const envKey = (import.meta.env.VITE_DASHSCOPE_API_KEY as string | undefined) || ''
-    if (envKey) return envKey
-    return localStorage.getItem(KEY_STORAGE) || ''
-  } catch {
-    return (import.meta.env.VITE_DASHSCOPE_API_KEY as string | undefined) || ''
-  }
-}
-
-export function setStoredApiKey(key: string): void {
-  try {
-    if (key) localStorage.setItem(KEY_STORAGE, key)
-    else localStorage.removeItem(KEY_STORAGE)
-  } catch {
-    /* 忽略隐私模式等异常 */
-  }
-}
+let singleton: AIModel | null = null
 
 export function getAIModel(): AIModel {
-  const key = getStoredApiKey()
-  if (key) return new DashScopeModel(key)
-  return new LocalGuideModel()
+  if (!singleton) singleton = new RemoteGuideModel()
+  return singleton
 }
 
-/* ===================== 语音（TTS） ===================== */
+/* ------------------------------------------------------------------ *
+ * 「问小原」上下文传递：镇上气泡 → 小原输入框
+ * ------------------------------------------------------------------ */
 
-// 默认朗读：浏览器内置 speechSynthesis（中文可用，无需密钥）
-export function speakText(text: string): void {
-  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-  try {
-    window.speechSynthesis.cancel()
-    const u = new SpeechSynthesisUtterance(text.replace(/[*`#>]/g, ''))
-    u.lang = 'zh-CN'
-    u.rate = 1
-    const voices = window.speechSynthesis.getVoices()
-    const zh = voices.find(v => /zh|chinese|中文|普通话/i.test(v.lang + v.name))
-    if (zh) u.voice = zh
-    window.speechSynthesis.speak(u)
-  } catch {
-    /* 忽略 */
+let pendingSeed: { speaker: string; text: string } | null = null
+
+/** 由 DialogBubbles 调用：记下「谁说了什么」，等小原面板打开时取用 */
+export function askAbout(speaker: string, text: string): void {
+  pendingSeed = { speaker: (speaker || '').trim(), text: (text || '').trim() }
+}
+
+/** 取出并清空，避免重复注入 */
+export function takePendingSeed(): { speaker: string; text: string } | null {
+  const seed = pendingSeed
+  pendingSeed = null
+  return seed
+}
+
+/* ------------------------------------------------------------------ *
+ * 语音：先服务端 CosyVoice，失败降级浏览器 TTS
+ * ------------------------------------------------------------------ */
+
+let currentAudio: HTMLAudioElement | null = null
+let currentObjectUrl: string | null = null
+
+function stripForSpeech(text: string): string {
+  return text
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/[*_#>`]/g, ' ')
+    .replace(/[•\-]\s+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 400)
+}
+
+function releaseAudio(): void {
+  if (currentAudio) {
+    try {
+      currentAudio.pause()
+    } catch {
+      /* 忽略 */
+    }
+    currentAudio = null
   }
+  if (currentObjectUrl) {
+    URL.revokeObjectURL(currentObjectUrl)
+    currentObjectUrl = null
+  }
+}
+
+function speakWithBrowser(text: string): void {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
+  const utterance = new SpeechSynthesisUtterance(text)
+  utterance.lang = 'zh-CN'
+  utterance.rate = 1
+  utterance.pitch = 1
+  window.speechSynthesis.cancel()
+  window.speechSynthesis.speak(utterance)
+}
+
+/** 朗读一段文本。优先 CosyVoice，不可用时降级浏览器语音 */
+export async function speakText(text: string): Promise<void> {
+  const clean = stripForSpeech(text)
+  if (!clean) return
+
+  stopSpeaking()
+
+  try {
+    const resp = await fetch('/api/tts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: clean }),
+    })
+    const contentType = resp.headers.get('content-type') || ''
+    if (resp.ok && contentType.startsWith('audio')) {
+      const blob = await resp.blob()
+      const url = URL.createObjectURL(blob)
+      currentObjectUrl = url
+      const audio = new Audio(url)
+      currentAudio = audio
+      audio.onended = () => releaseAudio()
+      await audio.play()
+      return
+    }
+  } catch {
+    /* 落回浏览器语音 */
+  }
+
+  speakWithBrowser(clean)
 }
 
 export function stopSpeaking(): void {
+  releaseAudio()
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     window.speechSynthesis.cancel()
   }
-}
-
-// 后续接入阿里语音合成（CosyVoice / Sambert）的扩展点：
-// 通过 DashScope 接口（WebSocket 或 HTTP）用 apiKey 调用，将返回的音频流播放给用户。
-// 当前留作占位，正式接入时替换 speakText 的调用即可。
-export async function synthesizeWithAliyun(_text: string, _apiKey: string): Promise<ArrayBuffer> {
-  throw new Error('阿里语音合成尚未接入，请改用浏览器内置朗读，或后续对接 CosyVoice。')
 }

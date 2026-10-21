@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------------ *
+ * 小原 AI 向导 · 增量样式
+ *   - 对话气泡上的「💬 问小原」按钮
+ *   - 面板内的快捷提问
+ *   - 在线模式徽章
+ * 与 npc.css 分开，避免改动原有样式引入回归。
+ * ------------------------------------------------------------------ */
+
+/* 气泡右下角：ℹ 在最右，🔊 在 26px，💬 再往里一格 */
+.dialog-bubble-ask {
+  position: absolute;
+  bottom: 0;
+  right: 52px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  font-size: 11px;
+  line-height: 1;
+  background: rgba(120, 180, 255, 0.15);
+  border: 1px solid rgba(120, 180, 255, 0.3);
+  border-radius: 0 0 6px 0;
+  color: #9cc7ff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dialog-bubble-ask:hover {
+  background: rgba(120, 180, 255, 0.3);
+  border-color: rgba(120, 180, 255, 0.6);
+  color: #fff;
+}
+
+/* 在线模式徽章 */
+.npc-mode-badge.mode-online {
+  background: rgba(80, 200, 140, 0.16);
+  border-color: rgba(80, 200, 140, 0.45);
+  color: #7ce0b0;
+}
+
+/* 快捷提问 */
+.npc-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 14px 4px;
+}
+
+.npc-quick-btn {
+  background: rgba(255, 215, 0, 0.08);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  color: var(--text-accent);
+  border-radius: 14px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-family: var(--ui-font);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.npc-quick-btn:hover {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: var(--text-accent);
+}
