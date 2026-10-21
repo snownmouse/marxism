@@ -24,8 +24,8 @@ const PORT = Number(process.env.PORT || 1960)
 const HOST = process.env.HOST || '127.0.0.1'
 const KEY = (process.env.DASHSCOPE_API_KEY || '').trim()
 const CHAT_MODEL = process.env.QWEN_MODEL || 'qwen-plus'
-const TTS_MODEL = process.env.COSYVOICE_MODEL || 'cosyvoice-v2'
-const TTS_VOICE = process.env.COSYVOICE_VOICE || 'longxiaochun_v2'
+const TTS_MODEL = process.env.COSYVOICE_MODEL || 'qwen3-tts-flash'
+const TTS_VOICE = process.env.COSYVOICE_VOICE || 'Cherry'
 const CACHE_DIR = process.env.TTS_CACHE_DIR || '/opt/marxism-cache/tts'
 const CHAT_TIMEOUT = Number(process.env.CHAT_TIMEOUT_MS || 35000)
 const TTS_TIMEOUT = Number(process.env.TTS_TIMEOUT_MS || 45000)
@@ -281,7 +281,7 @@ async function handleTts(req, res) {
       body: {
         model: TTS_MODEL,
         input: { text },
-        parameters: { voice, format: 'mp3', sample_rate: 22050 },
+        parameters: { voice, format: 'mp3', sample_rate: 24000 },
       },
       timeout: TTS_TIMEOUT,
     })

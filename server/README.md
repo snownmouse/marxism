@@ -22,7 +22,7 @@
 | 能力 | 模型 | 接口 |
 |---|---|---|
 | 文本 | `qwen-plus` | `POST /api/chat` |
-| 语音 | `cosyvoice-v2`（音色 `longxiaochun_v2`） | `POST /api/tts` |
+| 语音 | `qwen3-tts-flash`（音色 `Cherry`） | `POST /api/tts` |
 
 **不引入聚合平台（如蚂蚁数科 MaaS）的理由：** 那边**没有语音合成（TTS）模型**，一旦引入就变成「文本一套 Key、语音另一套 Key」，两套计费、两套降级逻辑，维护成本翻倍；而它提供的文本模型本身就是转售通义千问，质量同源、多一层转发。真需要换供应商时改环境变量即可（`QWEN_MODEL` / 端点），但当前产品阶段不需要为这种灵活性付出复杂度代价。
 
@@ -36,8 +36,8 @@
 | `PORT` | `1960` | 监听端口（仅本机，nginx 反代） |
 | `HOST` | `127.0.0.1` | 监听地址 |
 | `QWEN_MODEL` | `qwen-plus` | 文本模型 |
-| `COSYVOICE_MODEL` | `cosyvoice-v2` | 语音模型 |
-| `COSYVOICE_VOICE` | `longxiaochun_v2` | 默认音色 |
+| `COSYVOICE_MODEL` | `qwen3-tts-flash` | 语音合成模型（键名为兼容旧配置保留） |
+| `COSYVOICE_VOICE` | `Cherry` | 默认音色 |
 | `TTS_CACHE_DIR` | `/opt/marxism-cache/tts` | 语音缓存目录 |
 | `CHAT_TIMEOUT_MS` | `35000` | 文本超时 |
 | `TTS_TIMEOUT_MS` | `45000` | 语音超时 |
