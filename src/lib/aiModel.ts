@@ -3,7 +3,7 @@
  *
  * 链路（前端零密钥）：
  *   浏览器 ──POST /api/chat──▶ server/index.mjs ──▶ 阿里通义千问（qwen-plus）
- *   浏览器 ──POST /api/tts ──▶ server/index.mjs ──▶ CosyVoice（磁盘缓存）
+ *   浏览器 ──POST /api/tts ──▶ server/index.mjs ──▶ qwen3-tts-flash（磁盘缓存）
  *
  * 降级顺序：
  *   1. 服务端已配 Key        → 在线模型实时生成

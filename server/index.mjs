@@ -234,6 +234,27 @@ function audioKey(text, voice) {
   return createHash('sha256').update(`${TTS_MODEL}|${voice}|${text}`).digest('hex').slice(0, 40)
 }
 
+/**
+ * 按真实字节判断音频格式。
+ * 上游（qwen3-tts-flash）不认 format 参数，无论传什么都返回 WAV，
+ * 所以绝不能在响应头里硬写 audio/mpeg —— 否则浏览器 MIME 不符会拒播。
+ */
+function audioContentType(buf) {
+  if (buf.length >= 12 && buf[0] === 0x52 && buf[1] === 0x49 && buf[2] === 0x46 && buf[3] === 0x46) {
+    return 'audio/wav' // RIFF....WAVE
+  }
+  if (buf.length >= 3 && buf[0] === 0x49 && buf[1] === 0x44 && buf[2] === 0x33) {
+    return 'audio/mpeg' // ID3
+  }
+  if (buf.length >= 2 && buf[0] === 0xff && (buf[1] & 0xe0) === 0xe0) {
+    return 'audio/mpeg' // MPEG frame sync
+  }
+  if (buf.length >= 4 && buf[0] === 0x4f && buf[1] === 0x67 && buf[2] === 0x67 && buf[3] === 0x53) {
+    return 'audio/ogg'
+  }
+  return 'application/octet-stream'
+}
+
 async function handleTts(req, res) {
   let body
   try {
@@ -255,14 +276,14 @@ async function handleTts(req, res) {
   }
 
   const key = audioKey(text, voice)
-  const file = path.join(CACHE_DIR, `${key}.mp3`)
+  const file = path.join(CACHE_DIR, `${key}.audio`)
 
   // 1) 命中缓存
   try {
     const cached = await fsp.readFile(file)
     if (cached.length > 0) {
       res.writeHead(200, {
-        'Content-Type': 'audio/mpeg',
+        'Content-Type': audioContentType(cached),
         'Content-Length': cached.length,
         'Cache-Control': 'public, max-age=604800',
         'X-TTS-Cache': 'hit',
@@ -273,7 +294,7 @@ async function handleTts(req, res) {
     /* 未命中，继续合成 */
   }
 
-  // 2) 调 CosyVoice
+  // 2) 调语音合成（上游实际只返回 WAV，MIME 稍后按字节判定）
   let upstream
   try {
     upstream = await httpsRequest(TTS_ENDPOINT, {
@@ -316,7 +337,7 @@ async function handleTts(req, res) {
     .catch(() => {})
 
   res.writeHead(200, {
-    'Content-Type': 'audio/mpeg',
+    'Content-Type': audioContentType(audio.buf),
     'Content-Length': audio.buf.length,
     'Cache-Control': 'public, max-age=604800',
     'X-TTS-Cache': 'miss',
