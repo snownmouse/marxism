@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useMemo, type ReactNode } from 'react'
 import { useAppStore } from '../store/useAppStore'
 import {
   getAIModel,
+  probeHealth,
   speakText,
   stopSpeaking,
   takePendingSeed,
@@ -76,6 +77,7 @@ export default function NpcChat() {
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const [speakOn, setSpeakOn] = useState(false)
+  const [engine, setEngine] = useState<'online' | 'local'>(model.mode)
 
   const listRef = useRef<HTMLDivElement>(null)
   const textRef = useRef<HTMLTextAreaElement>(null)
@@ -99,7 +101,16 @@ export default function NpcChat() {
       setInput(`${who}说的“${snippet}”是什么意思？`)
     }
     const timer = window.setTimeout(() => textRef.current?.focus(), 30)
-    return () => window.clearTimeout(timer)
+
+    let alive = true
+    void probeHealth().then(mode => {
+      if (alive) setEngine(mode)
+    })
+
+    return () => {
+      alive = false
+      window.clearTimeout(timer)
+    }
   }, [showNpc])
 
   if (!showNpc) return null
@@ -129,6 +140,7 @@ export default function NpcChat() {
       ])
     } finally {
       setLoading(false)
+      setEngine(model.mode)
     }
   }
 
@@ -148,14 +160,14 @@ export default function NpcChat() {
           <h3>🤖 AI 向导 · {NPC_NAME}</h3>
           <div className="npc-header-actions">
             <span
-              className={`npc-mode-badge mode-${model.mode}`}
+              className={`npc-mode-badge mode-${engine}`}
               title={
-                model.mode === 'online'
+                engine === 'online'
                   ? '正在使用服务端代理的通义千问实时生成'
                   : '在线模型不可用，正在用本地知识库回答'
               }
             >
-              {model.label}
+              {engine === 'online' ? '通义千问' : '本地引导'}
             </span>
             <button className="modal-close" onClick={() => setNpc(false)}>✕</button>
           </div>

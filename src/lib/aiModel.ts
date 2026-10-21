@@ -207,6 +207,11 @@ class RemoteGuideModel implements AIModel {
   mode: 'online' | 'local' = 'online'
   private readonly local = new LocalGuideModel()
 
+  /** 由 probeHealth 调用，纠正徽章显示 */
+  setMode(next: 'online' | 'local'): void {
+    this.mode = next
+  }
+
   get label(): string {
     return this.mode === 'online' ? '通义千问' : '本地引导'
   }
@@ -235,10 +240,35 @@ class RemoteGuideModel implements AIModel {
 }
 
 let singleton: AIModel | null = null
+let remoteInstance: RemoteGuideModel | null = null
 
 export function getAIModel(): AIModel {
-  if (!singleton) singleton = new RemoteGuideModel()
+  if (!singleton) {
+    remoteInstance = new RemoteGuideModel()
+    singleton = remoteInstance
+  }
   return singleton
+}
+
+/**
+ * 探测服务端是否已配置模型 Key（打开面板时调用一次）。
+ * 只影响徽章显示与首次请求策略，失败不抛错。
+ */
+export async function probeHealth(timeoutMs = 6000): Promise<'online' | 'local'> {
+  const controller = new AbortController()
+  const timer = window.setTimeout(() => controller.abort(), timeoutMs)
+  try {
+    const resp = await fetch('/api/health', { cache: 'no-store', signal: controller.signal })
+    const data = await resp.json()
+    const online = Boolean(data?.chat)
+    remoteInstance?.setMode(online ? 'online' : 'local')
+    return online ? 'online' : 'local'
+  } catch {
+    remoteInstance?.setMode('local')
+    return 'local'
+  } finally {
+    window.clearTimeout(timer)
+  }
 }
 
 /* ------------------------------------------------------------------ *
